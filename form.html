@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title> 
+			Form 
+		</title>
+	</head>
+	<body bgcolor="#ccffff">
+	<iframe src="image.html" align="right" frameborder="1" width="500px" height="500px"></iframe>
+		<form action="" method="post" >
+			<fieldset>
+			<legend>Personal data</legend>
+			<label>Name </label> &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="fname" value="Arun Pawar" Placeholder="Enter Your name" /><br/><br/>
+			<label>Password</label>&nbsp &nbsp &nbsp   <input type="password" name="" /> <br/> <br/>
+			<label>Gender </label> &nbsp &nbsp &nbsp <input type="radio" name="gender" id="male" /><label for="male">Male</label>
+								<input type="radio" name="gender" id="female" /><label for="female">Female</label><br/><br/>
+			<label>Hobbies</label> &nbsp &nbsp  <input type="checkbox" name="hobby" id="music"><label for="music"> Music </label><input type="checkbox" name="hobby" id="football" /> <label for="football">Football</label>
+												<input type="checkbox" name="hobby" id="reading" /> <label for="reading">Reading</label><input type="checkbox" name="hobby" id="cricket" /> <label for="cricket">Cricket</label><br/><br/>
+			<Label>District</label> &nbsp &nbsp &nbsp &nbsp <select name="" size="3" multiple>
+										<option value="in">Indore</Option>
+										<option value="uj">Ujjain</Option>
+										<option value="dw" selected>Dewas</Option>
+										<option value="jb">Jabalpur</Option>
+										<option value="gw">Gwalior</Option>
+										<option value="bh">Bhopal</Option>
+									</select><br/><br/>							
+			<label> Cars </label> <select>
+			 <optgroup label="Toyata">
+			 <option>Innova</option>
+			 <option>Etios</option>
+			 <option>Fortuner</option></optgroup>
+			 <Optgroup label="Renault">
+			 <option>Kwid</option>
+			 <option>Duster</option>
+			 <option>Captur</option>
+			 </optgroup>
+			</select><br/><br/>
+			<label>Cars</label><input list="car">
+			<datalist id="car">
+			<option value="Alto">
+			<option value="Verna">
+			<option value="BMW">
+			<option value="Range rover">
+			<option value="Thar"></datalist><br/><br/>
+			<label>Upload File</label><input type="file" name=""/>
+			<br/>
+			<br/>
+			<label> Message</label><br/> &nbsp &nbsp &nbsp &nbsp<textarea rows="10" cols="60"> please type your message here</textarea><br/>
+			<input type="submit"/> &nbsp <input type="reset" />
+			</fieldset>
+		</form>
+	
+	</body>
+</html>

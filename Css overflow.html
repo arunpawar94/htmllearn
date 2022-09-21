@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>
+	Overflow
+</title>
+<style>
+
+#id1{border:4px ridge blue;
+width:500px; height:200px;
+}
+#id2
+{border:4px ridge blue;
+width:500px; height:200px;
+overflow:hidden;
+}
+#id3
+{border:4px ridge blue;
+width:500px; height:200px;
+overflow:scroll;
+}
+#id4
+{border:4px ridge blue;
+width:500px; height:200px;
+overflow:auto;
+}
+#id5{
+color:blue;}
+#id6{border:4px ridge blue;
+width:500px; height:200px;
+overflow:visible;}
+#id7{border:4px ridge blue;
+width:500px; height:200px;
+overflow-x:scroll;}
+#id8{border:4px ridge blue;
+width:500px; height:200px;
+overflow-y:scroll;}
+</style>
+</head>
+<body bgcolor="yellow">
+<font color="#00600" face="cooper black">
+<h3><u>Without Overflow</u></h3>
+</font><br/>border:4px ridge blue;<br/>
+width:500px; height:200px;
+<div id="id1">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<font color="red" face="Lucida Handwriting">
+In above box data is going outside the box to overcome these problem we use overflow property.
+</font><br/>
+<font color="#00600" face="cooper black">
+<h3><u>With Overflow</u></h3>
+</font>
+<pre>
+1. overflow:hidden;   (here data is hidden which is outside the box)</pre>
+<div id="id2">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<pre>
+2. overflow:scroll;   (here we have scroll bars which are always appear)</pre>
+<div id="id3">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<pre id="id5">
+3. overflow:auto;   (here we have scroll bars which appears only when data is outside. In this box we have only vertical scroll bar because vertically data is outside, if horizontally data outside will appear then horizontal scroll bar is also appear)</pre>
+<div id="id4">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<pre id="id5">
+4. overflow:visible;   (It is default value of overflow.)</pre>
+<div id="id6">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<pre id="id5">
+5. overflow-x:scroll;   (It is used for only for horizontal)</pre>
+<div id="id7">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<pre id="id5">
+6. overflow-y:scroll;   (It is used for only vertical)</pre>
+<div id="id8">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+</body>
+</html>
