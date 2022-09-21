@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+	Box sizing
+</title>
+<style>
+	#id1{width:500px; height:220px; 
+	padding-left:50px; padding-right:50px;
+	border:20px groove green; 
+	}
+	#id2{width:500px; height:220px; 
+	padding-left:50px; padding-right:50px;
+	border:20px groove green; 
+	overflow:auto;
+	box-sizing:border-box;}
+	#id3{width:500px; height:220px; 
+	padding-left:50px; padding-right:50px;
+	border:20px groove green; 
+	overflow:auto;
+	box-sizing:content-box;}
+</style>
+</head>
+<body bgcolor="yellow">
+<font color="#00600" face="cooper black">
+<h3><u>Box sizing</u></h3>
+
+</font><br/><a href="https://youtu.be/1qEqhCWMvfo" target="_blank">Youtube Video Link</a><br/>
+The box sizing is used to prevent the box to become oversize.It is written as "box-sizing:border-box"<br/>
+It has only two values-<br/>
+1.border-box<br/>
+2.content-box<br/>
+<h3>Before</h3>
+<img src="images\box-sizing1.jpg" width="40%" /><br/>
+<h3>After</h3>
+<img src="images\box-sizing.jpg" width="40%" />
+<br/>Examples:<br/>
+<h3>Without box-sizing</h3>
+<pre>width:500px; height:220px; 
+	padding-left:50px; padding-right:50px;
+	border:20px groove green; </pre>
+<div id="id1">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<font color="blue">
+<i>The above box have given width is 500px but due to the padding and border size its total width become 500+50+50+20+20=640.</i>
+</font><br/>
+<h3>After using box-sizing</h3><br/>
+1.box-sizing:border-box;<br/>
+
+<div id="id2">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<font color="blue">
+<i>The above box have total width 500px it automatically adjusted by box sizing</i>
+</font><br/>
+2.box-sizing:content-box;     &nbsp &nbsp (The value "content-box" is the default value.It does not show any affect )<br/>
+
+<div id="id3">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+			Banned itemselectronic/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.Banned itemselectronic/electronic gadgets such as 
+</div><br/>
+<font color="blue">
+<i>These value does not show any affect</i>
+</font><br/>
+</body>
+</html>
