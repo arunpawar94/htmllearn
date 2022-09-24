@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>
+clear poperty
+</title>
+<link rel="stylesheet" href="fontcss.css">
+<style>
+	#id1
+	{width:500px;
+	margin-left:30px;
+	background-color:#99ccff;
+	border:6px ridge yellow;
+	float:left;
+	}
+	#id2
+	{width:500px;
+		margin-right:30px;
+	background-color:#ecffb3;
+	border:6px ridge yellow;
+	float:right;
+	}
+	#id3
+	{
+		margin-right:30px;
+	background-color:#ffcccc;
+	border:6px ridge yellow;
+	}
+	#id4
+	{
+	margin-left:30px;
+		margin-right:30px;
+	background-color:#ffcccc;
+	border:6px ridge yellow;
+	clear:left;
+	}
+	#id5
+	{
+	margin-left:30px;
+		margin-right:30px;
+	background-color:#ffcccc;
+	border:6px ridge yellow;
+	clear:right;
+	}
+	#id6
+	{
+	margin-left:30px;
+		margin-right:30px;
+	background-color:#ffcccc;
+	border:6px ridge yellow;
+	clear:both;
+	}
+</style>
+</head>
+<body bgcolor="#ffffcc">
+<span id="idfh1"><u>clear:</u></span> When we use float in any div then this div overlap the another div. To avoid this situation we use clear property in css.<br/>
+<a id="idfy" href="https://youtu.be/5IVbuwrrqBE" target="_blank">Youtube video link</a>
+<br/>It can be written as:
+<br/><span id="idf1">clear:left;</span>
+<br/>There are 3 values of clear property:
+<br/>1.left ( use if in previous div used float:left then left side of not to next div overlap  )
+<br/>2.right  ( use if in previous div used float:right then right side  not to next div overlap  )
+<br/>3.both ( it is used to avoid overlap of next div wheathere we use left or right float used in previous div)<br/>
+<br/><span id="idfh2"><u>Without clear property:</u></span>
+	<br/>
+	<div id="id1">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id2">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id3">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<br/><span id="idfh2"><u>With clear property:</u></span>
+	<br/>1.<span id="idf1">clear:left;</span>
+	<br/><div id="id1">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id2">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id4">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+		<br/>2.<span id="idf1">clear:right;</span>
+	<br/><div id="id1">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id2">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id5">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+			<br/>3.<span id="idf1">clear:both;</span>
+	<br/><div id="id1">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id2">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+	<div id="id6">
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+		Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetooth enabled devices, calculators, metallic wears, bangles, belts, bracelets etc. are NOT ALLOWED inside the Test Centre. Only e-Call Letter and Photo ID card in original will be allowed inside the test hall. Candidate should not carry any Pen/ Pencil inside the Test Centre. Pen will be provided to the candidates during the Exam.
+
+	</div>
+</body>
+</html>
