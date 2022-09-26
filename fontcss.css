@@ -2,6 +2,7 @@
 	{
 		color:#000099;
 		font-size:30px;
+		text-decoration:underline #000066 solid;
 }
 #idf1
 	{
@@ -17,4 +18,5 @@
 	{
 		color:green;
 		font-size:20px;
+		text-decoration:underline #03b923 solid;
 		}
