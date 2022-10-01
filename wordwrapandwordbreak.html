@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>
+			word-wrap and word-break
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			#id1
+				{ 
+				width:500px;
+				border:6px ridge purple;
+				background-color:#ccccff;
+				padding:10px;	
+				}
+			#id2
+				{ 
+				width:500px;
+				border:6px ridge purple;
+				background-color:#ccccff;
+				padding:10px;	
+				word-wrap:normal;
+				}
+			#id3
+				{ 
+				width:500px;
+				border:6px ridge purple;
+				background-color:#ccccff;
+				padding:10px;	
+				word-wrap:break-word;
+				}
+			#id4
+				{ 
+				width:500px;
+				border:6px ridge purple;
+				background-color:#ccccff;
+				padding:10px;
+				}
+			#id5
+				{ 
+				width:500px;
+				border:6px ridge purple;
+				background-color:#ccccff;
+				padding:10px;
+				word-break:keep-all;
+				}
+			#id6
+				{ 
+				width:500px;
+				border:6px ridge purple;
+				background-color:#ccccff;
+				padding:10px;
+				word-break:break-all;
+				}
+		</style>
+	</head>
+	<body bgcolor="8fcce6">
+		A)<span id="idfh1">word-wrap:</span>It is used when a single word length is greater than 
+			the width of the div.
+			<a href="https://youtu.be/EWhJ89uqAh8" target="_blank"><span id="idfy">Youtube video link</span></a>	
+
+			<br/><br/><span id="idfh2">without word-wrap</span>
+			<br/>
+			<div id="id1">
+				djklsdklfkslkfjdjsxzclkfjlsadfafdsfsadfsfasfsadadfkfkjklfjksjklfsjklfdsdfsfdsfsfsfsfdsfdsfjkls		
+			</div>
+			<span id="idf2"> In above div we can see the word is oveflow from the box.</span>
+			
+			<br/><br/><span id="idfh2">with using word-wrap</span>
+			<br/>It has only 2 values:
+			<br/><br/>a) normal (default value. it does not show any effect.)
+			<br/><span id="idf1">word-wrap:normal;</span>
+			<div id="id2">
+				djklsdklfkslkfjdjsxzclkfjlsadfafdsfsadfsfasfsadadfkfkjklfjksjklfsjklfdsdfsfdsfsfsfsfdsfdsfjkls		
+			</div>
+			<br/><br/>b) break-word
+			<br/><span id="idf1">word-wrap:break-word;</span>
+			<div id="id3">
+				djklsdklfkslkfjdjsxzclkfjlsadfafdsfsadfsfasfsadadfkfkjklfjksjklfsjklfdsdfsfdsfsfsfsfdsfdsfjkls		
+			</div>
+				<span id="idf2"> In above div we can see that word is breaked and come in next line.</span>
+
+		<br/><br/>B)<span id="idfh1">word-break:</span>It is used if in a line there is a last word which is not fitting in the div then it comes in next line and leave some space in previous line as shown below. 
+		<br/><br/><span id="idfh2">without word-wrap</span>
+			<div id="id4">
+			    Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetoothenabled.
+			</div>
+			<span id="idf2"> In above div we can see "Bluetoothenabled" which is single word and starting form next line and leave some space after word "watches,"</span>
+		<br/><br/><span id="idfh2">with word-wrap</span>
+<br/>It has only 2 values:
+			<br/><br/>a) keep-all (default value. it does not show any effect.)
+			<br/><span id="idf1">word-break:keep-all;</span>
+<div id="id5">
+			    Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetoothenabled.
+			</div>			
+	</body>
+	
+	<br/><br/>b) break-all (in this all letters of every word is separated from eachother)
+			<br/><span id="idf1">word-break:break-all;</span>
+<div id="id6">
+			    Banned items/electronic gadgets such as Mobile phones, pager, watches, Bluetoothenabled.
+			</div>	
+		<span id="idf2"> In above div we can see "Bluetoothenabled" which is single word is breaked into two parts one part is in the previous line and after completing the previous line the remainig word is coming form next line and there is no space leave in previous line.</span>
+		
+	</body>
+
+</html>
