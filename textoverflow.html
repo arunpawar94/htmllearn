@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>
+			text-overflow
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			#id1
+				{width:400px;
+				border:6px groove purple;
+				background-color:#ccccff;
+				white-space:nowrap;
+				overflow:hidden;
+				}
+			#id3
+				{width:400px;
+				border:6px groove purple;
+				background-color:#ccccff;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				}
+			#id2
+				{width:400px;
+				border:6px groove purple;
+				background-color:#ccccff;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:clip;
+				}
+			#id4
+				{width:400px;
+				border:6px groove purple;
+				background-color:#ccccff;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:"etc...";
+				}
+		</style>
+	</head>
+	<body bgcolor="#c6e651">
+	<span id="idfh1">text-overflow</span> helps when text overflow the box. By this we can show that there is text in continue.
+	It comes in css3 version. Mainly use when we use "white-space:nowrap;"
+	<br/><a id="idfy" href="https://youtu.be/Fw2XWBHxkqc" target="_blank">Youtube Video Link</a>
+	<br/><br/>There are 3 values:
+<ul type="square">
+	<li>clip (default)
+	</li>
+	<li>ellipsis</li>
+	<li>string (these value does not work in every browser. It works in mozilla firefox)</li>
+</ul>
+<span id="idfh2">without text-overflow</span>
+<span id="idf1"><br/>width:400px;<br/>
+				border:6px groove purple;<br/>
+				background-color:#ccccff;<br/>
+				white-space:nowrap;<br/>
+				overflow:hidden;</span>
+<div id="id1">
+        Banned items/electronic gadgets such as Mobile 
+		phones, pager, watches, Bluetooth enabled devices, 
+		calculators, metallic wears, bangles, belts, bracelets
+		etc. are NOT ALLOWED inside the Test Centre. Only e-Call 
+		Letter and Photo ID card in original will be allowed inside 
+		the test hall. Candidate should not carry any Pen/ Pencil 
+		inside the Test Centre. Pen will be provided to the candidates 
+		during the Exam.
+</div>	
+<br/><span id="idfh2">with text-overflow</span>
+<br/>1.) <span id="idf1">text-overflow:clip;</span>(Since it is default value it does not show any effect.)
+<div id="id2">
+        Banned items/electronic gadgets such as Mobile 
+		phones, pager, watches, Bluetooth enabled devices, 
+		calculators, metallic wears, bangles, belts, bracelets
+		etc. are NOT ALLOWED inside the Test Centre. Only e-Call 
+		Letter and Photo ID card in original will be allowed inside 
+		the test hall. Candidate should not carry any Pen/ Pencil 
+		inside the Test Centre. Pen will be provided to the candidates 
+		during the Exam.
+</div>	
+<span id="idf2">we can see that it same as without text-overflow.</span>
+
+<br/><br/>2.) <span id="idf1">text-overflow:ellipsis;</span>(in this there are we can see "..." before text is hidden.)
+<div id="id3">
+        Banned items/electronic gadgets such as Mobile 
+		phones, pager, watches, Bluetooth enabled devices, 
+		calculators, metallic wears, bangles, belts, bracelets
+		etc. are NOT ALLOWED inside the Test Centre. Only e-Call 
+		Letter and Photo ID card in original will be allowed inside 
+		the test hall. Candidate should not carry any Pen/ Pencil 
+		inside the Test Centre. Pen will be provided to the candidates 
+		during the Exam.
+</div>	
+
+<br/><br/>3.) <span id="idf1">text-overflow:etc...;</span>(in this there are we can see "etc..." before text is hidden. So in string we can add in last whatever we want to show in the last)
+<div id="id4">
+        Banned items/electronic gadgets such as Mobile 
+		phones, pager, watches, Bluetooth enabled devices, 
+		calculators, metallic wears, bangles, belts, bracelets
+		etc. are NOT ALLOWED inside the Test Centre. Only e-Call 
+		Letter and Photo ID card in original will be allowed inside 
+		the test hall. Candidate should not carry any Pen/ Pencil 
+		inside the Test Centre. Pen will be provided to the candidates 
+		during the Exam.
+</div>	
+<span id="idf2">it is only supports in firefox.</span>
+
+	</body>
+</html>

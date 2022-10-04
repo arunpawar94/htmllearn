@@ -3,6 +3,7 @@
 		color:#000099;
 		font-size:30px;
 		text-decoration:underline #000066 solid;
+		text-shadow:2px 2px 3px red;
 }
 #idf1
 	{
@@ -24,6 +25,7 @@
 #idfh2
 	{
 		color:green;
-		font-size:20px;
+		font-size:23px;
 		text-decoration:underline #03b923 solid;
+		text-shadow:2px 2px 2px yellow;
 		}
