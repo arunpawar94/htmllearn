@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>
+			@font-face
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			@font-face
+				{
+					font-family:fontname;
+					src:url(fonts/JOKERMAN.TTF)
+				}
+			#id1
+				{
+					font-family:fontname;
+					font-size:25px;
+				}
+			#id2
+				{	width:600px;
+					box-shadow:3px 3px 2px 2px blue;
+				}
+		</style>
+	</head>
+	<body bgcolor="#C8F51E">
+		<span id="idfh1">font-face</span> @font-face is used to define font-family. If any local machine has font-family not install which we want to show for this we can link that font-family in our css by using @font-family.
+	<br/><a id="idfy" href="https://youtu.be/5IniEmNymLk" target="_blank">Youtube Video Link...</a>
+	<br/><br/>
+	<u>Syntax:</u>
+<pre id="idf1">	
+	@font-face
+		{
+			font-family:fontname;
+			src:url(fonts/JOKERMAN.TTF)
+		}
+	#id1
+		{
+			font-family:fontname;
+			font-size:25px;
+		}
+	
+	</pre>
+	<br/>Result:
+<span id="id1">My name is Arun Pawar.</span>
+
+<br/><br/><span id="idf3">Important point:</span><br/>
+a) In font name we can't give space.
+<br/>b) multiple fonts can also be given with single name.
+<br/>"<span id="idf1">src:url(fonts/JOKERMAN.TTF),url(fonts/verdana.TTF)</span>"
+
+<br/><br/><span id="idf3">Supported formats in different browsers are as follows:</span>	
+	<br/><div id="idi1">
+	<img src="images/fontfaceimage1.jpg" width="600px"/>
+	</div>
+	</body>
+</html>
