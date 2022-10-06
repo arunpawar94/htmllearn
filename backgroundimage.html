@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>
+			background-image
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+		body{
+			background-image:url(images/481336.jpg);
+			}
+		#id1
+			{
+				color:transparent;
+				font-size:70px;
+				font-weight:900;
+				background-image:url(images/1736527.jpg);
+				-webkit-background-clip:text;
+			}
+		</style>
+	</head>
+	<body>
+	<span id="idfh1">background-image</span> used to add image in background.<a id="idfy" href="https://youtu.be/_mBJnQLg70M" target="_blank">Youtube Video Link...</a>
+	<br/>Properties:
+	<br/><br/>1.) <span id="idfh2">Background-image:</span>  to add image in background.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background-image:url(images\481336.jpg)</span>
+	<br/>For multiple images<span id="idf1">background-image:url(hsjhdjkhjk.jpg),url(jhhsdkhfjkh.jpg);</span>
+	
+	<br/><br/>2.) <span id="idfh2">Background-repeat:</span>  it used how the image repeat in background.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background-repeat:no-repeat;</span>
+	<br/><br/>values are:
+	<ul>
+		<li>repeat(default)</li>
+		<li>no-repeat(image not repeat)</li>
+		<li>repeat-x(repeat but only horizontally)</li>
+		<li>repeat-y(repeat but only vertically)</li>
+		<li>space(there is some space in repeated image)</li>
+		<li>round(image is repeat and stretched)</li>
+	</ul>
+	
+	<br/><br/>3.) <span id="idfh2">Background-position:</span> defines the position of background image where to place it.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background-position:center center;</span>
+	<br/><br/>values are:
+	<ul>
+		<li>left top(default)</li>
+		<li>left center</li>
+		<li>left bottom</li>
+		<li>right top</li>
+		<li>right center</li>
+		<li>right bottom</li>
+		<li>center top</li>
+		<li>center center</li>
+		<li>center bottom</li>
+		<li>we can also give it in percentage(%) such as "20% 30%" here 20% is along x-axis and 30% is along y-axis.</li>
+		<li>we can also give it in pixel(px) such as "200px 100px" here 200px is along x-axis and 100px is along y-axis.</li>
+	</ul>
+<br/>4.) <span id="idfh2">Background:</span> it is shorthand of the above 3 properties i.e. background-image background-repeat and background-position respectively.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background:url(images/hjkdhsjhd,jpg) no-repeat right center;</span>
+
+<br/><br/>5.) <span id="idfh2">Background-attachment:</span> normally background image scroll with the contain but background-attachment make it fixed or scrollabel.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background-attachment:fixed;</span>
+<br/><br/>There are only 2 values:
+	<ul>
+		<li>scroll(default)</li>
+		<li>fixed</li>
+	</ul>
+	
+<br/><br/>6.) <span id="idfh2">Background-size:</span> used to resize the background image.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background-size:600px 500px;</span>
+<br/><br/>The values are:
+	<ul>
+		<li>auto(default)</li>
+		<li>cover(cover whole place of the background and crop the image)</li>
+		<li>contain(image is fully fitted in the background and some place may or may not be left.)</li>
+		<li>can be given in pixel(px) "600px 400px" the 600px is for horizontal length and 400px is for vertical length.</li>
+		<li>can be given in percentage(%) "30% 40%" the 30% is for horizontal length and 40% is for vertical length.</li>
+	</ul>
+
+<br/><br/>7.) <span id="idfh2">Background-origin:</span> define to from where the background-image should start.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">background-origin:content-box;</span>
+<br/><br/>There are 3 values:
+	<ul>
+		<li>padding-box(It is default value.background-image start along with padding start)</li>
+		<li>content-box(background-image start along with the starting of the content)</li>
+		<li>border-box(background-image start along with starting of the border)</li>
+	</ul>
+	
+<br/><br/>8.) <span id="idfh2">Background-clip:</span> define from where the background color starts.
+<br/><span id="idf3">Syntax:</span><span id="idf1">background-clip:content-box;</span>	
+<br/><br/>There are 4 values:
+	<ul>
+		<li>padding-box(It is default value.background start along with padding start)</li>
+		<li>content-box(background start along with the starting of the content)</li>
+		<li>border-box(background start along with starting of the border)</li>
+		<li>text(Presently it is not supported by the all browsers we can use prefix for this as shown below.)
+	</ul>
+<span id="idf1"><pre>
+color:transparent;
+font-size:70px;
+font-weight:900;
+background-image:url(images/1736527.jpg);
+background-clip:text;
+</pre></span>
+<span id="idf3">Result of above code:</span>
+<span id="id1">My name is Arun Pawar.</span>
+<br/><span id="idf2">There is image within the text written above.</span>
+</body>
+</html>
