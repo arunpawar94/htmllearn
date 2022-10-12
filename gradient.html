@@ -8,20 +8,69 @@
 			body
 				{
 					font-size:20px;
-					background:linear-gradient(yellow,orange,blue);
+					background:linear-gradient(to bottom right,yellow,orange,red);
 				}
+			#id1
+			{
+				width:700px;height:150px;
+				background:linear-gradient(to bottom right,blue,yellow,green);
+			}
+			#id2
+			{
+				width:700px; height:150px;
+				background:repeating-linear-gradient(to right,blue ,yellow 20%, green 30% );
+			}
+			#id3
+			{
+				
+				background:radial-gradient(blue ,yellow, green );
+			}
+			#id4
+			{
+				width:700px; height:150px;
+				background:repeating-radial-gradient(circle,blue ,yellow 20%, green 30%);
+			}
 		</style>
 	</head>
 	<body>
 	<span id="idfh1">Gradient:</span> it is used to give 2 or more colors in the background. 
-	<a id="idfy" href="" target="_blank">Youtube Video Link...</a>
+	<a id="idfy" href="https://youtu.be/ib2rSar5rZE" target="_blank">Youtube Video Link...</a>
 	<br/><span id="idf3">syntax:</span><span id="idf1"> background:linear-gradient(to top,red,blue);</span>
 	<br/>
 		<ol>There are 4 properties;
 			<li>linear-gradient</li>
+			<li>repeating-linear-gradient</li>
 			<li>radial-gradient</li>
-			<li>repeat linear-gradient</li>
-			<li>repeat radial-gradient</li>
+			<li>repeating-radial-gradient</li>
 		</ol>
+	
+	<br/>1.) <span id="idfh2">linear-gradient:</span>
+	<br/><div id="id1">Eg:<span id="idf1">background:linear-gradient(to bottom right,blue,yellow,green);</span>here the first value "to bottom right" is for direction and the other are different colors. The direction of the color is also can be given in degree such as "background:linear-gradient(-45deg,blue,yellow,green);" we can give multiple colors there is no limit.
+	</div>
+	
+	<br/>2.) <span id="idfh2">repeating-linear-gradient:</span>
+	<br/><div id="id2">Eg:<span id="idf1">background:repeating-linear-gradient(to right,blue,yellow 20, green 30% );</span>In this, the linear-gradient is repeated here we required to give percentage.
+	</div>
+	
+	<br/>3.) <span id="idfh2">radial-gradient:</span>
+	<br/><div id="id3">Eg:<span id="idf1">background:radial-gradient(blue ,yellow, green );</span>
+	<br/>Differnt way to give radial-gradient.
+	<br/><ol><li><span id="idf1">background:radial-gradient(red 5%,yellow 15%,green 60%);</span> here we have give ratio of different colors.here we can use pixel also.</li>
+	<li><span id="idf1">background:radial-gradient(circle,red 5%,yellow 15%,green 60%);</span> here we have given shape i.e. circle.</li>
+	<li><span id="idf1">background:radial-gradient(closest-side at 50% 50%,red 5%,yellow 15%,green 60%);</span> here we have give location to strating point.</li>
+		<ul>
+			<li>closest-side at 30% 40%</li>
+			<li>farthest-side at 30% 40%</li>
+			<li>closest-corner at 30% 40%</li>
+			<li>farthest-corner at 30% 40%</li>
+		</ul>
+	</ol>
+	</div>
+	
+	<br/>4.) <span id="idfh2">repeating-radial-gradient:</span>
+	<br/><div id="id4">Eg:<span id="idf1">background:repeating-linear-gradient(circle,blue,yellow 20, green 30% );</span>It is similar to radial-gradient but there is repeatation of radial-gradient. here we can use pixel also.
+	</div>
+	
+	
 	</body>
 </html>

@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>
+			Opacity,background-blend-mode and mix-blend-mode
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{	
+				color:white;
+				font-size:20px;
+				background:linear-gradient(gray,black);
+			}
+			#id1
+			{	
+				background:linear-gradient(yellow,purple);
+				border:6px ridge yellow;
+				opacity:0.5;
+			}
+			
+			#id2
+			{	
+				background-image:linear-gradient(blue,purple),url(images/3977442.jpg);
+				background-position:center center;
+				border:6px ridge yellow;
+				background-blend-mode:overlay;
+			
+			}
+			
+			#id3
+			{	
+				background:linear-gradient(orange,yellow,blue);
+				background-position:center center;
+				border:6px ridge yellow;
+			
+			}
+			img
+			{
+				mix-blend-mode:luminosity;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<span id="idfh1">1.) Opacity:</span>
+	<br/><div id="id1">
+	<a id="idfy" href="" target="_blank">Youtube Video Link...</a>
+	<br/><span id="idf3">Syntax:</span><span id="idf1">opacity:0.5;</span> 
+	<br/>its value lie b\w 0 to 1. It makes all the content transparent i.e. text,image,background and whatever within the box. and if we want to transparent only background and not the content within it we can use rgba or hsla color mode.
+	<br/>In Internt explorer older version 8 and its below we can use this property by following syntax.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">filter:alpha(opacity=50);</span> 
+	</div>
+	
+	<br/><span id="idfh1">2.) background-blend-mode</span>
+	<br/><div id="id2">
+	<a id="idfy" href="" target="_blank">Youtube Video Link...</a>
+	<br/>it is used when we have image and color both in the background, we can give different effects by blend mode.
+	<br/><span id="idf3">Syntax:</span>
+	<br/><span id="idf1">background-image:linear-gradient(blue,purple), url(images/3977442.jpg);</span>
+	<br/><span id="idf1">background-blend-mode:overlay;</span>
+	<br/>
+	<br/>Different values are:
+		<ol>
+			<li>normal(default)</li>
+			<li>color-dodge</li>
+			<li>hue</li>
+			<li>multiply</li>
+			<li>color-burn</li>
+			<li>color</li>
+			<li>screen</li>
+			<li>hard-light</li>
+			<li>soft-light</li>
+			<li>saturation</li>
+			<li>overlay</li>
+			<li>luminosity</li>
+			<li>darken</li>
+			<li>difference</li>
+			<li>lighten</li>
+			<li>exclusion</li>
+		</ol>
+	</div>
+	
+	<br/><span id="idfh1">3.) mix-blend-mode</span>
+	<br/><div id="id3">
+	<a id="idfy" href="" target="_blank">Youtube Video Link...</a>
+	<br/>it is similar to the background-blend-mode, in background-blend-mode it shows effect on background but in mix-blend-mode we show effect on the content.
+	<br/><img src="images/3977442.jpg" width="30%"/>
+	<br/><span id="idf3">Syntax:</span>
+	<br/><span id="idf1">
+	img
+			{
+				mix-blend-mode:luminosity;
+			}
+	</span>
+	<br/>it is given in image tag as shown above.
+	<br/>The values of mix-blend-mode and background-blend-mode are same.
+	</div>
+	</body>
+</html>
