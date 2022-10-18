@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>
+			position and z-index
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{
+				background:linear-gradient(white,yellow);
+				font-size:20px;
+			}
+			#id1
+			{width:200px;
+			height:200px;
+			background-color:orange;
+			position:relative;
+			color:white;
+			z-index:1;
+			}
+			#id2
+			{width:200px;
+			height:200px;
+			background-color:green;
+			position:relative;
+			left:50px;
+			top:-150px;
+			z-index:2;
+			color:white;
+			}
+			#id3
+			{width:200px;
+			height:200px;
+			background-color:blue;
+			position:relative;
+			left:100px;
+			top:-300px;
+			z-index:3;
+			color:white;
+			}
+			#id4
+			{
+				color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="idfh1">position:</span>It is used to give location of the div.
+		<a id="idfy" href="https://youtu.be/gOHqGT2RUt0" target="_blank">Youtube Video Link...</a>
+		<br/>It necessory to use following properties with "position".
+		<br/>1.)left(for x axis)
+		<br/>2.)right(for x axis)
+		<br/>3.)top(for y axis)
+		<br/>4.)bottom(for y axis)
+		<br/><span id="idf2">from left or right we have to use only one also from top and bottom we have to use only one.</span>
+		<br/><br/><span id="idf3">Syntax:</span>
+		<br/><span id="idf1">position:sticky;
+		<br/>left:-4px;
+		<br/>bottom:4px;</span>
+		
+		<br/><br/>The values of position properties are:
+		<ol>
+			<li>static</li>
+			<li>relative</li>
+			<li>absolute</li>
+			<li>fixed</li>
+			<li>sticky</li>
+		</ol>
+		
+		<br/><br/><span id="idfh2">2.)relative:</span> In relative the position of the div is with respect to its original position and scroll with the page.
+		<br/><br/><span id="idfh2">3.)absolute:</span> In absolute the position of the div is with respect to absolute screen position and scroll with the page.
+		<br/><br/><span id="idfh2">4.)fixed:</span> In fixed the position of the div is with respect to absolute screen position and does not scroll with the page.
+		<br/><br/><span id="idfh2">5.)sticky:</span> In sticky the position of the div is with respect to absolute screen position and scroll with the page but after reaching at the given position it does not scroll with the page.
+		
+		<br/><br/><span id="idfh1">z-index:</span> to position of any div behind or above from each other.
+		<a id="idfy" href="https://youtu.be/5S2fNVdr-zU" target="_blank">Youtube Video Link...</a>
+		<br/>value of z-index can also be negative.
+		<br/>The "auto" value of z-index is the default value which is near to zero.
+	
+		<div id="id1">A<br/><span id="id4">z-index:1;</span></div>
+		<div id="id2">B<br/><span id="id4">z-index:2;</span></div>
+		<div id="id3">C</br><span id="id4">z-index:3;</span></div></body>
+</html>

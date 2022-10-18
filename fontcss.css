@@ -14,7 +14,7 @@
 	{
 		color:red;
 		font-size:15px;
-		font-family:Lucida Handwriting;
+		font-family:Lucci;
 		}
 #idf3
 	{
@@ -38,3 +38,8 @@
 	{	width:600px;
 		box-shadow:3px 3px 2px 2px blue;
 		}
+@font-face
+	{
+		font-family:lucci;
+		src:url(fonts/LHANDW.TTF)
+	}
