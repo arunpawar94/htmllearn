@@ -22,15 +22,28 @@
 			{
 				body
 				{
-					background:linear-gradient(#E9BDF9,#BA79F7);
+					background:linear-gradient(white,blue);
 				}
 			}
-			
+			@mehdia screen and (max-width:600px)
+			{
+				body
+				{
+					background:linear-gradient(white,red);
+				}
+			}
+			@mehdia screen and (max-width:1000px)
+			{
+				body
+				{
+					background:linear-gradient(white,green);
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<span id="idfh1">@media:</span>It helps in adjusting layout of the web page according to the screen size.
-		<a id="idfy" href="https://youtu.be/vBOMyYP9BDU" target="_blank">Youtube Video Link....</a>
+		<a id="idfy" href="" target="_blank">Youtube Video Link....</a>
 		<br/><span id="idf3">Syntax:</span>
 		<br/><span  id="idf1">
 		<pre>
@@ -42,9 +55,10 @@
 			background-color:blue;
 		   }
 	    }
+	   	   
 		</pre></span>
-	
-	<span id="idfh2">Media type:</span>
+	In above 
+	<br/><br/><span id="idfh2">Media type:</span>
 	<br/>There are 4 types of media:
 	<br/>1.) print (helps in change when we want to print the web page)
 	<br/>2.) screen (helps in change when it runs different size of the screen such as on mobile, tablet etc.)
@@ -97,16 +111,5 @@
 			<li>width</li>
 		</ol>
 	</div>
-	<br/>For example if we open this page in portrait mode such as in mobile screen its background changes. And css code used for this is written below.
-	<br/><span  id="idf1">
-		<pre>
-	@media screen and (orientation:portrait)
-	   {
-		body
-		  {
-			background:linear-gradient(#E9BDF9,#BA79F7);
-		   }
-	    }
-		</pre></span>
 	</body>
 </html>
