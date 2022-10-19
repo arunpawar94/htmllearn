@@ -1,0 +1,135 @@
+<html>
+	<head>
+		<title>
+			resize, cursor and units
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{	
+				font-size:20px;
+				background:linear-gradient(to bottom right,white,lightblue,yellow);
+			}
+			#id1
+			{	
+				width:200px;
+				height:100px;
+				padding-top:90px;
+				padding-left:100px;
+				overflow:auto;
+				resize:both;
+				background-color:tan;
+				border:2px solid black;				
+			}
+			#id2
+			{	
+				width:300px;
+				height:100px;
+				padding-top:90px;
+				padding-left:20px;
+				background-color:tan;
+				border:2px solid black;
+				cursor:wait;
+			}
+			#id3
+			{
+				column-width:200px;
+			}
+			#id3 ol
+			{margin:0;}
+		</style>
+	</head>
+	<body>
+	<span id="idfh1">resize</span>it used to resize the size of any div or anything else.It is necessory to use "overflow:auto;" with resize.
+	<br/><a id="idfy" href="https://youtu.be/yIW_-ECuQ1c" target="_blank">Youtube Video Link....</a>
+	<br/>There are 4 values:
+	<br/>1. none (default value. It can be used in "textarea" tag, since "textarea" is resizable by default to make it non-resizable we use this value.)
+	<br/>2. horizontal (it helps only resize div horizontally)
+	<br/>3. vertical (it helps only resize div vertically)
+	<br/>4. both (it helps resize div vertically as well as horizontally)
+	<br/>Example:
+	<span id="idf1"><pre>
+	overflow:auto;
+	resize:both;
+	</pre></span>
+	<div id="id1">
+	<span id="idf3">Resulted div</span>	
+	</div>
+	
+	<br/><br/><span id="idfh1">cursor:</span>it changes the cursor icon when we move cursor above on any element in page. 
+	<a id="idfy" href="https://youtu.be/pp5ypU_xzeo" target="_blank">Youtube Video Link....</a>
+	<br/><br/><span id="idf3">Syntax:</span><span id="idf1">cursor:wait;</span>
+	<div id="id2">
+	<span id="idf3">move your cursor here to see effect</span>	
+	</div>
+	<br/>The following are the values of the cursor:
+	<div id="id3">
+		<ol>
+			<li>auto (default value no change in cursor icon)</li>
+			<li>default</li>
+			<li>none (hide the cursor)</li>
+			<li>help</li>
+			<li>pointer</li>
+			<li>progress</li>
+			<li>wait</li>
+			<li>cell</li>
+			<li>crosshair</li>
+			<li>text</li>
+			<li>vertical-text</li>
+			<li>alias</li>
+			<li>move</li>
+			<li>no-drop</li>
+			<li>not-allowed</li>
+			<li>copy</li>
+			<li>e-resize</li>
+			<li>n-resize</li>
+			<li>ne-resize</li>
+			<li>nw-resize</li>
+			<li>s-resize</li>
+			<li>se-resize</li>
+			<li>sw-resize</li>
+			<li>w-resize</li>
+			<li>ew-resize</li>
+			<li>ns-resize</li>
+			<li>nesw-resize</li>
+			<li>nwse-resize</li>
+			<li>col-resize</li>
+			<li>row-resize</li>
+			<li>all-scroll</li>
+			<li>zoom-in</li>
+			<li>zoom-out</li>
+			<li>grab</li>
+			<li>grabbing</li>
+		</ol>
+	</div>
+	
+	<br/><br/><span id="idfh1">units:</span> 
+	<a id="idfy" href="https://youtu.be/2CW2B7W4Vas" target="_blank">Youtube Video Link....</a>
+	<br/>Units are devided mainly in 2 catogories:
+	<br/><br/><span id="idfh2">1. Absolute:</span> There values are fixed. They does not depend on other values.
+	<div id="id3">
+		<ol>
+			<li>cm (centimeters)</li>
+			<li>mm (millimeters)</li>
+			<li>in (inches)</li>
+			<li>px (pixels)</li>
+			<li>pt (points)</li>
+			<li>pc (picas)</li>
+		</ol>
+	</div>
+	
+	<br/><span id="idfh2">2. relative:</span> whose value change or depend on parent div or anything else such as body or html.
+	
+		<ol>
+			<li>em (change size according to the parent.For example if body has 10px text and if we use 0.5em than it means 50% of body text which is 5px)</li>
+			<li>rem (relative em. value depends on root tag such as html if browser text is set to 16px than 2rem means 200% of it which is 32px and does not depend on its parent tag)</li>
+			<li>ch</li>
+			<li>ex</li>
+			<li>vw (viewport width,50vw means 50% of the viewport horizontally)</li>
+			<li>vh (viewport height,110vh means 50% of the viewport vertically)</li>
+			<li>vmax (viewport maximum, it takes the value w.r.t which is greater b\w viewport height or viewport width, for example width of screen is 900px and height of screen is 1000px and if we give 60vmax than it equal to 60% of greater value which is height of the screen )</li>
+			<li>vmin (viewport minimum, it takes the value w.r.t which is smaller b\w viewport height or viewport width, for example width of screen is 900px and height of screen is 1000px and if we give 60vmin than it equal to 60% of smaller value which is width of the screen)</li>
+			<li>% (percentage)</li>
+		</ol>
+	</body>
+</html>
