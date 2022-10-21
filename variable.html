@@ -1,0 +1,240 @@
+<html>
+	<head>
+		<title>
+			variable, calc(), clip-path, shape-outside and filter
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+		body
+		{
+			background:linear-gradient(to bottom right,white,yellow);
+			font-size:20px;
+			
+		}
+		
+		#id1
+		{
+		width:350px;
+		height:200px;
+		border:2px solid purple;
+		position:relative;
+		left:calc(50vw - 175px - 1px);
+		
+		}
+		
+		#id2
+		{	width:50%;
+			float:left;
+			text-align:center;
+		}
+		
+		#id2 img
+		{	float:left;
+			width:300px;
+			clip-path:circle(33% at 35% 55%);
+		}
+		#id3
+		{	width:calc(50% - 4px);
+			float:left;
+			border:2px solid blue;
+			overflow:hidden;
+		}
+		
+		#id3 img
+		{	float:left;
+			width:300px;
+			clip-path:circle(33% at 35% 55%);
+		}
+		#id4
+		{	width:calc(50% - 4px);
+			float:left;
+			border:2px solid blue;
+			overflow:hidden;
+		}
+		
+		#id4 img
+		{	float:left;
+			width:300px;
+			clip-path:circle(33% at 35% 55%);
+			shape-outside:circle(33% at 35% 55%);
+		}
+		
+		#id5{clear:both;}
+		
+		#id6{width:300px;}
+		#id6 img{ float:right;position:fixed;right:0;bottom:0;
+		width:300px;}
+		
+		#id7{ float:left;position:relative;left:110px;top:4px;
+		width:1px;}
+		#id7 img:hover
+		{ 	width:300px;
+			filter:blur(5px);
+		}
+		
+		#id8{ float:left;position:relative;left:126px;top:4px;
+		width:1px;}
+		#id8 img:hover
+		{ 	width:300px;
+			filter:brightness(200%);
+		}
+		
+		#id9{ float:left;position:relative;left:115px;top:4px;
+		width:1px;}
+		#id9 img:hover
+		{ 	width:300px;
+			filter:contrast(200%);
+		}
+		#id10{ float:left;position:relative;left:150px;top:4px;
+		width:1px;}
+		#id10 img:hover
+		{ 	width:300px;
+			filter:drop-shadow(6px 6px 5px red);
+		}
+		
+		#id11{ float:left;position:relative;left:120px;top:4px;
+		width:1px;}
+		#id11 img:hover
+		{ 	width:300px;
+			filter:grayscale(150%);
+		}
+		
+		#id12{ float:left;position:relative;left:125px;top:4px;
+		width:1px;}
+		#id12 img:hover
+		{ 	width:300px;
+			filter:hue-rotate(100deg);
+		}
+		
+		#id13{ float:left;position:relative;left:100px;top:4px;
+		width:1px;}
+		#id13 img:hover
+		{ 	width:300px;
+			filter:invert(100%);
+		}
+		
+		#id14{ float:left;position:relative;left:110px;top:4px;
+		width:1px;}
+		#id14 img:hover
+		{ 	width:300px;
+			filter:opacity(50%);
+		}
+		
+		#id15{ float:left;position:relative;left:125px;top:4px;
+		width:1px;}
+		#id15 img:hover
+		{ 	width:300px;
+			filter:saturate(200%);
+		}
+		
+		#id16{ float:left;position:relative;left:100px;top:4px;
+		width:1px;}
+		#id16 img:hover
+		{ 	width:300px;
+			filter:sepia(100%);
+		}
+		
+		</style>
+	</head>
+	<body>
+		<span id="idfh1">variable and var() function:</span>for when we use the same value like color at different places and if we want to change the color then we have to change that color on each and every places which is also a time comsuming. To overcome this problem we use variable.
+		<br/><a id="idfy" href="https://youtu.be/jl3BIjkjmfo" target="_blank">Youtube Video Link....</a>
+		<br/><span id="idf3">syntax:</span>
+		<span id="idf1">
+		<pre>
+		:root
+		{
+		  --variableName:blue;
+		}
+		body
+		{
+		  background-color:var(--variableName);
+		}
+		</pre></span>
+		in ":root" we define the variable of "variableName" store the value of blue color. and in body selector, we change the background-color by calling a var() function with variableName. In ":root"  the scope of variable is global and if we define in any class or id its scope will be local.
+		
+		
+		<br/><br/><span id="idfh1">calc():</span>this property used when we want to give any unit in calculated form.
+		<a id="idfy" href="https://youtu.be/tnqasxOvBFI" target="_blank">Youtube Video Link....</a>
+		<br/><span id="idf3">Syntax:</span><span id="idf1">width:calc(100% - 20px);</span>there is a space before and after "-" sign.
+		<div id="id1">
+		here we use calc() to position the div in center.using following css.
+<br/><span id="idf1"><pre>
+width:350px;
+height:200px;
+border:2px solid purple;
+position:absolute;
+left:calc(50vw - 175px - 1px);
+</pre></span>
+		</div>
+<br/>These 4 operators can be used in calc().
+<br/>1. + (addition)
+<br/>2. - (subtraction)
+<br/>3. * (multiplication)
+<br/>4. / (division)
+
+	<br/>
+	<br/><span id="idfh1">clip-path:</span> it is used to crop the image or div in specific shape.
+	<a id="idfy" href="https://youtu.be/Q1kfSJ2CjV8" target="_blank">Youtube Video Link....</a>
+	<br/><span id="idf3">Syntax:</span><span id="idf1">clip-path:circle(33% at 35% 55%);</span>	
+	<br/><span id="idf3">Example:</span>
+	<br/>
+	<div id="id2">
+	<span id="idfh2">Image with clip-path</span>
+	<br/><img src="images/laxmi.jpg"  >
+	</div>
+	<div>
+	<span id="idfh2">Normal Image</span>
+	<br/><img src="images/laxmi.jpg" width="300px" >
+	</div>
+	<br/>There are 4 values of clip-path are as follow:
+	<br/>1. <span id="idf1">circle(33% at 35% 55%)</span> (there are 3 units we have to given 33% is the radius and 35% is for x axis 55% is for y axis from left and top resp. )
+	<br/>2. <span id="idf1">ellipse(20% 40% at 35% 55%)</span> (there are 4 units we have to given 20% is the horizontal radius, 40% is the vertical radius and 35% is for x axis 55% is for y axis from left and top resp. )
+	<br/>3. <span id="idf1">inset(20% 30% 40% 50%)</span> (there are 4 units we have to given 20% is from top, 30% is from right, 40% is from bottom and 50% is from left of the image )
+	<br/>4. <span id="idf1">poygon(20% 30%,40% 50%,60% 70%)</span> (In this we can give as many point as we want. we have to give cordinates of every point separated by commas. here we have 3 points.)
+	<br/><br/><span id="idf2">from website <a id="idfy" href="https://bennettfeely.com/clippy/" target="_blank">https://bennettfeely.com/clippy/</a> we can copy the css code for different shapes.</span>
+	
+	<br/>
+	<br/><span id="idfh1">shape-outside</span> when we use property "clip-path" space outside the clip remains blank and not occupied by the text if present. To place the text here we use "shape-outside" property. "shape-outside" works only when there is "clip-path" property is given. The value of "clip-path" and "shape-outside" is same.
+	<a id="idfy" href="https://youtu.be/hIw7AmAPIQk" target="_blank">Youtube Video Link....</a>
+	<br/><span id="idf3">Syntax:</span><span id="idf1">shape-outside:circle(33% at 35% 55%);</span>	
+	<br/><span id="idf3">Example:</span>
+	<br/>
+	<div id="id3">
+	<span id="idfh2">without shape-outside</span>
+	<br/><img src="images/laxmi.jpg"  >
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, tempor sit amet lobortis vel, laoreet vitae risus. Suspendisse potenti. Ut vel velit elementum, viverra sem id, eleifend ante. Duis ultricies tortor sed commodo varius. Curabitur sagittis augue non augue maximus condimentum. Fusce et ullamcorper neque. In et porta turpis. Ut bibendum, felis sed pretium euismod, enim mauris ultrices leo, vel fringilla nunc dolor iaculis urna. Nulla enim purus, iaculis sed aliquam eu, laoreet sed tellus. Praesent tristique sem sed fringilla elementum. Maecenas ligula nunc, porttitor non auctor sed, rutrum vitae diam.
+	</div>
+	<div id="id4">
+	<span id="idfh2">with shape-outside property</span>
+	<br/><span id="idf1">shape-outside:circle(33% at 35% 55%);</span>
+	<br/><img src="images/laxmi.jpg" width="300px" >
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin metus tortor, tempor sit amet lobortis vel, laoreet vitae risus. Suspendisse potenti. Ut vel velit elementum, viverra sem id, eleifend ante. Duis ultricies tortor sed commodo varius. Curabitur sagittis augue non augue maximus condimentum. Fusce et ullamcorper neque. In et porta turpis. Ut bibendum, felis sed pretium euismod, enim mauris ultrices leo, vel fringilla nunc dolor iaculis urna. Nulla enim purus, iaculis sed aliquam eu, laoreet sed tellus. Praesent tristique sem sed fringilla elementum. Maecenas ligula nunc, porttitor non auctor sed, rutrum vitae fringilla elementum. Maecenas ligula nunc, porttitor non auctor sed, rutrum vitae diam.
+	</div>
+	<div id="id5"><br/>we can also give some gap b\t clip-path and text by using property <span id="idf1">shape-margin:20px;
+	</div>
+	
+		<br/>
+	<br/><span id="idfh1">filter</span> filter property is used to change the appearance of the images
+	<a id="idfy" href="https://youtu.be/s4ajxG8Bs-M" target="_blank">Youtube Video Link....</a>
+	<br/><span id="idf3">Syntax:</span><span id="idf1">filter:</span>	
+	<br/>different values of the filter are:
+	<br/>1. none (default value remove all effect)
+	<br/>2. blur(5px);<div id="id7"><img src="images\arunpawar.jpg" width="21px" title="filter:blur(5px);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp(its default value is 0px)
+	<br/>3. brightness();<div id="id8"><img src="images\arunpawar.jpg" width="21px" title="filter:brightness(200%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (its value is given in %, 100% is its default value, at 0 it become black, above 100% it become brighter ) 
+	<br/>4. contrast();<div id="id9"><img src="images\arunpawar.jpg" width="21px" title="filter:contrast(200%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (it is given in %, 100% is default value, its value can be 0 and above 100%)
+	<br/>5. drop-shadow();<div id="id10"><img src="images\arunpawar.jpg" width="21px" title="filter:drop-shadow(6px 6px 5px red);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (it is similar to box-shadow)
+	<br/>6. grayscale();<div id="id11"><img src="images\arunpawar.jpg" width="21px" title="filter:grayscale(100%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (0 is default value,min is 0% and max is 100%)
+	<br/>7. hue-rotate();<div id="id12"><img src="images\arunpawar.jpg" width="21px" title="filter:hue-rotate(100deg);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp(its value is given in "deg" 0deg in min and 360deg is max value)
+	<br/>8. invert();<div id="id13"><img src="images\arunpawar.jpg" width="21px" title="filter:invert(100%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (0% is default value, 0% is min and 100% is max)
+	<br/>9. opacity();<div id="id14"><img src="images\arunpawar.jpg" width="21px" title="filter:opacity(50%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (100% is default value,0% is full transparent and 100% is fully non transparent)
+	<br/>10. saturate();<div id="id15"><img src="images\arunpawar.jpg" width="21px" title="filter:saturate(200%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (100% is default value, we can also give its value above or below 100%)
+	<br/>11. sepia();<div id="id16"><img src="images\arunpawar.jpg" width="21px" title="filter:sepia(100%);"></div> &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp (0% is default value, 0% is min and 100% is max)
+	<br/>12. url() ()
+	
+	<div id="id6"><img src="images\arunpawar.jpg" title="filter:blur(5px);"></div>
+	
+	<br/><br/>We can also give multiple filters in following way:
+	<br/><span id="idf1">filter:blur(2px) hue-rotate(200deg) saturate(200%);</span>	
+	</body>
+</html>
