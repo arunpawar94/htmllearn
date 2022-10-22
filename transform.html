@@ -1,0 +1,124 @@
+<html>
+	<head>
+		<title>
+			transporm 2d and transform 3d
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{
+				background:linear-gradient(to bottom right,#d0ffae,#34ebe9);
+				font-size:20px;
+			}
+			
+			#s1
+			{	
+				font-size:30px;
+				text-align:center;
+				padding-top:80px;
+				position:fixed;
+				right:50px;
+				top:50px;
+				width:300px;
+				height:200px;
+				float:right;
+				border:4px solid purple;
+				background-color:yellow;
+				color:blue;
+				box-sizing:border-box;
+				transform:none;
+				transition-property:transform;
+				transition-duration:1s;
+				
+				}
+			
+			#id1,#id2,#id3,#id4,#id5,#id6,#id7,#id8,#id9,#id10,#id11
+			{
+				border-radius:10px;
+				text-align:center;
+				padding:5px;
+				color:white;
+				width:80px;
+				background:linear-gradient(pink,blue);
+				text-shadow:2px 2px 2px red;
+				cursor:pointer;
+			}
+			
+			#id1:hover ~ #s1{transform:rotate(270deg);}
+			
+			#id2:hover ~ #s1{transform:skewx(20deg);}
+			
+			#id3:hover ~ #s1{transform:skewy(20deg);}
+			
+			#id4:hover ~ #s1{transform:skew(25deg,20deg);}
+			
+			#id5:hover ~ #s1{transform:translatex(-80px);}
+			
+			#id6:hover ~ #s1{transform:translatey(80px);}
+			
+			#id7:hover ~ #s1{transform:translate(-80px,80px);}
+			
+			#id8:hover ~ #s1{transform:scalex(1.5);}
+			
+			#id9:hover ~ #s1{transform:scaley(1.5);}
+			
+			#id10:hover ~ #s1{transform:scale(1.2);}
+			
+			#id11:hover ~ #s1{transform:matrix(1.3,0.2,0.3,1.5,-80,80);}
+			
+		</style>
+	</head>
+	<body>
+	<span id="idfh1">transform 2D:</span> In 2d transform we can rotate,scale,skew any element in css<a id="idfy" href="" target="_blank">Youtube Video Link....</a>
+	<br/>following 12 value of the transform 2D:
+	<br/><br/><span id="idfh2">1. none:</span> (default value,no transform)
+	
+	<br/><br/><span id="idfh2">2. rotate(angle):</span> (rotate the element,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:rotate(270deg);</span>
+	<br/><div id="id1">Result:</div>
+	
+	<br/><br/><span id="idfh2">3. skewx(angle)</span> (rotate the wrt element x-axis,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:skewx(20deg);</span>
+	<br/><div id="id2">Result:</div>
+	
+	<br/><br/><span id="idfh2">4. skewy(angle)</span> (rotate the wrt element y-axis,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:skewy(20deg);</span>
+	<br/><div id="id3">Result:</div>
+	
+	<br/><br/><span id="idfh2">5. skew(angle,angle)</span> (rotate the element wrt x-axis and y-axis,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:skewy(20deg);</span>
+	<br/><div id="id4">Result:</div>
+	
+	<br/><br/><span id="idfh2">6. translatex(-80px)</span> (it change the position of the element horizontally, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:translatex(-50px);</span>
+	<br/><div id="id5">Result:</div>
+	
+	<br/><br/><span id="idfh2">7. translatey(80px)</span> (it change the position of the element vertically, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:translatey(80px);</span>
+	<br/><div id="id6">Result:</div>
+	
+	<br/><br/><span id="idfh2">8. translate(-80px,80px)</span> (it change the position of the element horizontally and vertically respectively, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:translate(-80px,80px);</span>
+	<br/><div id="id7">Result:</div>
+	
+	<br/><br/><span id="idfh2">9. scalex(1.5)</span> (shrink or expand the element horizontally,1 is default value,its value can be negative or positive)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:scalex(1.5);</span>
+	<br/><div id="id8">Result:</div>
+	
+	<br/><br/><span id="idfh2">10. scaley(1.5)</span> (shrink or expand the element vertically,1 is default value,its value can be negative or positive)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:scaley(1.5);</span>
+	<br/><div id="id9">Result:</div>
+	
+	<br/><br/><span id="idfh2">11. scale(1.2)</span> (shrink or expand the element horizontally and vertically,1 is default value,its value can be negative or positive)
+	<br/><span id="idf3">Syntax:</span>
+	<br/>1.<span id="idf1">transform:scale(1.2);</span>
+	<br/>2. <span id="idf1">transform:scale(1.2,1.5);</span>
+	<br/><div id="id10">Result:</div>
+	
+	<br/><br/><span id="idfh2">11. matrix(1.3,0.2,0.3,1.5,-80,80);</span> (by matrix,we can give following value in shortly in following order "matrix(scalex(),skewy(),skewx(),scaley(),translatex(),translatey())" )
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:matrix(1.3,0.2,0.3,1.5,-80,80);</span>
+	<br/><div id="id11">Result:</div>
+
+	<div id="s1">without transform</div>
+	</body>
+</html>

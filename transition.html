@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<title>
+			transition
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{	
+				font-size:20px;
+				background:linear-gradient(to bottom right,white,lightblue,yellow);
+
+			}
+			
+
+			table,td
+			{
+			border:1px solid green;}
+			table tr th{color:white;background-color:#A31FF9;}
+			table tr th,td
+			{	
+				text-align:center;
+				font-size:20px;
+				
+				border-collapse:collapse;
+				height:23px;
+				
+				
+			}
+			table tr
+			{
+				border:1px solid red;
+			}
+			tr:nth-child(even)
+			{ background-color:#6775F9;}
+			tr:nth-child(odd)
+			{ background-color:#9CA4F9}
+			table tr:hover
+			{padding:4px;
+			background-color:white;}
+			table tr td:hover
+			{padding:4px;}
+			#id1
+			{	width:600px;
+				padding-left:20px;
+				height:330px;
+				color:blue;
+				background-color:yellow;
+				transition-property:color,width,background-color;
+				transition-duration:2s;
+			}
+			#id1:hover
+			{	width:100%;
+				color:yellow;
+				background-color:blue;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<span id="idfh1">transition:</span> make the change in effect smooth.
+	<a id="idfy" href="" target="_blank">Youtube Video Link....</a>
+	<br/>Different properties are as follows:
+	<br/>1. transition-property
+	<br/>2. transition-duration
+	<br/>3. transition-delay
+	<br/>4. transition-timing-function
+	<br/>5. transition
+	
+	<br/><br/><span id="idfh2">transition-property:</span>it apply on which property of css we want to apply transition such as width, background, transform etc.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transition-property:width,height,background;</span>
+
+	<br/><br/><span id="idfh2">transition-duration:</span> it used in how long in time a transition should be complete in. It can be in "s" or "ms".
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transition-duration:2s 3s 4s;</span>(multiple time for diferent properties in transition-property we have give such as 2s for width,3s for height and 4s for background)
+
+	<br/><br/><span id="idfh2">transition-timing-function:</span> if we want the transition slow or fast.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transition-timing-function:ease-in-out</span>(slow in starting and normal end)
+	<table>
+		<tr>
+			<th>Unit</th>
+			<th>Description</th>
+		</tr>
+		
+		<tr>
+			<td>ease</td>
+			<td>slow start,then fast,then end slowly</td>
+		</tr>
+		<tr>
+			<td>linear</td>
+			<td>same speed from start to end</td>
+		</tr>
+		<tr>
+			<td>ease-in</td>
+			<td>slow start</td>
+		</tr>
+		<tr>
+			<td>ease-out</td>
+			<td>slow end</td>
+		</tr>
+		<tr>
+			<td>ease-in-out</td>
+			<td>slow start and end</td>
+		</tr>
+		<tr>
+			<td>step-start</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>step-end</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>steps(4,end)</td>
+			<td>we can give in how many steps transition completed</td>
+		</tr>
+		<tr>
+			<td>cubic-bezier(2s,3s,4s,5s)</td>
+			<td>duration of each step, 4 is fixed number of steps can given here</td>
+		</tr>
+	</table>
+
+	<br/><br/><span id="idfh2">transition-delay:</span> used to how long it take time before transition start.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transition-delay:2s;</span> (transition start after 2s)
+	
+	
+	<br/><br/><br/><span id="idfh2">transition:</span> it is shorthand of above 4 properties.
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transition:all 2s,3s,4s linear 1s;</span>(property, duration, timing-function, delay respectively it should be in the same order as written here)
+
+	<br/><br/>Example:
+	<div id="id1">
+	<pre>
+#id1
+{ width:600px;
+  height:350px;
+  color:blue;
+  background-color:yellow;
+  transition-property:color,width,background-color;
+  transition-duration:2s;
+}
+#id1:hover
+{ width:500px;
+  color:yellow;
+  height:450px;
+  background-color:blue;
+}
+	</pre>
+	</div>
+
+	</body>
+</html>
