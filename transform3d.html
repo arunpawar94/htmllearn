@@ -1,0 +1,132 @@
+<html>
+	<head>
+		<title>
+			transporm 3d
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{
+				background:linear-gradient(to bottom right,#F8BCF5,#7DF667);
+				font-size:20px;
+			}
+			
+			#s1
+			{	
+				font-size:30px;
+				text-align:center;
+				padding-top:80px;
+				position:fixed;
+				right:50px;
+				top:50px;
+				width:300px;
+				height:200px;
+				float:right;
+				border:4px solid purple;
+				background-color:yellow;
+				color:blue;
+				box-sizing:border-box;
+				transform:none;
+				transition-property:transform,background-color;
+				transition-duration:1s;
+				
+				
+				}
+			
+			#s2
+			{	
+				position:fixed;
+				right:50px;
+				top:50px;
+				width:300px;
+				height:200px;
+				float:right;
+				background-color:gray;
+				box-sizing:border-box;
+				
+			}
+			
+			#id1,#id2,#id3,#id4,#id5,#id6,#id7,#id8,#id9,#id10,#id11
+			{
+				border-radius:10px;
+				text-align:center;
+				padding:5px;
+				color:white;
+				width:80px;
+				background:linear-gradient(pink,blue);
+				text-shadow:2px 2px 2px red;
+				cursor:pointer;
+			}
+			
+			#id1:hover ~ #s2 #s1{transform:perspective(800px) rotatex(70deg);background-color:tomato;}
+			
+			#id2:hover ~ #s2 #s1{transform:perspective(800px) rotatey(70deg);background-color:tomato;}
+			
+			#id3:hover ~ #s2 #s1{transform:rotatez(70deg);background-color:tomato;}
+			
+			#id4:hover ~ #s2 #s1{transform:perspective(800px) translatez(200px);background-color:tomato;}
+			
+			#id5:hover ~ #s2 #s1{transform:perspective(800px) translate3d(-80px,80px,200px);background-color:tomato;}
+			
+			#id6:hover ~ #s2 #s1{transform:perspective(800px) scalez(4) rotatex(40deg);background-color:tomato;}
+			
+			#id7:hover ~ #s2 #s1{transform:perspective(800px) scale3d(2,2,2) rotatex(40deg);background-color:tomato;}
+			
+			#id8:hover ~ #s2 #s1{transform:perspective(800px) matrix3d(0.6, 0.1, 0.7, 0, -0.5, 0.8, 0.1, 0, -0.6, -0.5, 0.5, 0, 0, 0, 0, 1);background-color:tomato;}
+			
+		</style>
+	</head>
+	<body>
+	
+	<span id="idfh1">transform 3D:</span> It is similar to 2D transform but here we have z-axis also. <a id="idfy" href="https://youtu.be/B6G5BRVt2n8" target="_blank">Youtube Video Link....</a>
+	<br/>following 12 value of the transform 3D:
+	
+	<br/><br/><span id="idfh2">1. none:</span> (default value,no transform)
+	
+	<br/><br/><span id="idfh2">2. rotatex(angle):</span> (rotating x-axis,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) rotatex(70deg);</span>
+	<br/>we use "perspective(800px)" value here so that we can see effect clearly.
+	<br/><div id="id1">Result:</div>
+	
+	<br/><br/><span id="idfh2">3. rotatey(angle):</span> (rotating y-axis,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) rotatey(70deg);</span>
+	<br/>we use "perspective(800px)" value here so that we can see effect clearly.
+	<br/><div id="id2">Result:</div>
+	
+	<br/><br/><span id="idfh2">4. rotatez(angle):</span> (rotating z-axis, it looks similar to rotate in 2D transform,value is in degree, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) rotatez(70deg);</span>
+	
+	<br/><div id="id3">Result:</div>
+	
+	<br/><br/><span id="idfh2">5. translatez(200px):</span> (we are moving on z-axis, value is in pixel, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) translatez(200px);</span>
+	<br/>we use "perspective(800px)" value here so that we can see effect clearly.
+	<br/><div id="id4">Result:</div>
+	
+	<br/><br/><span id="idfh2">6. translate3d(-80px,80px,200px):</span> (we are moving on x-axis,y-axis and z-axis in same order, value is in pixel, it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) translate3d(-80px,80px,200px);</span>
+	<br/>we use "perspective(800px)" value here so that we can see effect clearly.
+	<br/><div id="id5">Result:</div>
+	
+	<br/><br/><span id="idfh2">7. scalez(4):</span> (we are changing size of the element on wrt to z-axis,here we use "scalez(4)" means value 4 times the size of normal element, "1" is the default value,it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) scalez(4) rotatex(40deg);</span>
+	<br/>we use "perspective(800px)" and "rotatex(40deg)" value here so that we can see effect clearly.
+	<br/><div id="id6">Result:</div>
+	
+	<br/><br/><span id="idfh2">8. scale3d(2,2,2):</span> (we are changing size of the element on wrt to x-axis, y-axis and z-axis,here we use "scalez(2,2,2)" means value 2 times the size of normal element,it can be negative or positive both)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:perspective(800px) scalez(4) rotatex(40deg);</span>
+	<br/>we use "perspective(800px)" and "rotatex(40deg)" value here so that we can see effect clearly.
+	<br/><div id="id7">Result:</div>
+	
+	<br/><br/><span id="idfh2">9. matrix3d(0.6, 0.1, 0.7, 0, -0.5, 0.8, 0.1, 0, -0.6, -0.5, 0.5, 0, 0, 0, 0, 1):</span> (all value of 3D transform can be given in matrix3d)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">transform:matrix3d(0.6, 0.1, 0.7, 0, -0.5, 0.8, 0.1, 0, -0.6, -0.5, 0.5, 0, 0, 0, 0, 1);</span>
+	<br/>we use "perspective(800px)" and "rotatex(40deg)" value here so that we can see effect clearly.
+	<br/><div id="id8">Result:</div>
+	
+	<br/><div id="s2">
+	<div id="s1">3D transform:</div>
+	</div>
+	
+	<br/><br/><span id="idf2">In above div we use other property also such as transition,background-color,perspective and a parent div of gray color so that we can easily differentiate the 3D transform effects.</span>
+	</body>
+</html>
