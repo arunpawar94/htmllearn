@@ -11,14 +11,19 @@
 				font-size:20px;
 			}
 			
+			img
+			{
+				filter:drop-shadow(6px 6px 2px blue);
+			}
+			
 			#s1
 			{	
 				font-size:30px;
 				text-align:center;
 				padding-top:80px;
 				position:fixed;
-				right:8vw;
-				top:8vh;
+				right:50px;
+				top:50px;
 				width:300px;
 				height:200px;
 				float:right;
@@ -36,8 +41,8 @@
 			#s2
 			{	
 				position:fixed;
-				right:8vw;
-				top:8vh;
+				right:50px;
+				top:50px;
 				width:300px;
 				height:200px;
 				float:right;
@@ -128,5 +133,19 @@
 	</div>
 	
 	<br/><br/><span id="idf2">In above div we use other property also such as transition,background-color,perspective and a parent div of gray color so that we can easily differentiate the 3D transform effects.</span>
+	
+	<br/><br/><span id="idfh1">perspective:</span> it is used to change the view point.
+		<a id="idfy" href="https://youtu.be/vj2TZ2rnuGk" target="_blank">Youtube Video Link....</a>
+		<br/><img src="images\perspective.jpg" width="500px"/>
+
+		<br/>There are 2 properties:
+		<br/>1. perspective: (it is given in parent element,its value is in pixel. it change the distance from element.)
+		<br/><span id="idf3">Syntax:</span><span id="idf1">perspective:400px;</span>
+		
+		<br/>2. perspective-origin: (change the direction of the view)
+		<br/><span id="idf3">Syntax:</span><span id="idf1">perspective-origin:30% 40%;</span>(30% from horizontal and 40% from vertical.)
+		<br/>the values are:
+		<br/><img src="images\perspectiveorigin.jpg" width="700px"/>
+	
 	</body>
 </html>
