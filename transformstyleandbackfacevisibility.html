@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<title>
+			transform-style and backface-visibility
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{
+				font-size:20px;
+				background:linear-gradient(to bottom right,rgb(253 253 253),rgb(0 48 24));
+			}
+			.cl1
+			{
+			width:500px;
+			height:250px;
+			background-color:gray;
+			transform:rotatey(50deg);
+			transform-style:flat;
+			border:2px solid red;
+			float:right;
+			}
+			
+			#id1
+			{
+			
+			width:500px;
+			height:250px;
+			background-color:tomato;
+			
+			transition-property:transform;
+			transition-duration:1s;
+			border:2px solid blue;
+			transform:rotatex(40deg);
+			}
+	
+			.cl2
+			{
+			width:500px;
+			height:250px;
+			background-color:gray;
+			transform:rotatey(50deg);
+			transform-style:preserve-3d;
+			border:2px solid red;
+			float:right;
+			}
+			
+			
+			.bv1
+			{
+				float:right;
+				border:2px solid red;
+				width:300px;
+				height:300px;
+				position:absolute;
+				right:100px;
+				
+				perspective:800px;
+			}
+			.cn
+			{
+				width:300px;
+				height:300px;
+				
+				transform:rotatey(0deg);
+				position:absolute;
+				transition-property:transform;
+				transition-duration:1s;
+				transform-style:preserve-3d;
+			}
+			.bv1:hover .cn
+			{
+				transform:rotatey(180deg);
+			}
+			#fr,#bk,#fr2,#bk2
+			{	
+				width:300px;
+				height:300px;
+				font-size:60px;
+				text-align:center;
+				line-height:300px;
+				position:absolute;
+				}
+			#fr,#fr2
+			{
+				background-color:yellow;
+				color:blue;
+				
+			}
+			#bk,#bk2
+			{
+				background-color:blue;
+				color:yellow;
+				transform:rotatey(180deg);
+				
+			}
+			#fr2,#bk2{backface-visibility:hidden;}
+		
+		</style>	
+	</head>
+	<body>
+	<span id="idfh1">transform-style:</span> It is given in parent element.by this we are able to see back of the element. It is used with transform property. It gives it 3d effect.
+	<a id="idfy" href="https://youtu.be/4CcL8rsrDd8" target="_blank"> Youtube Video Link....</a>
+	
+	<br/><br/>There are 2 values;
+	
+	<br/><span id="idfh2">1. flat:</span> (It is default value)
+ 	<br/><span id="idf3">Syntax:</span><span id="idf1">transform-style:flat;</span>
+	<div class="cl1"><div id="id1"></div></div>
+	
+	
+	<div style="clear:both;">
+	<br/><span id="idfh2">1. preserve-3d:</span> (it gives 3d look, by we are able to see back of the parent element)
+ 	<br/><span id="idf3">Syntax:</span><span id="idf1">transform-style:preserve-3d;</span>
+	<div class="cl2"><div id="id1"></div></div>
+	</div>
+
+	<div style="clear:both;">
+	<span id="idf2"> in above div,we give parent div rotatey and child div rotatex so that we can see the effect of transform-style.</span>
+	</div>
+	
+	
+	<br/><br/><span id="idfh1">backface-visibility</span> it helps in hidden or visible the backface of the element, it only works with transform property.
+	<a id="idfy" href="https://youtu.be/4Mw_VHi2ulg" target="_blank"> Youtube Video Link....</a>
+	<br/><br/>
+	
+	<div style="float:left;width:calc(100% - 410px);min-height:300px;">
+	There are 2 values;
+	<br/>
+	<br/><span id="idfh2">1. visible:</span> (It is default value)
+	<br/><span id="idf3">Syntax:</span><span id="idf1">backface-visibility:visible;</span>
+	<br/>here we have 2 div one is front and another is back. we rotate the back div at y-axis at 180deg. Since the backface of the back div is visible so we are not able to see the front div which is behind of it. 
+</div>
+	
+	<div class="bv1">
+		<div class="cn">
+			<div id="fr">Front!</div>
+			<div id="bk">Back!</div>
+		</div>
+	</div>
+<br/>
+	<div style="clear:both;">
+		<div style="float:left;width:calc(100% - 410px);min-height:300px;">
+			<br/><span id="idfh2">2. hidden</span>
+	
+	
+	<br/><span id="idf3">Syntax:</span><span id="idf1">backface-visibility:hidden;</span>
+	<br/>here we have 2 div one is front and another is back. we rotate the back div at y-axis at 180deg. Since the backface of the back div is visible so we are not able to see the front div which is behind of it. 
+</div>
+	
+	<div class="bv1">
+		<div class="cn">
+			<div id="fr2">Front!</div>
+			<div id="bk2">Back!</div>
+		</div>
+	</div>
+	
+	
+	</div>
+	
+	
+	
+	</body>
+</html>
