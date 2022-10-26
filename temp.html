@@ -3,55 +3,29 @@
 		<title>
 		</title>
 		<style>
-			.cn
-			{
-				width:300px;
-				height:300px;
-				
-				transform:rotatey(0deg);
-				position:absolute;
-				left:50%;
-				right:50%;
-				transition-property:transform;
-				transition-duration:1s;
-				transform-style:preserve-3d;
-			}
-			.cn:hover
-			{
-				transform:rotatey(180deg);
-			}
-			#fr,#bk
-			{	
-				width:300px;
-				height:300px;
-				font-size:60px;
-				text-align:center;
-				line-height:300px;
-				position:absolute;
-				backface-visibility:hidden;
-				
-			}
-			#fr
-			{
-				background-color:yellow;
-				color:blue;
-				
-			}
-			#bk
-			{
-				background-color:blue;
-				color:yellow;
-				transform:rotatey(180deg);
-				
-			}
+		img
+		{
+			margin-left:350px;
+			margin-top:90px;
+			animation-name:arun;
+			animation-duration:1s;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+		}
+		@keyframes arun
+		{
+			0% {filter:hue-rotate(0deg);}
+			20% {filter:hue-rotate(72deg);}
+			40% {filter:hue-rotate(144deg);}
+			60% {filter:hue-rotate(216deg);}
+			805 {filter:hue-rotate(288deg);}
+			100% {filter:hue-rotate(360deg);}
+			
+		}
 			
 		</style>
 	</head>
 	<body>
-		<div class="cn">
-			<div id="fr">Front!</div>
-			<div id="bk">Back!</div>
-			
-		</div>
+		<img src="images\arunpawar.jpg"/>
 	</body>
 </html>

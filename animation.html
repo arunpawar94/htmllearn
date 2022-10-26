@@ -1,0 +1,233 @@
+<html>
+	<head>
+		<title>
+			animation
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			body
+			{
+				background:linear-gradient(to bottom right,#00000029,#0000009c);
+				font-size:20px;
+			}
+			
+			
+			table
+			{
+				border-spacing:0;
+				border:8px ridge #454546;
+				margin:10px 0 0 30px;
+				font-size:20px;
+				width:700px;
+			}
+			table tr th,td
+			{	
+				
+				padding:4px 20px 4px 20px;
+			}
+			
+			tr:nth-child(even)
+			{
+				background-color:#b6d38c;
+			}
+			tr:nth-child(odd)
+			{
+				background-color:#dfde77;
+			}
+				
+			table tr
+			{
+				transform:scale(1,1);
+				transition-property:transform;
+				transition-duration:0.2s;
+			}
+			table tr:hover
+			{	
+				
+				transform:scale(1.03,1.2);
+				background-color:yellow;
+				color:#0d3a48;
+	
+			}
+			
+			#idf1
+			{
+				font-size:25px;
+				text-shadow:2px 2px 2px yellow;
+			}
+			#idfh1
+			{
+				font-size:35px;
+				letter-spacing:2px;
+				animation-name:hss;
+				animation-duration:1s;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;
+			}
+			@keyframes hss
+			{ 
+				form {color:#000099;
+		
+		text-decoration:underline #000066 solid;
+		text-shadow:2px 2px 3px red;}
+				to {color:yellow;
+		
+		text-decoration:underline yellow solid;
+		text-shadow:3px 3px 2px blue;}
+			}
+		</style>
+	</head>
+	<body>
+		<span id="idfh1">animation:</span> it automatically allow the changing effect on any element. For example the animation word is changing color in main hading.
+		<br/><a id="idfy" href="https://youtu.be/MJXNX3kdNS0" target="_blank">Youtube Video Link....</a>
+	
+	<br/><br/><span id="idf3">Syntax:</span>
+	<br/>There are 2 ways to define the working of animation.<pre id="idf1">
+ <div style="float:left;min-height:280;"> @keyframes name_of_animation
+  { 
+    form {css property at starting }
+    to {css property at end}
+  }</div><div style="float:left;margin-left:50px;margin-top:110px;min-height:170;color:green;font-size:35px;font-weight:700;"> or </div><div style="float:left;margin-left:50px;"> @keyframes name_of_animation
+  { 
+    0% {css property at starting }
+    20% {css property at 20% of animation}
+    40% {css property at 40% of animation}
+	.
+	.
+	.
+	.
+    100% {css property at end}
+	
+  }</div></pre>
+  <div style="clear:both;">
+	
+	<br/><br/>Different properties of the animation are:
+	<br/><br/>1. <span id="idf1">animation-name:name_of_animation;</span> (it is the name of animation as we given in @keyframens)
+	<br/><br/>2. <span id="idf1">animation-duration:2s;</span> (it is the time how long the animation take.)
+	<br/><br/>3. <span id="idf1">animation-timing-function:ease;</span>
+	<br/>It has following 9 values:
+	<table>
+		<tr style="background-color:#0d3a48;color:#cdfda1">
+			<th>S.no.</th>
+			<th>Unit</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>ease</td>
+			<td>slow start,then fast,then end slowly</td>
+		</tr>
+		<tr>
+			<td>2.</td>
+			<td>linear</td>
+			<td>same speed from start to end</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>ease-in</td>
+			<td>slow start</td>
+		</tr>
+		<tr>
+			<td>4.</td>
+			<td>ease-out</td>
+			<td>slow end</td>
+		</tr>
+		<tr>
+			<td>5.</td>
+			<td>ease-in-out</td>
+			<td>slow start and slow end</td>
+		</tr>
+		<tr>
+			<td>6.</td>
+			<td>step-start</td>
+			<td>equivalent to steps(1,start)</td>
+		</tr>
+		<tr>
+			<td>7.</td>
+			<td>step-end</td>
+			<td>Equivalent to steps(1,end)</td>
+		</tr>
+		<tr>
+			<td>8.</td>
+			<td>steps(#,start/end)</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>9.</td>
+			<td>cubic-bezier</td>
+			<td>lets you define your own values(0 to 1)</td>
+		</tr>
+	</table>
+	
+	<br/><br/>4. <span id="idf1">animation-delay:2s;</span> (after how much time does the animation start)
+	<br/><br/>5. <span id="idf1">animation-iteration-count:5;</span> (how many time does animation run, it can be given in number. If we want to run it infinite time we use word "infinite")
+	<br/><br/>6. <span id="idf1">animation-direction:alternate;</span>
+	<br/>It has following 4 values:
+	<table>
+		<tr style="background-color:#0d3a48;color:#cdfda1">
+			<th>S.no.</th>
+			<th>Unit</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>normal</td>
+			<td>default</td>
+		</tr>
+		<tr>
+			<td>2.</td>
+			<td>reverse</td>
+			<td>start from 100%(end) and end at 0%(start)</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>alternate</td>
+			<td>start from 0%(start) move to 100%(end) and end at 0%(start)</td>
+		</tr>
+		<tr>
+			<td>4.</td>
+			<td>alternate-reverse</td>
+			<td>start from 100%(end) move to 0%(start) and end at 100%(end)</td>
+		</tr>
+	</table>
+	<br/><br/>7. <span id="idf1">animation-fill-mode:backwards;</span>
+	<br/>It has following 4 values:
+	<table>
+		<tr style="background-color:#0d3a48;color:#cdfda1">
+			<th>S.no.</th>
+			<th>Unit</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>1.</td>
+			<td>none</td>
+			<td>default value</td>
+		</tr>
+		<tr>
+			<td>2.</td>
+			<td>backwards</td>
+			<td>already at 0% and start from here and end at initially</td>
+		</tr>
+		<tr>
+			<td>3.</td>
+			<td>forwards</td>
+			<td>start at initially and end at 100% and pause here</td>
+		</tr>
+		<tr>
+			<td>4.</td>
+			<td>both</td>
+			<td>both backward and forward works i.e. already at 0% and start from here and end at 100% and pause here</td>
+		</tr>
+		
+	</table>
+	<br/><br/>8. <span id="idf1">animation-play-state:paused;</span>
+	<br/>It has only 2 values:
+	<br/>1. paused (it pause the animation on any condition such as we hover on that element)
+	<br/>2. running (it run the animation on any condition such as we hover on that element)
+	
+	<br/><br/>9. <span id="idf1">animation:arun 2s ease-in 3s infinite alternate backwards paused;</span> (it is the shorthand of above all propertie of the animation)
+	<br/>The order of giving value is:
+	<br/>name_animation duration timing-function delay iteration-count direction fill-mode play-state.
+  </div>
+	</body>
+</html>
