@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>
+            object-fit, user-select, box-decoration-break
+        </title>
+         <link rel="stylesheet" href="fontcss.css">  
+		<style>
+            body
+            {
+                font-size:20px;
+                background:linear-gradient(to bottom right,#f0efb4,#a7e93d);
+            }
+
+            #id1
+            {
+                border:3px inset #d254dd;
+                line-height:30px;
+                background:linear-gradient(yellow,tomato);
+            }
+
+            #id2
+            {
+                border:3px inset #d254dd;
+                line-height:30px;
+                background:linear-gradient(yellow,tomato);
+                -webkit-box-decoration-break: clone;
+                border-radius:6px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <span id="idfh1">object-fit:</span> It is the new way to make responsive the images or videos.<a id="idfy" target="_blank" href="https://youtu.be/Jjwf4IEfOHk">Youtube Video Link....</a>
+        <br/><span id="idf3">Syntax:</span><span id="idf1"> object-fit:contain;</span>
+        
+        <br/><br/>There are following 5 values:
+        <br/>1. fill (here image cover the whole space it stretch or screw itself if required to fill the remaining space)
+        <br/>2. contain (image resize itself, according to the space and image does not crop always show the whole image)
+        <br/>3. cover (cover the given area and does not stretch or screw it crops according to the space available if we resize the browser)
+        <br/>4. scale-down (it is similar to the contain value)
+        <br/>5. none (cover the given area and does not stretch or screw it crops according to the space available if we resize the browser)
+
+        <br/><br/><span id="idfh2">object-position</span> It is another property which is used with object-fit to give position of the reference point w.r.t which the image resize.
+        <br/><br/><span id="idf3">Syntax:</span><span id="idf1"> object-position:top;</span>
+        
+        <br/><br/>There are following 5 values:
+        <br/>1. center (default value)
+        <br/>2. top
+        <br/>3. right
+        <br/>4. bottom
+        <br/>5. left
+        <br/>we can also give customize value such as "object-position:30px 50px;"
+    
+        <br/><br/><br/><span id="idfh1">user-select:</span> It restricts the user from copying the data from website.<a id="idfy" target="_blank" href="https://youtu.be/StlFANrB-HY">Youtube Video Link....</a>
+        <br/><span id="idf3">Syntax:</span><span id="idf1"> user-select:none;</span>
+        <br/><br/>There are following 4 values:
+        <br/>1. auto (default value, does not restrict the user from copying the data)
+        <br/>2. none (restrict the user from selecting the data and copying it)
+        <br/>3. text (text is similar to auto but in auto if browser setting not allowed to copy then in auto also data select but in text it always allow to select the data)
+        <br/>4. all (select the whole text in single click)
+    
+        <br/><br/><br/><span id="idfh1">box-decoration-break</span>use where we use "br" tag in html, it is mainly used for text. <a id="idfy" target="_blank" href="https://youtu.be/vqyJCQvK338">Youtube Video Link....</a>
+        <br/><span id="idf3">Syntax:</span><span id="idf1"> box-decoration-break:clone;</span>
+        <div style="width:660;margin-top:20px;">
+            <div style="padding:10px;width:300px;height:200px;float:left;border:2px ridge #3b0833;"></span><span id="idfh2">without box-decoration-break</span><br/><span id="id1">Lorem ipsum dolor sit amet, <br/>consectetur adipiscing elit. Praesent <br/>elementum dignissim velit et egestas. <br/>Suspendisse ultrices risus a ipsum <br/>mattis iaculis</span>.</div>
+            <div style="padding:10px;width:300px;height:200px;float:right;border:2px ridge #3b0833;"><span id="idfh2">using box-decoration-break</span><br/><span id="id2">Lorem ipsum dolor sit amet, <br/>consectetur adipiscing elit. Praesent <br/>elementum dignissim velit et egestas. <br/>Suspendisse ultrices risus a ipsum <br/>mattis iaculis.</span></div>
+        </div>
+    
+    <br/><br/>There are only 2 values:
+    <br/>1. slice (default value)
+    <br/>2. clone (it separate the each sentence after the "br" tag)
+    </body>
+</html>
