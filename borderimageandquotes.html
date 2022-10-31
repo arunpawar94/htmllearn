@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>border-image and quotes</title>
+        <link rel="stylesheet" href="fontcss.css">
+        <style>
+            body
+            {
+                background:linear-gradient(to bottom right,#f7f3bc,#fcfa7c,#f16a58,#830b83);
+                font-size:20px;
+                margin:30px;
+            }
+            #id1
+            {
+                border:20px ridge #3ceb3c;
+                width:684px;
+                height:350px;
+                text-align: justify;
+                background-color: #d1d4ff;
+                border-image-source:url(images/borders-png-1.png);
+                border-image-slice: 24 24 24 24;
+                border-image-width: 40px 36px 40px 36px;
+                border-image-outset: 18px 18px 18px 18px;
+                border-image-repeat: round;
+            }
+
+            q
+            {
+                quotes:"$" "@" "#" "^";
+            }
+        </style>
+    </head>
+    <body>
+        <span id="idfh1">border-image:</span>to add image or gradient in border<a id="idfy" href="https://youtu.be/ACnh7607vIU" target="_blank">Youtube Video Link....</a>
+        <br/><br/>It has following 6 properties:
+        <br/><br/><span id="idfh2">1. border-image-source:</span> It is used to give location of the image.
+        <br/><span id="idf3">Syntax:</span><span id="idf1">border-image-source:url(images/borders-png-1.png);</span>
+
+        <br/><br/><span id="idfh2">2. border-image-slice:</span>crop the image from where we want to add the image.
+        <br/><span id="idf3">Syntax:</span><span id="idf1"> border-image-slice: 24 24 24 24;</span>
+
+        <br/><br/><span id="idfh2">3. border-image-width:</span>it is the width of image slice that we cut.
+        <br/><span id="idf3">Syntax:</span><span id="idf1"> border-image-width: 40px 36px 40px 36px;</span>
+
+        <br/><br/><span id="idfh2">4. border-image-outset:</span>The values specify the amount by which the border image area extends beyond the border box on the top, right, bottom, and left sides respectively. If the fourth value is absent, it is the same as the second. If the third one is also absent, it is the same as the first. If the second one is also absent, it is the same as the first. Numbers represent multiples of the corresponding border-width.
+        <br/><span id="idf3">Syntax:</span><span id="idf1">border-image-outset: 18px 18px 18px 18px;</span>
+
+        <br/><br/><span id="idfh2">5. border-image-repeat:</span>Specifies how the images for the sides and the middle part of the border image are scaled and tiled. If the second keyword is absent, it is assumed to be the same as the first.
+        <br/><span id="idf3">Syntax:</span><span id="idf1">border-image-repeat: round;</span> or <span id="idf1">border-image-repeat: repeat round;</span>
+        <br/>The following 4 are the values:
+        <br/>1. repeat
+        <br/>2. stretch
+        <br/>3. round
+        <br/>4. space
+
+
+        <br/><br/><span id="idfh2">6. border-image:</span> It is the shorthand of all above 5 properties.
+        <br/><span id="idf3">Syntax:</span><span id="idf1">border-image:url(images/borders-png-1.png) 24 24 24 24 / 40px 36px 40px 36px / 18px 18px 18px 18px round;</span>
+        <br/>The order is: source slice / width / outset repeat;
+        <br/><br/><br/><div id="id1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam maximus faucibus dui in venenatis. Mauris vitae euismod ex, quis malesuada augue. Phasellus suscipit commodo elementum. Nullam at tempus erat. Nam sit amet magna a augue elementum viverra venenatis id nunc. Cras a risus odio. Vestibulum venenatis elit tortor. Aenean sed rhoncus lectus. Phasellus in arcu erat. Maecenas consectetur neque non massa laoreet iaculis vitae et nulla. Suspendisse nec ullamcorper elit, sed malesuada risus. Duis vestibulum vulputate lacus nec rhoncus. Mauris velit felis, molestie vel vestibulum eget, vulputate sed odio. Curabitur blandit laoreet nibh vel varius.
+            
+            Maecenas vitae nibh non tortor scelerisque vestibulum. Nullam interdum metus libero, id posuere neque tempus non. Etiam pulvinar lorem at purus facilisis consequat. Morbi ullamcorper leo mauris. Proin porta sed eros vel finibus. Donec et nisl laoreet, tincidunt sapien nec, aliquam nunc. Integer feugiat sapien sit amet consequat rutrum.
+            
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum lacinia augue lacus, in tempor eros accumsan id. Nulla ut dui
+        </div>
+
+        <br/><br/><span id="idfh1">quotes:</span>It replace the "q" tag's """ mark with given quotation mark in quotes property.
+        <a id="idfy" target="_blank" href="https://youtu.be/fwguFr4zrGE">Youtube Video Link....</a>
+       
+        
+        <br/><span id="idfh2">without qoutes:</span>
+        <br/>"Maecenas vitae nibh non tortor 'scelerisque vestibulum.' Nullam interdum metus libero."</q>
+
+        <br/><span id="idfh2">using qoutes:</span> 
+        <br/><span id="idf3">Syntax:</span><span id="idf1">q{quotes: "$" "@" "#" "^" ;}</span> the first two sign are for outer quotes and the next two sign are for inner qoutes.
+        <br/><q>Maecenas vitae nibh non tortor <q>scelerisque vestibulum.</q> Nullam interdum metus libero.</q>
+        <br/> 
+        
+    
+    </body>
+</html>
