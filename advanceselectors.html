@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <title>
+            Advanced Selectors
+        </title>
+    </head>
+    <link rel="stylesheet" href="fontcss.css">
+    <style>
+        body
+        {
+            font-size:20px;
+            background:linear-gradient(to bottom right,#f3efef,#f6ef98,#f7f77d,#f88a80,#fb6c6c,#8000ff);
+        }
+        pre
+        {
+            color:red;
+        }
+
+    </style>
+    <body>
+        <span id="idfh1">Advance selectors:</span>Selectors are used to apply css properties on specific elements in html.
+        <a id="idfy" target="_blank" href="https://youtu.be/VF6g_exUUGE">Youttube Video Link....</a>
+        <br/><br/>There are 4 categories of selectors:
+        <br/><span id="idfh2">1. Simple selectors</span>
+        <br/><span id="idfh2">2. Combinators selectors</span>
+        <br/><span id="idfh2">3. Attribute selector</span>
+        <br/><span id="idfh2">4. Psedo-classes & Pseudo-elements</span>
+
+        <br/><br/><span id="idfh2">1. Simple selectors</span>
+        <br/>There are 4 types of Simple selectors
+        <br/>1. type selectors
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            body
+            {
+                color:red;    
+            } </pre>
+        <br/>2. class selector
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            .class_name
+            {
+                color:red;    
+            } </pre>
+        <br/>3. id selector
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            #id_name
+            {
+                color:red;    
+            } </pre>
+        <br/>4. universal selector
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            *{
+                color:red;    
+            } </pre>
+        also can be given as:
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            #id_name *
+            {
+                color:red;    
+            } </pre>
+
+        <br/><span id="idfh2">2. Combinators selectors</span>two or more tag or id or class etc to make selectors.
+        <br/>There are 4 types of Combinators selectors
+        <br/>1. Descendant selectors
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            .class_name p
+            {
+                color:red;    
+            } </pre>
+            <pre>
+
+            p span
+            {
+                color:red;    
+            } </pre>
+            <pre>
+
+            div p span
+            {
+                color:red;    
+            } </pre>
+        <br/>2. Direct Child selectors or child selctors (they show effect of css on direct child of parent element and not on the grand child)
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            .class_name or id_name > p
+            {
+                color:red;    
+            }
+        sign of greater than i.e. ">" is used </pre>
+        
+        
+        <br/>3. Adjacent Sibling selectors (here "+" sign is used. it works only on the just succeding the element)
+        <br/>for example in below syntax property "color:red;" is applied only the ul which is just succed the div but if another ul is also there then the property is not applied there.
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            div + ul
+            {
+                color:red;    
+            }
+        sign of plus i.e. "+" is used </pre>
+        <br/>4. General Sibling selectors (here "~" sign is used. it apply on all  succeding that element)
+        <br/>for example in below syntax property "color:red;" is applied on all the ul which are succed the div.
+        <br/><span id="idf3">Syntax:</span>
+        <pre>
+            div ~ ul
+            {
+                color:red;    
+            }
+        sign of tiddal i.e. "~" is used </pre>
+
+        <br/><span id="idfh2">3. Attribute selector</span>
+        <a id="idfy" target="_blank" href="https://youtu.be/f7Czf8sUA5E">Youttube Video Link....</a>
+        <br/>There are 7 way to give attribute selector:
+        <br/><br/>1. tag_name[attr_name]
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[width]
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply on "img" tag which is using "width" attribute.
+
+        <br/><br/>2. tag_name[attr_name='val']
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[width='300px']
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply only on "img" tag whose width exactly 300px i.e. "width=300px" attribute.
+
+        <br/><br/>3. tag_name[attr_name^='val']
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[width^='3']
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply on "img" tag whose value of width is starting 3.
+
+        <br/><br/>4. tag_name[attr_name|='val']
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[title|='image']
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply on "img" tag whose value of title is 'image-' i.e. "image" and "-" both are present.
+
+        <br/><br/>5. tag_name[attr_name$='val']
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[title$='flower']
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply on "img" tag whose value of title  attribute is ending with "flower". 
+
+        <br/><br/>6. tag_name[attr_name*='val']
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[title*='age']
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply on "img" tag in which "age" is present anywhere in the value of title.
+
+        <br/><br/>7. tag_name[attr_name~='val']
+        <br/><span id="idf3">Syntax:</span>
+        <pre>img[title~='image']
+            {
+                border:6px solid red;
+            }</pre>
+        <br/>apply on "img" tag in which value of title is "image" and there must be space before and after the word "image".
+
+
+        
+
+        <br/><br/><span id="idfh2">4. Pseudo-classes</span>":" is used.
+        <br/><a id="idfy" target="_blank" href="https://youtu.be/RqTXyLThQsw">Youtube Video Link....</a>
+        <br/>There are over-all 32 types of psedo-classes:
+        <ol>
+            <li>tag_name:first-child</li>
+            <li>tag_name:last-child</li>
+            <li>tag_name:nth-child(value)</li>
+            <li>tag_name:nth-last-child(value)</li>
+            <li>tag_name:nth-last-of-type(value)</li>
+            <li>tag_name:nth-of-type(value)</li>
+            <li>tag_name:only-child</li>
+            <li>tag_name:only-of-type</li>
+            <li>tag_name:first-of-type</li>
+            <li>tag_name:last-of-type</li>
+            <li>tag_name:empty</li>
+            <li>tag_name:not(.class_name or #id_name or tagname)</li>
+            <li>tag_name:lang(en)  use for css of "lang="en"" attribute</li>
+            <span id="idf1">below 5 psedo-classes are mainly used for anchor "a" tag</span>
+            <li>tag_name:link</li>
+            <li>tag_name:hover</li>
+            <li>tag_name:visited</li>
+            <li>tag_name:active</li>
+            <li>tag_name:target &nbsp;&emsp;&ensp;used for internal linking</li>
+            <span id="idf1">below 5 psedo-classes are mainly used in form.</span>
+            <li>tag_name:focus</li>
+            <li>tag_name:checked</li>
+            <li>tag_name:disabled</li>
+            <li>tag_name:enabled</li>
+            <li>tag_name:required</li>
+            <li>tag_name:optional</li>
+            <li>tag_name:in-range</li>
+            <li>tag_name:out-of-range</li>
+            <li>tag_name:read-only</li>
+            <li>tag_name:read-write</li>
+            <li>tag_name:valid</li>
+            <li>tag_name:invalid</li>
+            <li>tag_name:default</li>
+            <li>:root</li>
+        </ol>
+
+        <br/><br/><span id="idfh2">5. Pseudo-elements</span> "::" is used.
+        <br/><a id="idfy" target="_blank" href="https://youtu.be/cqQ8Fxga7-o">Youtube Video Link....</a>
+        <br/>There are over-all 6 types of psedo-elements:
+        <ol>
+            <li>tag_name::after</li>
+            <br/><span id="idf3">Syntax:</span>
+            <pre>
+                p::after
+                {
+                    content:"hello";
+                }
+            </pre>
+            content is used for before and after.before is for first child and after is used for last child.
+            <li>tag_name::before</li>
+            <li>tag_name::first-letter</li>
+            <li>tag_name::first-line</li>
+            <li>tag_name::selection</li>
+            <li>tag_name::placeholder</li>
+        </ol>
+    </body>
+</html>
