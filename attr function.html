@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>
+            attr() function, counter-increment and caret-color
+        </title>
+        <link rel="stylesheet" href="fontcss.css">
+        <style>
+            body
+            {
+                background:linear-gradient(to bottom right,#999797,#224bf2);
+                font-size:20px;
+            }
+            pre
+            {
+                color:darkred;
+            }
+            div
+            {
+                overflow:auto;
+            }
+            #id1
+            {
+                float:left;
+            }
+            img
+            {
+                float:right;
+            }
+            #id2,#id3
+            {   position:fixed;
+                border-radius:10px;
+                text-align: center;
+                width:80px;
+                
+                background:linear-gradient(yellow,orange,tomato);
+                color:#524f0a;
+            }
+            #id2{float:left;top:50%;}
+            #id3{float:right;top:50%;right:0;}
+            div a
+            {
+                color:#303d0e;display:block;
+                text-decoration: none;
+               
+            }
+            
+        </style>
+    </head>
+    <body>
+        <span id="idfh1">attr() function:</span> This function is used to show value of attribute name given in attr(attribute_name) function. It is always used with "content" property.
+        <br/><a href="https://youtu.be/b_-lv-OjSmc" id="idfy" target="_blank">Youtube Video Link...</a>
+        <br/><span id="idf3">Syntax:</span>
+        <pre>tag_name::after
+            {
+                content:attr(class);
+            }
+        </pre>
+        <br/>in above syntax, tag_name is the name of the tag where we want to use attr() and "class" is the attribute name we use within attr() function to show the value of class attribute. We can also use another attribute name in place of class.
+        <br/><br/>
+        We can also make our own attribute using "data-" within tag.
+        for example: <pre>data-attribute_name="value"</pre>
+        
+        <br/><br/><span id="idfh1">counter-increment</span> used to increase the value 
+        <br/><a href="https://youtu.be/EkPJDDbO5FI" id="idfy" target="_blank">Youtube Video Link...</a>
+        <br/>It has 3 properties, all are used simultaneously:
+        <br/>1. counter-reset:counter_name 0; (used to give counter name and starting value)
+        <br/>2. counter(counter_name); (It is a function to call the counter we define with counter name)
+        <br/>3. counter-increment:counter_name 1; (to increase the value of the counter)
+        <br/><span id="idf3">Syntax:</span>
+        <div><div id="id1">
+        <pre>
+            body
+		{
+			counter-reset:counter_name 0;
+		}
+			
+		h2::before
+		{
+			content:"chapter:" counter(counter_name);
+			counter-increment:counter_name 1; 
+		}</pre></div>
+        <img src="images\cinc1.jpg" width="600px">
+        </div>
+        <br/>We can also use roman or alpha value in place of alpha-numeric value.
+        <div><div id="id1">
+            <pre>
+                body
+            {
+                counter-reset:counter_name;
+            }
+                
+            h2::before
+            {
+                content:"chapter:" counter(counter_name, upper-alpha);
+                counter-increment:counter_name 1; 
+            }</pre></div>
+            <img src="images\cinc2.jpg" width="500px">
+            </div>
+            There are 4 value we can use i.e. upper-alpha, lower-alpha, upper-roman or lower-roman.
+            
+            <br/><br/><span id="idfh1">caret-color:red;</span> use to give color of blinking cursor in input text area.
+            <br/><a href="https://youtu.be/f5bXdY2bai8" id="idfy" target="_blank">Youtube Video Link...</a>
+            <br/>without caret-color.
+            <input style="background-color: #07a31e;">
+
+            <br/>with caret-color.
+            <input style="caret-color:#fdf506;background-color:#07a31e;"> here we change the blinking cursor to yellow.
+
+            <br/><br/>we can give following value to the caret-color.
+            <br/>1. auto (give default color i.e. black)
+            <br/>2. transparent (hide the blinking cursor)
+            <br/>3. we can give color name whatever we want.
+        <div id="id2"><a id="id5" href="advanceselectors.html">Previous page</a></div>
+        <div id="id3"><a id="id5" href="@import iconfont scrollbarstyling.html">Next Page</a></div>
+        </body>
+</html>

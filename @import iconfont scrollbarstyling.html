@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>
+            @import rule, icon font and scrollbar styling
+        </title>
+        <link rel="stylesheet" href="fontcss.css">
+        <link rel="stylesheet" href="css\all.css">
+        <style>
+            body
+            {
+                background:linear-gradient(to bottom right,#f2c4c4,#fbff17);
+                font-size:20px;
+            }
+            i
+            {
+                color:#0e1981;
+            }
+            pre
+            {
+                color:#900202;
+            }
+            body::-webkit-scrollbar
+            {
+                width:28px;
+                background-color: #e30f75;
+            }
+            body::-webkit-scrollbar-track
+            {
+                border-radius: 10px;
+                background-color:darkslategray;
+                box-shadow:  4px -2px 0px 0px #003f46 inset;
+            }
+            body::-webkit-scrollbar-thumb
+            {
+                border-radius: 10px;
+                background:radial-gradient(#163d8f,#47afe5,#790487);
+                box-shadow: 0px 3px #29ed99;
+            }
+        ol li
+        {
+            color:#900202;
+            text-shadow: 2px 2px 3px red;
+        }
+        ol[type] li
+        {
+            color:#014601;
+        }
+        fj
+        {
+            color:#e30f75;
+        }
+        img
+        {
+            width:700px;
+            position:relative;
+            left:20%;
+            filter:drop-shadow(8px 8px 3px #080cf6);
+            margin:8px;
+        }
+        </style>
+    </head>
+    <body>
+        <span id="idfh1">@import</span> used to import any css while within another css file.
+        <a id="idfy" href="" target="_blank">Youtube Video Link....</a>
+        <br/><br/>There are 3 different way to give @import rule:
+        
+        <ol>
+            <li>@import "css_file_name.css";</li>
+            <li>@import url("file_location/css_file_name.css");</li>
+            <li>@import "css_file_name.css" print.</li>
+            
+            <br/>In 3rd way we can also give media type.
+            
+            <br/>There are 4 types of media:
+            
+            <ol type="i">
+                <li>all</li>
+                <li>print</li>
+                <li>screen</li>
+                <li>speech</li>
+             </ol>
+        </ol>
+         
+        <br/><br/><br/><span id="idfh1">icon font:</span>icon font are the icons in font format. There are similar to fonts.
+        <br/><a id="idfy" target="_blank" href="">Youtube Video Link....</a> 
+       <br/>Following are the steps to use icon fonts:
+       <br/><fj>1. search for icon font. Go to any website. Here we use icon font from "font awesome" website. And download the zip file by following the given procedure.</fj>
+       <img src="images/ic1.jpg">
+       <img src="images/ic2.jpg">
+       <img src="images/ic3.jpg">
+      
+       <img src="images/ic4.jpg">
+        <br/><fj>2. extract the downloaded zip file.</fj><br/>
+        <img src="images/ic5.jpg">
+        
+        <br/><br/><fj>3. Open the extracted zip file and find all.css or allmin.css file in css folder and link it to your html page.
+        here there is different catogories of icon font file is also available such as solid, regular etc we can also link them but all.css contain all the catogories in one file.
+        </fj><br/>
+       
+        <img src="images/ic6.jpg">
+        <br/><br/><fj>4. find the webfont folder in the extracted zip file and place it in the same folder where our html page is located. It can also placed anywhere but we have to edit its location in all.css file.</fj><br/>
+       <img src="images/ic7.jpg">
+
+       <br/><br/><fj>If webfont folder is located at another place. Then open the all.css file and go at the bottom of the page and edit its location shown below. </fj>
+       <img src="images/ic10.jpg">
+
+       <br/><br/><fj>5. Now go to the website and select the icon you want to use and click on it.</fj>
+       <img src="images/ic8.jpg">
+
+       <br/><br/><fj>6. Now copy the css code as shown below and paste it where you want to use in html page.</fj>
+       <img src="images/ic9.jpg">
+
+       <br/><br/><fj>Here we add home icon font and instagram icon font by using above procedure. The resulted icon fonts are:</fj>
+        <br/><i class="fa-brands fa-instagram"></i><i class="fa-solid fa-house"></i>
+    
+        <br/><br/><span id="idf2">We can also use icon font direct online from website.</span>
+
+        <br/><br/><br/><span id="idfh1">Scrollbar Styling:</span> They are pseudo elements which are used for styling of the scrollbar.
+        <br/><a id="idfy" target="_blank" href="">Youtube Video Link....</a>
+        <br/><span id="idf2">These pseudo elements are not supported on browsers so we use prefix for use them.</span>
+        
+        <ol>
+            There are 4 pseudo elements that are used to styling the scrollbar.
+            <li>::scrollbar</li>
+            it is used to define the width of the scrollbar and on which scrollbar-track lie.
+            <li>::scrollbar-thumb</li>
+            It is used for styling the bar that we move.
+            <li>::scrollbar-track</li>
+            It is used for styling the track on which the bar move.
+            <li>::scrollbar-corner</li>
+            It is used to fill the background color for the space left b/w the vertical and horizontal scrollbar.
+        </ol>
+    <br/> for example, we design the body scrollbar on right side of these page.
+    <br/><span id="idf3">The syntax we use for designing it is:</span>
+    <pre>
+        body::-webkit-scrollbar
+        {
+            width:28px;
+            background-color: #e30f75;
+        }
+        body::-webkit-scrollbar-track
+        {
+            border-radius: 10px;
+            background-color:darkslategray;
+        }
+        body::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            background:radial-gradient(#163d8f,#47afe5,#790487);
+        }
+    </pre>
+
+
+    <i class="fa-solid fa-circle-right"></i><i class="fa-solid fa-circle-left"></i>
+</body>
+</html>
