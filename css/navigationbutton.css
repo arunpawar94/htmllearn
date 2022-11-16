@@ -1,0 +1,29 @@
+ifp,ifn,ifi
+		{
+    		
+   			font-size: 46px;
+    		position: fixed;
+    		top: 50%;
+			background: linear-gradient(#cafd81,#024a2f 60%,#cafd81);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		#ifnav:active
+		{
+			background: linear-gradient(#024a2f,#f52a2a 60%,#024a2f);
+			-webkit-background-clip: text;
+			-webkit-text-fill-coldor: transparent;
+		}
+		ifn 
+		{
+    		right: 0px;
+		}
+		ifp 
+		{
+    		left: 0px;
+		}
+		ifi
+		{
+			top:0;
+			right:0;
+		}
