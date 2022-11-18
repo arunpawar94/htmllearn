@@ -4,14 +4,64 @@
 		</title>
 		<link rel="stylesheet" href="fontcss.css">
 		<style>
-			
-		
+			.parent
+			{
+				display: grid;
+				background-color: #4e48f4;
+				width: 800px;
+				padding:10px;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-template-rows: 195px 195px ;
+				grid-row-gap:50px;
+				grid-column-gap:50px;
+			}
+			.child
+			{
+				line-height: 6.4em;
+				text-align: center;
+				font-weight: 700;
+				font-size: 30px;
+				border:4px solid #0a0a0a;
+			}
+			.child1
+			{
+				background-color: #fd9617;
+			}
+			.child2
+			{
+				background-color: #00d9ff;
+			}
+			.child3
+			{
+				background-color: #d000ff;
+			}
+			.child4
+			{
+				background-color: #398484;
+			}
+			.child5
+			{
+				background-color: rgb(255, 0, 242);
+			}
+			.child6
+			{
+				background-color: rgb(255, 0, 0);
+			}
 		</style>
 	</head>
 	<body>
 		<a  href=".html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
 		<a href=".html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
 		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+
+		<div class="parent">
+			<div class="child child1">div1</div>
+			<div class="child child2">div2</div>
+			<div class="child child3">div3</div>
+			<div class="child child4">div4</div>
+			<div class="child child5">div5</div>
+			<div class="child child6">div6</div>
+		</div>
 
 	</body>
 </html

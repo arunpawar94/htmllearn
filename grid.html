@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>
+            grid
+        </title>
+        <link rel="stylesheet" href="fontcss.css">
+        <style>
+            body
+            {
+                background-color: #2f4f4f;
+                color:aliceblue;
+                font-size:20px;
+                counter-reset: ewn;
+            }
+            
+            ew
+            {
+                color:chartreuse;
+                font-weight: 700;
+                font-size: 25px;
+                padding-left: 10px;
+            }
+
+            ew::before
+            {
+                content:counter(ewn, upper-alpha)") ";
+                counter-increment:ewn 1;
+            }
+            ol
+            {
+                margin:0;
+                
+            }
+            fr
+            {
+                color:#ff5a5a;
+            }
+        </style>
+    </head>
+    <body>
+        <span style="color: #81ecf7;font-size: 34px;text-decoration: underline #81ecf7 solid;text-shadow: 3px 3px 2px #000000;">grid:</span> it is used when we use two or more no. of div and arrange them in column and row in proper way.
+        <a target="_blank" style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/h7CsJ6x-sI0"><i class="fa-brands fa-youtube"></i></a>
+        <br/>To make parent div grid container we use property "<fr>display:grid;</fr>"
+
+        <br/><br/><ew><u>Advantages:</u></ew>
+        <br/>&emsp; 1. Two dimentional grid system.
+        <br/>&emsp; 2. css layout replaces float layout.
+        <br/>&emsp; 3. fast and clean code.
+        <br/>&emsp; 4. no need of css framework.
+
+        <br/><br/><ew><u>Structure of grid and terminology</u></ew><br/>
+        <img src="images/gs1.png" width="49%"/>
+        <img src="images/gs2.png" width="49%"/>
+
+        <br/><br/><ew><u>Different properties of the grid</u></ew><br/><br/>
+        <div style="column-count:5;">
+        <ol>
+            <fg style="color:#4dfb2f;"><li>grid-template-rows</li>
+            <li>grid-template-columns</li>
+            <li>grid-template-areas</li>
+            <li>grid-template</li></fg>
+
+            <fg style="color:#fbcb2f;"><li>grid-row-gap</li>
+            <li>grid-column-gap</li>
+            <li>grid-gap</li></fg>
+            
+            <fg style="color:#da9bff;"><li>justify-items</li>
+            <li>align-items</li>
+            <li>justify-content</li>
+            <li>align-content</li></fg>
+
+            <fg style="color:#e7fb2f;"><li>grid-auto-rows</li>
+            <li>grid-auto-columns</li>
+            <li>grid-auto-flow</li></fg>
+
+            <fg style="color:#a4f2ff;"><li>grid-row-start</li>
+            <li>grid-row-end</li>
+            <li>grid-row</li>
+            <li>grid-column-start</li>
+            <li>grid-column-end</li>
+            <li>grid-column</li>
+            <li>grid-area</li></fg>
+
+            <fg style="color:#fb2f3d;"><li>justify-self</li>
+            <li>align-self</li>
+            <li>order</li></fg>
+        </ol>
+        </div>
+
+        <br/><br/><ew>creating grid layout:</ew>
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/XWY2zKpn5R4" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>The below 2 properties are used to create grid:
+        <br/><br/>1. <fr>grid-template-columns:100px 100px 200px;</fr> (It create 3 cloumn of given width i.e. 100px 100px and 200px)
+        <br/>&emsp; another way to give:
+        <br/>&emsp;<fr>grid-template-columns:1fr 2fr 3fr;</fr> (it create column of width in fraction)
+        <br/>&emsp;<fr>grid-template-columns:repeat(2, 150px);</fr> (here we use repeat function,in which 2 is the no. of column and 150px is  the width of each column)
+        <br/>&emsp;<fr>grid-template-columns:repeat(3, 150px) 2fr 150px auto;</fr> (we can also use different combination of the values. the value "auto" for 4th column means the width of the 4th column is the whole space remain after first 3 column)
+       
+        <br/><br/>2. <fr>grid-template-rows:100px 100px 200px;</fr> (It create 3 rows of given height i.e. 100px 100px and 200px)
+        <br/>&emsp; another way to give:
+        <br/>&emsp;<fr>Similar to grid-template-columns</fr>
+       
+        <br/><br/><ew>grid gap</ew>
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/2MTCvuDKW80" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>The below 3 properties are used to give grid gap:
+        <br/><br/>1. <fr>grid-row-gap:20px;</fr> (give space of 20px b/t rows)
+        <br/><br/>2. <fr>grid-column-gap:20px;</fr> (give space of 20px b/t columns)
+        <br/><br/>3. <fr>grid-gap:20px 25px;</fr> (It is a shorthand of the above 2 values, first value 20px is space b/t row and second value 25px is space b\t column)
+
+        <br/><br/><ew>grid items positioning</ew> (giving position of any grid item in grid container, it is given in grid item id or class, here we give value which is grid line)
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/QdZjWYmZo9Y" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>The below 7 properties are used to give grid item position:
+        <br/><br/>1. <fr>grid-row-start:2;</fr> (the item start from grid line no. 2 of row)
+        <br/><br/>2. <fr>grid-row-end:3;</fr> (the item end at grid line no. 3 of row)
+        <br/><br/>3. <fr>grid-row:2/3;</fr> ( It is shorthand of above 2 properties, the first is starting  and the second is ending grid line no.,the item start from grid line no. 2 of row and end at grid line no. 3 of row)
+        
+        <br/><br/>4. <fr>grid-column-start:2;</fr> (the item start from grid line no. 2 of column)
+        <br/><br/>5. <fr>grid-column-end:3;</fr> (the item end at grid line no. 3 of column)
+        <br/><br/>6. <fr>grid-column:2/3;</fr> ( It is shorthand of above 2 properties, the first is starting  and the second is ending grid line no.,the item start from grid line no. 2 of column and end at grid line no. 3 of column)
+
+        <br/><br/>7. <fr>grid-area:2/2/3/3;</fr> ( it is shorthand of above properties, in following order row starting/column starting/row ending/column ending)
+
+        <br/><br/><ew>grid items spanning</ew> (in spanning a single grid item can cover place of two or more column or rows, the same properties of grid item positioning are used)
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/6AFeaXDNbZ0" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>for example:
+        <br/><fr>grid-column:2/5;</fr> (here this grid item not only cover single column, it covers columns from grid line no. 2 to 5 i.e. three columns)
+        <br/>another ways:
+        <br/><fr>grid-column:2/ span 3;</fr> (here start from grid line no.2 and "span 3" means cover 3 columns)
+        <br/><fr>grid-column:2/-1;</fr>(here start from grid line no.2 and cover all the columns after that to the end of grid container)
+
+        <br/><br/>the similar way is use to cover row.
+
+        <br/><br/><ew>grid line naming</ew> (we can give name of grid line, the naming of grid line is given in property <fr>grid-template-columns</fr> and <fr>grid-template-columns</fr>)
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/D53MBXEj8m4" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>In following way we can give naming of grid line
+        <br/><fr>grid-template-columns:[column_name1_start] 100px [column_name1_end column_name2_start] 150px [column_name2_end]</fr>
+        <br/>we can use it as:
+        <br/><fr>grid-column-start:column_name1_start;</fr>
+        <br/><fr>grid-column-end:column_name1_end;</fr>
+        
+        
+        
+        
+        <a href="@import iconfont scrollbarstyling.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
+		<a href="temp.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+
+
+    </body>
+</html>

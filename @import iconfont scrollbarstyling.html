@@ -36,6 +36,8 @@
                 background:radial-gradient(#163d8f,#47afe5,#790487);
                 box-shadow: 0px 3px #29ed99;
             }
+        
+
         ol li
         {
             color:#900202;
@@ -57,11 +59,35 @@
             filter:drop-shadow(8px 8px 3px #080cf6);
             margin:8px;
         }
+        #par
+        {   
+            width:800px;
+            
+            border:2px solid #f62a2a;
+            background-color: #003f46;
+        }
+        #par1
+        {   
+            width:800px;
+            display: flow-root;
+            border:2px solid #f62a2a;
+            background-color: #003f46;
+        }
+        #chil
+        {
+            width:292px;
+            height: 192px;
+            margin:2px;
+            float:left;
+            border:2px solid #f21b1b ;
+            background-color:#fbff17;
+        }
         </style>
     </head>
+    
     <body>
         <span id="idfh1">@import</span> used to import any css while within another css file.
-        <a id="idfy" href="" target="_blank">Youtube Video Link....</a>
+        <a id="idfy" href="https://youtu.be/tFX4swuYIOA" target="_blank">Youtube Video Link....</a>
         <br/><br/>There are 3 different way to give @import rule:
         
         <ol>
@@ -82,7 +108,7 @@
         </ol>
          
         <br/><br/><br/><span id="idfh1">icon font:</span>icon font are the icons in font format. There are similar to fonts.
-        <br/><a id="idfy" target="_blank" href="">Youtube Video Link....</a> 
+        <br/><a id="idfy" target="_blank" href="https://youtu.be/adSoD74EqIQ">Youtube Video Link....</a> 
        <br/>Following are the steps to use icon fonts:
        <br/><fj>1. search for icon font. Go to any website. Here we use icon font from "font awesome" website. And download the zip file by following the given procedure.</fj>
        <img src="images/ic1.jpg">
@@ -116,7 +142,7 @@
         <br/><br/><span id="idf2">We can also use icon font direct online from website.</span>
 
         <br/><br/><br/><span id="idfh1">Scrollbar Styling:</span> They are pseudo elements which are used for styling of the scrollbar.
-        <br/><a id="idfy" target="_blank" href="">Youtube Video Link....</a>
+        <br/><a id="idfy" target="_blank" href="https://youtu.be/JOF__gMoQcw">Youtube Video Link....</a>
         <br/><span id="idf2">These pseudo elements are not supported on browsers so we use prefix for use them.</span>
         
         <ol>
@@ -150,7 +176,29 @@
         }
     </pre>
 
+    <br/><br/><span id="idfh1">display:flow-root;</span> It is used when we have two div, one is child of another and child div has applied the float property then the bottom and top border of the parent div collapsed to avoid this we use "display:flow-root".
+    It is used in parent div.
+    <br/><a id="idfy" target="_blank" href="https://youtu.be/20jQYWlo6Ok"></a>
+    <br/><span id="idfh2">Without the display:flow-root;</span>
+    
+    <div style="height:200px">
+        <div id="par">
+            <div id="chil">
+         
+            </div>
+        </div>
+    </div>
 
-    <i class="fa-solid fa-circle-right"></i><i class="fa-solid fa-circle-left"></i>
+    <br/><br/><span id="idfh2">using the display:flow-root;</span>
+    <div id="par1">
+        <div id="chil">
+         
+        </div>
+    </div>
+
+    <a  href="attr function.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
+    <a href="grid.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+    <a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+
 </body>
 </html>
