@@ -34,6 +34,13 @@
             fr
             {
                 color:#ff5a5a;
+                
+            }
+            rf
+            {
+                color:#c55aff;
+                font-size: 25px;
+                text-decoration: underline #c55aff double;
             }
         </style>
     </head>
@@ -137,10 +144,55 @@
         <br/>we can use it as:
         <br/><fr>grid-column-start:column_name1_start;</fr>
         <br/><fr>grid-column-end:column_name1_end;</fr>
+        <br/> If we use repeat function.
+        <br/><fr>grid-template-columns:repeat(3,[column_name_start]1fr[column_name_end]);</fr>
+        <br/>The name of grid line is as follows:
+        <br/>for grid line 1:column_name_start 1 and column_name_end 1
+        <br/>for grid line 2:column_name_start 2 and column_name_end 2
+        <br/>for grid line 3:column_name_start 3 and column_name_end 3
         
+        <br/><br/><ew>grid item naming</ew> (it is used to name the grid item and positioning the grid items)
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/wPOt0sTkYv4" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>The following two properties are used:
+        <br/>1. <fr>grid-area:grid_item_name;</fr> (written in grid item)
+        <pre>2. <fr>grid-template-area:"grid_item_name1 grid_item_name2 grid_item_name3"
+                    "grid_item_name4 grid_item_name5 grid_item_name6";</fr>(it is written in grid container)
+        </pre>
+        <br/>Important points to remember for grid item naming:
+        <br/>1. name of every column in each row is compulsory to give. Without this it will not work.
+        <br/>2. we use "." in place where we don't want to give any grid item and leave space blank. "." can be used on at the end and start, we can't use it at middle.
         
+        <br/><br/><ew>minmax() function</ew> (it is used to change width and height of the grid item dynamically)
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/oXVwI1PhRRo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>It is used in following two properties "<fr>grid-template-columns</fr>" and "<fr>grid-template-rows</fr>"
+        <br/><br/>We also use two properties with minmax() function
+        <br/>1. <fr>min-content</fr>
+        <br/>2. <fr>max-content</fr>
+
+        <br/><br/>The way of using them are as follows:
+        <br/>1. <fr>grid-template-columns:max-content 1fr min-content;</fr> (in max-content all words come in single line and width of grid item equal to that sentence. In min-content width of grid item is equal to 
+        the largest word in that sentence. )
+        <br/>2. <fr>grid-template-rows:min-content max-content;</fr> (change height according to the data within grid item)
+        <br/>3. <fr>grid-template-columns:minmax(150px,200px) 1fr 100px;</fr> (the first value in minmax() 150px is minimum and 200px is maximum width can be of grid item. we can also use value of minmax() function as "min-content" or "max-content" or "%" or "fr")
+        <br/>4. <fr>grid-template-columns:repeat(3,minmax(150px,200px));</fr> (we can also use it in repeat functiion)
+
+        <br/><br/><ew>Explicit and Implicit grid:</ew>
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/thDAgB_R0YA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/><rf>Explicit grid:</rf><br/>Explicit grid are the grid items whose width and height already defined by us by properties "<fr>grid-template-rows</fr>" and "<fr>grid-template-columns</fr>";
+        <br/><rf>Implict grid:</rf><br/>Implicit grid are the grid items which are added dynamically or from server site, to give width and height of the implicit grid.
+        <br/><br/>we use following 3 properties:
+        <br/><br/>1. <fr>grid-auto-flow:column;</fr> (It defines that if new grid item is added then where to add it wheather in row or column)
+        <br/>It has two values:
+        <br/>a) row (default value, it add new grid item in row and extend the grid container vertically)
+        <br/>b) column (it add new grid item in column and extend the grid container horizontally)
+
+        <br/><br/>2. <fr>grid-auto-rows:150px;</fr> (define the height of the grid item if new is added)
         
+        <br/><br/>3. <fr>grid-auto-columns:150px;</fr> (define the width of the grid item if new is added)
         
+
+
+
         <a href="@import iconfont scrollbarstyling.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
 		<a href="temp.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
 		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
