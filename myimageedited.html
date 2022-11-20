@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            editing my image
+        </title>
+        <style>
+            #id1
+            {
+                background-color: #0000006b;
+                width:450px;
+                height:330px;
+                position:relative;
+                left:20%;
+                top:23%;
+                perspective-origin:top;
+                transform-style:preserve-3d;
+                transform: rotatey(20deg);
+                border:6px groove lightseagreen;
+                
+                
+            }
+            img
+            {
+                width:98%;
+                animation-name:hds;
+				animation-duration:3s;
+                transform-origin: top;
+				animation-iteration-count:infinite;
+				animation-direction:alternate;
+                border:6px groove darkgrey;
+            }
+            @keyframes hds
+            {
+                from{transform: rotatex(-50deg);}
+                to{transform:rotatex(50deg);}
+            }
+            body
+            {
+                background-color: darkslategrey;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="id1">
+        <img src="images\IMG_20211109_100013.jpg"/>
+
+        </div>
+
+    </body>
+</html>
