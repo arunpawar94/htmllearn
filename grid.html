@@ -192,7 +192,7 @@
         
 
         <br/><br/><ew>grid item alignment:</ew> used to align grid item.
-        <a style="color:red;font-size: 25px;" title="youtube video link" href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/wcGI8fsOsT4" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         <br/><br/>There are 6 properties to align grid items:
         <br/><br/><fr>1.) align-items:center;</fr> (it used in grid container. It aligns the all grid items within grid container vertically.)
         <br/>It has 4 values: start, end, center and stretch(default value).
@@ -214,7 +214,7 @@
 
 
         <br/><br/><ew>grid track alignment:</ew> used to align whole grid track.
-        <a style="color:red;font-size: 25px;" title="youtube video link" href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/xMQ6TwB31Sg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         <br/><br/>There are 3 properties to align grid track:
         <br/><br/><fr>1.) align-content:center;</fr> (it is used in grid container. It aligns the whole grid track within grid container vertically.)
         <br/>It has 7 values: start, end, center, stretch(default value), space-around, space-between, space-evenly.
@@ -233,17 +233,39 @@
         <br/>6. space-between (all remaining space is placed at center)
         <br/>7. space-evenly (there is equal lenght of space at start, center and end of the grid container)
 
+        <br/><br/><rf>Sometimes the place of any cell in grid track remains blank for this in property "grid-auto-flow" we use following values to fill that cell</rf>
+        <br/>1. row dense
+        <br/>2. column dense
 
-        <br/><br/><ew>auto fill and auto fit:</ew>
-        <a style="color:red;font-size: 25px;" title="youtube video link" href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <br/>
+
+        <br/><br/><ew>auto fill and auto fit:</ew> These are the values used in repeat function. they automatic fit the grid item in the cell.
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/RUqkE64ym-4" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>these can use as:
+        <br/><br/><fr>grid-template-columns:repeat(auto-fit, minmax(150px,1fr));</fr>
+        <br/>The difference bt these two value is that, in auto-fill it extend the grid-track and add the empty cell but auto-fit does not extend the grid track.
 
         
+        <br/><br/><ew>fit-content(100px):</ew> It is used as value in properties "grid-template-columns" and "grid-template-rows". Here min width of the grid-item is according to the content within grid item and max width is the value we give in "()" bracket.
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/IyfZclt3Eg8" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>this can use as:
+        <br/><fr>grid-template-columns:fit-content(100px) fit-content(200px) 1fr;</fr>
 
+        <br/><br/><ew>order:1;</ew> this property can be used for positioning the grid item. "0" is the default value which means if we does not give order property to any grid item then it will placed before the grid item which we have given order property.
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/Wiv4PGBa_M0" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <br/>this can use as:
+        <br/><fr>order:2;</fr>
+
+
+        <br/><br/><ew>nested grid:</ew> if we make any grid item to grid container within parent grid container this grid item called nested grid. we use same property i.e. "display:grid;" to make any grid item to grid conatiner.
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/r_EJsUkdMnQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        
+
+        <br/><br/><ew>overlaping of grid item</ew> we use property "z-index" to manage ovelaping of any grid item.
+        <a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/694gp-MGfKo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
 
 
         <a href="@import iconfont scrollbarstyling.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
-		<a href="temp.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="flex.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
 		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
 
 

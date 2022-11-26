@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>
+            Flex
+        </title>
+        <link rel="stylesheet" href="fontcss.css">
+        <style>
+            body
+            {
+                background: linear-gradient(to bottom right,#000000,#100024);
+                font-size:20px;
+                color:white;
+                margin-left: 20px;
+                counter-reset: ewn;
+            }
+        
+            fr
+            {
+                font-size:24px;
+                color:#f56161;
+            }
+            ew
+            {
+                color:aquamarine;
+                font-size:35px;
+                text-decoration:underline double aquamarine; 
+                text-shadow:2.5px 2.5px 4px #0ba4e9; 
+                             
+            }
+            ew::before
+            {
+                content:counter(ewn, upper-alpha) ".) ";
+                counter-increment:ewn 1;
+            }
+            p
+            {
+                padding-left: 20px;
+                white-space: pre-line;
+            }
+            rt
+            {
+                color:#58ff65;
+                font-size:25px;
+                text-decoration:underline double #58ff65; 
+                text-shadow:2.5px 2.5px 4px #0ba4e9; 
+               
+            }
+            img
+            {
+                margin: 20px;
+                width:800px;
+            }
+            #id1
+            {
+                column-count: 4;
+            }
+            ol
+            {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: #6d6d9b;text-shadow: 2.5px 0px 0px blue;text-align: center;font-size:62px;"><u>flexbox</u></h1>
+        <ew>Introduction:</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/-65YXXhJvOE" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <p>1. New module in css3 to easy align elements in different directions and orders.
+            2. Flexbox is to gives container the ability to expand and shrink elements to best use all the available space.
+            3. CSS Flexbox layout replaces float layout.
+            4. New way to build one-dimensional layouts.
+
+            <br/><rt>Layout and terminology of flexbox:</rt>
+            <img src="images/if1.jpg"/>
+            we use property "<fr>display:flex;</fr>" to make any div flexbox.
+        
+            <br/><rt>Properties used in flexbox are as follows:</rt>
+            <div id="id1"><ol>
+                <li>flex-direction</li>
+                <li>flex-wrap</li>
+                <li>flex-flow</li>
+                <li>flex-grow</li>
+                <li>flex-shrink</li>
+                <li>flex-basis</li>
+                <li>flex</li>
+                <li>justify-content</li>
+                <li>align-cotent</li>
+                <li>align-items</li>
+                <li>align-self</li>
+                <li>order</li>
+            </ol></div>
+        </p>
+
+
+        <ew>flex-direction</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/kD75n-6-Sig" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <p>
+
+        </p>
+
+        <a href="grid.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
+		<a href="flex.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+    </body>
+</html>
