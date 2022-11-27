@@ -19,6 +19,12 @@
                 font-size:24px;
                 color:#f56161;
             }
+            frr
+            {
+                color:#ddc080;
+                text-shadow:2.5px 2.5px 4px #e91e63;
+                font-size:30px;
+            }
             ew
             {
                 color:aquamarine;
@@ -58,6 +64,75 @@
             {
                 margin: 0;
             }
+            #id2
+            {
+                width:300px;
+                height:200px;
+                
+                position:fixed;
+                left:63%;
+                bottom:0;
+                padding:10px;
+
+            }
+            .fp
+            {
+                background-color:#24000d;
+                width:370px;
+                height:200px;
+                display:flex;
+                
+            }
+            .fc{}
+            .fc1
+            {
+                background-color: #f56161;
+            }
+            .fc2
+            {
+                background-color:#0ba4e9;
+            }
+            .fc3
+            {
+                background-color:#6d6d9b;
+            }
+            .fc4
+            {
+                background-color:#bb3f12;
+            }
+            .re
+            {
+                display:inline;
+                background:linear-gradient(#abb2ff,blue,#00010d);
+                border-radius: 10px;
+                cursor: pointer;
+                font-size:15px;
+                padding:3px;
+                box-shadow: 2px 2px 4px #13fafa;
+            }
+            
+            #re1:hover ~ #id2 #ifp
+            {
+                flex-direction: row;
+            }
+            #re2:hover ~ #id2 #ifp
+            {
+                flex-direction: row-reverse;
+            }
+            #re3:hover ~ #id2 #ifp
+            {
+                flex-direction: column;
+            }
+            #re4:hover ~ #id2 #ifp
+            {
+                flex-direction: column-reverse;
+            }
+            .re:hover
+            {
+                color:#06f5f1;
+                background:linear-gradient(#ffabab,#ff0000,#0d0000);
+                box-shadow: 2px 2px 4px #13fa13;
+            }
         </style>
     </head>
     <body>
@@ -91,9 +166,25 @@
 
 
         <ew>flex-direction</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/kD75n-6-Sig" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <p>
+        <p>Specifies how flex items are placed in the flex container, by setting the direction of the flex container’s main axis.
+            <frr>Syntax:</frr><fr> flex-direction:row-reverse;</fr>
+            There are following 4 values of the property "flex-direction".
+</p>
+             &ensp;1. row (default value, flex items arrange from left to right) <div class="re" id="re1">hover to see effect</div>
+             <br/><br/>&ensp;2. row-revese (flex items arrange from right to left) <div class="re" id="re2">hover to see effect</div>
+             <br/><br/>&ensp;3. column (flex items arrange from top to bottom) <div class="re" id="re3">hover to see effect</div>
+             <br/><br/>&ensp;4. column-reverse (flex items arrange from bottom to top) <div class="re" id="re4">hover to see effect</div>
+        
 
-        </p>
+
+        <div id="id2">
+            <div class="fp" id="ifp">
+                <div class="fc fc1">A</div>
+                <div class="fc fc2">B</div>
+                <div class="fc fc3">C</div>
+                <div class="fc fc4">D</div>
+            </div>
+        </div>
 
         <a href="grid.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
 		<a href="flex.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
