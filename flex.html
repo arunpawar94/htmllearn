@@ -127,6 +127,67 @@
             {
                 flex-direction: column-reverse;
             }
+            #re6:hover ~ #id2 #ifp
+            {
+                justify-content:flex-end ;
+            }
+            #re7:hover ~ #id2 #ifp
+            {
+                justify-content: center;
+            }
+            #re8:hover ~ #id2 #ifp
+            {
+                justify-content: space-around;
+            }
+            #re9:hover ~ #id2 #ifp
+            {
+                justify-content: space-between;
+            }
+            #re10:hover ~ #id2 #ifp
+            {
+                justify-content: space-evenly;
+            }
+            #re11:hover ~ #id2 #ifp
+            {
+                align-items:flex-start;
+            }
+            #re12:hover ~ #id2 #ifp
+            {
+                align-items:flex-end;
+            }
+            #re13:hover ~ #id2 #ifp
+            {
+                align-items:center;
+            }
+            #re14:hover ~ #id2 #ifp
+            {
+                align-items:stretch;
+            }
+            #re15:hover ~ #id2 #ifp
+            {
+                align-items:baseline;
+            }
+            #re16:hover ~ #id2 #ifp .fc2
+            {
+                align-self:auto;
+            }
+            #re17:hover ~ #id2 #ifp .fc2
+            {
+                align-self:flex-start;
+            }
+            #re18:hover ~ #id2 #ifp .fc2
+            {
+                align-self:flex-end;
+            }
+            #re19:hover ~ #id2 #ifp .fc2
+            {
+                align-self:center;
+            }
+            #re21:hover ~ #id2 #ifp .fc2
+            {
+                align-self:baseline;
+            }
+            
             .re:hover
             {
                 color:#06f5f1;
@@ -175,9 +236,66 @@
              <br/><br/>&ensp;3. column (flex items arrange from top to bottom) <div class="re" id="re3">hover to see effect</div>
              <br/><br/>&ensp;4. column-reverse (flex items arrange from bottom to top) <div class="re" id="re4">hover to see effect</div>
         
+             <br/><br/><ew>flex-wrap and flex-flow</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/x78oty0P-Ks" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+             <p><rt>a.) flex-wrap</rt> These propery is used when flex item overflow the flex container.
+                <frr>Syntax:</frr><fr>flex-wrap:wrap;</fr>
+                These property has following 3 values:
+                1. nowrap (default value, It does not show any effect)
+                2. wrap (make the flex item to be in flex container)
+                3. wrap-reverse (make the flex item to be in flex container but also reverse the main axis)
+             
+                <rt>b.) flex-flow</rt> These property is the shorthand of the two properties i.e. "flex-direction" and "flex-wrap".
+                    <frr>Syntax:</frr><fr>flex-flow:column wrap;</fr> (here first value is for property "flex-direction" and second is for "flex-wrap" resp.)
+             </p>
+             <br/><ew>justify-content</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/Jpqv6oUu6tg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+             <p>These property is used to align the flex items w.r.t main axis which means if flex-direction is row or row-reverse then it align the flex item horizontally and if the flex-direction is column or column-reverse then it align the flex item vertically.
+             </p>There are 6 values for this property which are as follows: 
+            
+                <br/><br/>&ensp;1. flex-start <div class="re" id="re5">hover to see effect</div>
+                <br/><br/>&ensp;2. flex-end <div class="re" id="re6">hover to see effect</div>
+                <br/><br/>&ensp;3. center   <div class="re" id="re7">hover to see effect</div>
+                <br/><br/>&ensp;4. space-around <div class="re" id="re8">hover to see effect</div>
+                <br/><br/>&ensp;5. space-between <div class="re" id="re9">hover to see effect</div>
+                <br/><br/>&ensp;6. space-evenly <div class="re" id="re10">hover to see effect</div>
+            
+            <br/><br/><ew>align-items</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/0if8z-Eevi8" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <p>These property is used to align the flex item w.r.t cross axis which means if flex-direction is row or row-reverse then it align the flex items vertically and if the flex-direction is column or column-reverse then it align the flex items horizontally.
+              It is used for single row i.e. when there is nowrap. </p>
+              There are 5 values for this property which are as follows: 
+            
+              <br/><br/>&ensp;1. flex-start <div class="re" id="re11">hover to see effect</div>
+              <br/><br/>&ensp;2. flex-end <div class="re" id="re12">hover to see effect</div>
+              <br/><br/>&ensp;3. center   <div class="re" id="re13">hover to see effect</div>
+              <br/><br/>&ensp;4. stretch (default value) <div class="re" id="re14">hover to see effect</div>
+              <br/><br/>&ensp;5. baseline (start the flex items from the base of text within flex item)<div class="re" id="re15">hover to see effect</div>
 
+            <br/><br/><ew>align-content</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/zCh9heo1a4Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+              <p>These property is used to align the flex item w.r.t cross axis which means if flex-direction is row or row-reverse then it align the flex items vertically and if the flex-direction is column or column-reverse then it align the flex items horizontally.
+                It is used for multiple rows i.e. when there is wrap.
+                It has following 6 values:
+                &ensp;1. flex-start
+                &ensp;2. flex-end
+                &ensp;3. center 
+                &ensp;4. stretch
+                &ensp;5. space-around
+                &ensp;6. space-between
+                &ensp;7. space-evenly
+        </p>
 
-        <div id="id2">
+        <br/><ew>align-self</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/eCNjeqtMhkY" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+              <p>These property is similar to the align-content but it work only for any individual flex item.
+                    It has following 6 values, which we use on second div i.e. at "B":
+            </p>&ensp;1. auto (it align the flex-item according to its its parent)<div class="re" id="re16">hover to see effect</div>
+            <br/><br/>&ensp;2. flex-start <div class="re" id="re17">hover to see effect</div>
+            <br/><br/>&ensp;3. flex-end   <div class="re" id="re18">hover to see effect</div>
+            <br/><br/>&ensp;4. center <div class="re" id="re19">hover to see effect</div>
+            <br/><br/>&ensp;5. stretch (default value) <div class="re" id="re20">hover to see effect</div>
+            <br/><br/>&ensp;6. baseline (start the flex items from the base of text within flex item) <div class="re" id="re21">hover to see effect</div>
+        
+        
+        
+        
+              <div id="id2">
             <div class="fp" id="ifp">
                 <div class="fc fc1">A</div>
                 <div class="fc fc2">B</div>
