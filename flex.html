@@ -71,7 +71,7 @@
                 
                 position:fixed;
                 left:63%;
-                bottom:0;
+                bottom:30px;
                 padding:10px;
 
             }
@@ -83,7 +83,7 @@
                 display:flex;
                 
             }
-            .fc{}
+            .fc{ margin: 5px;}
             .fc1
             {
                 background-color: #f56161;
@@ -187,7 +187,19 @@
             {
                 align-self:baseline;
             }
-            
+            #re22:hover ~ #id2 #ifp .fc
+            {
+                flex-grow:1;
+            }
+            #re22:hover ~ #id2 #ifp .fc1
+            {
+                flex-grow:3;
+            }
+            #re22:hover ~ #id2 #ifp .fc3
+            {
+                flex-grow:2;
+            }
+
             .re:hover
             {
                 color:#06f5f1;
@@ -292,9 +304,61 @@
             <br/><br/>&ensp;5. stretch (default value) <div class="re" id="re20">hover to see effect</div>
             <br/><br/>&ensp;6. baseline (start the flex items from the base of text within flex item) <div class="re" id="re21">hover to see effect</div>
         
+        <br/><br/><ew>order:0;</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/A82duFiU1wc" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <p>These property is given in flex item. It is used for positioning any flex item in flex container. Its value is the numerical value which can be negative or positive. "0" is the default value.
+                <frr>Syntax:</frr><fr>order:5;</fr>
+            </p>
         
+        <br/><ew>flex-grow:1;</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/aMKT57epIkg" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <p>These property is given in flex item. It is used when we have space remains left in flex container to give that space to the flex item. its value is numerical value. "0" is the default value.
+                <frr>Syntax:</frr><fr>flex-grow:1;</fr>
+                <div class="re" id="re22">hover to see effect</div>
+                here we have give all flex items "flex-grow:1;" , flex item "A" we give "flex-grow:3;" and flex item "C" we give "flex-grow:2;" 
+            </p>
+
+            <br/><ew>flex-basis:100px;</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/Wrbt_TEpxLE" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <p>These property is given in flex item. It is used to give width to the flex item. It act like a maximum width. Its value can be given in pixel and percentage. "auto" is the default value.
+                <frr>Syntax:</frr><fr>flex-basis:200px;</fr></p>
         
-        
+            <br/><ew>flex-shrink and flex</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/o-dDFSH-BxM" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <p><rt>a.) flex-shrink:0;</rt> 
+                    It is given in flex item.These makes the flex item wheather it change its with or not. Its value is given in positive numerical value.
+                    > "1" is the default value. it makes the flex item shrinkable.
+                    > "0" it makes the width of the flex item fixed so that it will not shrink.
+                    > any other value rather than "1" or "0" for example "3" then the flex item will shrink 3 times than its normal width.
+                    <frr>Syntax:</frr><fr>flex-shrink:0;</fr>
+                
+                <rt>b.) flex:0 0 200px;</rt>
+                    It is the shorthand of 3 properties "flex-grow", "flex-basis" and "flex-shrink" respectively.
+                    <frr>Syntax:</frr><fr>flex:0 0 150px;</fr>
+                </p>
+
+                <br/><ew>flexbox with "margin:auto;"</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/VtQZpnS3O4I" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <p>used to give margin in flex item. we can also use 4 properties of margin.
+                    1. margin-left:auto;
+                    2. margin-right:auto;
+                    3. margnin-top:auto;
+                    4. margin-bottom:auto;
+                </p>
+
+                <br/><ew>nested flex</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/PmeKPXcDXAY" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <p>if any flex item is given with "display:flex" then it is called nested flex container, and we can use all flexbox properties here.
+                </p>
+
+                <br/><ew>Align Form elements using flex box</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/4rkXSZ4FiFA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <p><iframe src="align form element using flexbox.html" style="overflow:auto;resize:horizontal;width: 100%;height: 400px;">
+
+                </iframe>
+                Please resize the frame horizontally to see responsiveness of the page.
+                </p>
+
+
+                <br/><ew>creating webpage using flexbox</ew><a style="color:red;font-size: 25px;" title="youtube video link" href="https://youtu.be/z7lkDctYqq8" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <p><iframe src="create webpage using flexbox.html" style="overflow:auto;resize:horizontal;width: 100%;height: 400px;">
+
+                </iframe>
+
+
               <div id="id2">
             <div class="fp" id="ifp">
                 <div class="fc fc1">A</div>
