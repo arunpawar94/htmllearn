@@ -8,18 +8,22 @@ body
 	display:flex;
 	flex-direction:column;
 	margin:0;
+	font-family:arial;
 }
 header
 {
-	background-color:yellowgreen;
+	background-color:#416000;
 	width:100%;
 	display:flex;
+	color:white;
 }
+header a{color:white;}
 #menu ul
 {
 	list-style:none;
-	display:flex;
+	display:flex;	
 }
+#menu ul li{padding:10px;}
 #menu ul li a
 {
 	text-decoration:none;
@@ -29,7 +33,99 @@ header
 	list-style:none;
 	display:flex;
 }
+#social ul li{padding:10px;}
 #logo
 {
 	margin:auto;
+	font-size:35px;
+}
+#main
+{
+	display:flex;
+}
+.sidebar
+{
+	
+	width:25vw;
+	background-color:#ecf967a6;
+	padding:10px;
+}
+.sidebar a
+{
+	border-bottom:2px solid gray;
+	display:block;
+	padding:10px 10px;
+	text-decoration:none;
+	color:#416000;
+}
+.sidebar ul
+{
+	list-style:none;
+	padding:0;
+}
+.sidebar img
+{
+	width:100%;
+	margin-top:45px;
+}
+.content
+{
+	
+	flex-basis:100%;
+	padding:0 0 0 10px;
+}
+.service-container
+{
+	display:flex;
+}
+.service-box
+{
+	border:1px solid #eee;
+	flex-basis:32%;
+	padding:10px;
+	display:flex;
+	flex-direction:column;
+}
+.service-box img
+{
+	width:100%;
+}
+.service-box p
+{
+	margin-top:0;
+}
+.service-box h2
+{
+	margin-bottom:8px;
+}
+.button
+{
+	
+	align-self:flex-start;
+	
+	margin-top:auto;
+}
+.button a
+{	
+	background-color:gray;
+	text-decoration:none;
+	color:white;
+	display:block;
+	padding:8px 13px;
+	border:2px solid transparent;
+}
+.button a:hover
+{
+	background-color:white;
+	color:gray;
+	border:2px solid gray;
+}
+footer
+{
+	background-color:#416000;
+	width:100%;
+	display:flex;
+	color:white;
+	padding:20px 0;
+	justify-content:space-around;
 }
