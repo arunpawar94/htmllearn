@@ -4,66 +4,40 @@
 		</title>
 		<link rel="stylesheet" href="fontcss.css">
 		<style>
-			label{color:aquamarine;}
-			#id1
-			{
-				list-style: none;
-				background-color: darkslategrey;
-				margin:50px;
-				padding:20px;
-			}
-			#id1 li
-			{
-				display:flex;
-				padding:5px 0;
-				justify-content:flex-end;
-				
-				
-			}
-			#id1 li label
+			#parent
 			{
 				
-				flex:1;
+				background-color: aquamarine;
+				width: 900px;
+				height: 600px;
+				margin: auto;
+				background-size: contain;
+				display: flex;
+				
 			}
-			
-@media screen and (min-width:300px) and (max-width:499px) 
-{
-	#id1 li{flex-direction: column;}
-	#id1 li input
+		
+			#parent:focus-within
 			{
-				flex:3;
+				background-color: blueviolet;
 			}
-}
-@media screen and (min-width:500px) 
-{
-	#id1 li input{flex:3;}
-}
-@media screen and (min-width:768px) 
-{
-	#id1 li input{flex:4;}
-}
-@media screen and (min-width:992px) 
-{
-	#id1 li input{flex:6;}
-}
-@media screen and (min-width:1200px) 
-{
-	#id1 li input{flex:8;}
-}
+			#child
+			{
+				width:50%;
+				height:50%;
+				border: 2px solid yellowgreen;
+				backdrop-filter: blur(2px);
+				margin:auto;
+				
+			}
 		</style>
 	</head>
-	<body bgcolor="black">
+	<body>
+	<div id="parent"><form>
+		<input type="text"/></form>
+		<div id="child">
+
+		</div>
+	</div>
 		
-
-		<form >
-			<ul id="id1">
-				<li><label>Name:</label><input type="text"></li>
-				<li><label>Class:</label><input type="text"></li>
-				<li><label>Mobile no.:</label><input type="number"></li>
-				<li><label>Email:</label><input type="email"></li>
-				<li><button type="submit">Save</button></li>
-			</ul>
-		</form>
-
 	</body>
 </html

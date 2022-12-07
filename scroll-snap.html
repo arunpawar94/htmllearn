@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <title>
+            scroll-snap, backdrop-filter, display:table, 
+        </title>
+        <link rel="stylesheet" href="fontcss.css">
+        <style>
+            *
+            {
+                box-sizing: border-box;
+            }
+            
+            body
+            {
+                background-color: #07140b;
+                font-size: 20px;
+                font-family: arial;
+                color:aliceblue;
+                margin:0;
+                display:flex;
+                flex-direction: column;
+            }
+            #menu
+            {
+              width:100vw;
+              height:11vh;
+              background-color: #950939;
+              display: flex;
+              justify-content: center;
+              
+            }
+            
+            #menu a
+            {
+                text-decoration: none;
+                color:aliceblue;
+                display: inline-block;
+                margin:auto 15px;
+                font-size: 25px;
+                padding: 10px;
+                text-shadow: 2px 2px 4px #00c7ff;
+                border-radius: 25px;
+                background: linear-gradient(45deg, black, #fbf9bf);
+                box-shadow: 1px 3px 0px #13cdf7;
+            }
+            
+            #menu a:active
+            {
+                box-shadow: 1px 1.5px 0px #13cdf7;
+                transform:translateY(3px);
+            }
+            
+            #menu a:hover
+            {
+                color:#fff700;
+                background: linear-gradient(45deg, #fbf9bf, black);
+            }
+            h1
+            {
+                text-align: center;
+                margin: 23px 0 0 0;
+                
+                color:#6edeff;
+                text-shadow: 2px 2px 4px #0022ff;
+            }
+            h1 a
+            {
+                color:#f63838;
+            }
+            .content
+            {
+                height:89vh;
+                width: 100%;
+                overflow-x:hidden;
+                display: flex;
+                scroll-behavior: smooth;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .section
+            {
+                width:100vw;
+                
+            }
+            .section #para
+            {
+                white-space: pre-line;
+                padding-left: 20px;
+                margin-top: 15px;
+                line-height: 23px;
+            }
+            .section ol
+            {
+                margin:0;
+                line-height:1.09rem;
+                padding:0 0 0 90px;
+            }
+            sy
+            {
+                color:#e6f31d;
+                font-size: 22.5px;
+                
+            }
+            syc
+            {
+                color:#f13131;
+                font-size: 22.5px;
+               
+            }
+            sh
+            {
+                color:chartreuse;
+                font-size: 25px;
+                text-shadow: 2px 2px 4px #00c7ff;
+            }
+            exht
+            {
+                text-align: center;
+                font-size: 25px;
+                color:#f63838;
+                text-shadow: 2px 2px 4px #0022ff;
+            }
+            #exhd,#exhd1
+            {
+                height:400px;
+                background-color: #2e264a;
+                overflow-y: auto;
+                padding: 0;
+            }
+            #exhd div,#exhd1 div
+            {
+                width:100%;
+                height: 100%;
+                margin:0;
+                color:#950939;
+                font-weight: 700;
+                font-size: 40px;
+                padding: 27% 0 0 48%;
+                scroll-snap-align: start;
+               
+            }
+            #exhd1
+            {
+                scroll-snap-type: y mandatory;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <a href="#scroll-snap">scroll-snap</a>
+            <a href="#backdrop-filter">backdrop-filter</a>
+            <a href="#display_table">display:table;</a>
+        </div>
+
+        <div class="content">
+        
+            <div class="section" id="scroll-snap">
+                <h1>scroll-snap <a href="https://youtu.be/Ts_sxSKGlsE" title="youtube video link for scroll-snap"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">scroll-snap is used when we are scrolling between different section as in scroll-behavior and we want to that it automatically jump on that section whichever have larger part.
+                      There are two properties used for scroll-snap:
+                 
+                     &emsp;<sh>1. scroll-snap-type:y mandatory;</sh> It is given in parent element. It defines the direction of scrolling.
+                     
+                     &emsp;&emsp;&ensp;There are 5 values for scroll-snap-type:
+                     <ol type="i">
+                        <li>y mandatory (used for vertical scrolling. scrolling always happen on larger part)</li>
+                        <li>x mandatory (used for horizontal scrolling. scrolling always happen on larger part)</li>
+                        <li>both mandatory (used for vertical as well as horizontal scrolling. scrolling always happen on larger part)</li>
+                        <li>y proximity (used for vertical scrolling. scrolling not necessory to happen. it scrolls only when there is larger part is display of any section i.e. about 70 to 80 or above it.)</li>
+                        <li>x proximity (used for horizontal scrolling. scrolling not necessory to happen. it scrolls only when there is larger part is display of any section i.e. about 70 to 80 or above it)</li></ol>
+                    
+                     &emsp;<sh>2. scroll-snap-align:start;</sh> it is given on child element, which scroll. It align the section element which we want to scroll.
+                     <br/>&emsp;&emsp;&ensp;There are 3 values for scroll-snap-type:
+                     <ol type="i">
+                        <li>start. (it align the element from start)</li>
+                        <li>center. (it align the element from center)</li>
+                        <li>end. (it align the element from end)</li>
+                     </ol>
+
+                     To see differrence b/t normal and using scroll-snap property scroll below divs.
+                     
+                     <div style="display:grid; grid-template-columns:1fr 1fr;grid-template-rows:1fr 10fr;grid-column-gap:20px;">
+                        <exht >Without scroll-snap</exht>
+                        <exht >Using scroll-snap</exht>
+                        <div id="exhd">
+                            <div style="background-color:#52f052;">A</div>
+                            <div style="background-color:#f6f63e;">B</div>
+                            <div style="background-color:#77b2e9;">C</div>
+                        </div>
+                        <div id="exhd1">
+                            <div style="background-color:#52f052;">A</div>
+                            <div style="background-color:#f6f63e;">B</div>
+                            <div style="background-color:#77b2e9;">C</div>
+                        </div>
+                     </div>
+                     In above div we use properties "scroll-snap-type:y mandatory;" in parent and "scroll-snap-align:start;" in child element.
+                
+                
+                
+                </div>
+            </div>
+
+            
+            <div class="section" id="backdrop-filter">
+                <h1>backdrop-filter <a href="https://youtu.be/Q8MsR7o21Jg" title="youtube video link for backdrop-filter"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">If there is div above any image then we can give effects on that div using this property. It is used on div and not on image.
+                
+                <sy>Syntax:</sy><syc>backdrop-filter:blur(4px);</syc>
+                
+                We can also use multiple values simultaneously.
+                <sy>Syntax:</sy><syc>backdrop-filter:blur(4px) sepia(80%);</syc>
+                
+                These property has following 11 values;
+                <ol>
+                    <li>blur(4px) value is given in pixel(px).</li>
+                    <li>brightness(60%) value is given in percentage(%). 100% is normal value.</li>
+                    <li>contrast(40%) value is given in percentage(%). 100% is normal value.</li>
+                    <li>drop-shadow()</li>
+                    <li>grayscale(50%) value is given in percentage(%).</li>
+                    <li>hue-rotate(120deg) value is given in degree(deg). we can given its value from 0deg to</li>
+                    <li>invert(60%) value is given in percentage(%).</li>
+                    <li>opacity()</li>
+                    <li>sepia(90%) value is given in percentage(%).</li>
+                    <li>saturate(80%) value is given in percentage(%).</li>
+                    <li>none It is default value. it does not show any effect.</li>
+                </ol>   
+
+                        <exht >Example:</exht>
+                        <div style="flex-direction:column;background-image: url(images/web-development.jpg);background-color: aquamarine;width: 600px;height: 400px;margin: auto;background-size: contain;display: flex;">
+                            <font style="margin:0 auto;text-align:center;color:black;font-weight: 700;">Outer div</font>
+                            <div style="display:flex;flex-direction:column;width:50%;height:50%;border: 4px solid #3247cd;backdrop-filter: blur(4px);margin:auto;">
+                                <font style="margin:0 auto;text-align:center;color:black;font-weight: 700;">Inner div</font>
+                                <font style="margin: auto; color:black;font-weight: 700;">backdrop-filter: blur(4px);</font>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        
+            
+            <div class="section" id="display_table">
+                <h1>display:table; <a href="" title="youtube video link for scroll-snap"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">Using this property we can use any element such as div as table tags.
+
+                </div>
+        
+        
+        
+        </div>
+    
+
+
+
+
+        <a href="important.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
+		<a href="scroll-snap.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+    </body>
+</html>

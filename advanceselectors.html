@@ -15,6 +15,23 @@
         {
             color:red;
         }
+        #fwf
+        {
+            width:100%;
+            display: flex;
+        }
+        #fwf form
+        {   
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #bafb6c;
+        }
+        #fwf form:focus-within
+        {
+            background-color: #8000ff;
+        }
 
     </style>
     <body>
@@ -213,6 +230,53 @@
             <li>tag_name:invalid</li>
             <li>tag_name:default</li>
             <li>:root</li>
+            <li>:is() <a style="color:red;font-size: 25px;" title="youtube video link for :is() psedo-class " href="https://youtu.be/5yqtvH_euCY" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            is() pseudo-class is used as a multiple selector.
+            <br/><span id="idf3">Syntax:</span>
+            <br/>different way to use it are as follow:
+            <br/>1.<pre>
+                #id_name :is(tag_name1, tag_name2, id_name,....etc)
+                {
+                    css property
+                }
+            </pre>
+            <br/>2.<pre>
+                :is(id_name1, id_name2,....etc) tag_name
+                {
+                    css property
+                }
+            </pre>
+            <br/>3.<pre>
+                :is(id_name1, id_name2,....etc) :is(tag_name1, tag_name2,...etc)
+                {
+                    css property
+                }
+            </pre>
+            <br/>4.<pre>
+                :is(id_name1, id_name2,....etc) tag_name:hover
+                {
+                    css property
+                }
+            </pre>
+        
+        <li>tag_name:focus-within <a style="color:red;font-size: 25px;" title="youtube video link for :focus-within psedo-class " href="https://youtu.be/hoYadtwOpnQ" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            It is used when we have any form or any parent element of input tag in form then we can apply css property on parent element of that input tag when we click or tab button within the field of that input tag. It is applied on the parent element.
+        <br/>Example:
+        <pre>form:focus-within
+            {
+                background-color:#8000ff;
+            }
+        </pre>
+        Resulted form:<br/>
+        <div id="fwf">
+            <form action="">
+                <label>Name:</label><input type="text"/>
+                <label>Class:</label><input type="text"/>
+                <label>Email:</label><input type="email"/>
+                <label>Mobile no.:</label><input type="tel"/>
+            </form>
+        </div>
+    In above form we have change the background-color when we click in the input field.
         </ol>
 
         <br/><br/><span id="idfh2">5. Pseudo-elements</span> "::" is used.
@@ -233,6 +297,37 @@
             <li>tag_name::first-line</li>
             <li>tag_name::selection</li>
             <li>tag_name::placeholder</li>
+            <li>::marker <a style="color:red;font-size: 25px;" title="youtube video link for ::marker psedo-element " href="https://youtu.be/tug37e_Cg5U" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <br/> used to change the color of marker of ordered list or unordered list.
+            <br/><span id="idf3">Syntax:</span>
+            <pre>
+                ::marker
+                {
+                    color:red;
+                }
+                The above syntax change the marker color of all lists wheather it is ordered or unoredered list.
+                
+                ul li::marker
+                {
+                    color:red;
+                }
+                The above syntax change the marker color of only unoredered list.
+            </pre>
+            <li>::file-selector-button <a style="color:red;font-size: 25px;" title="youtube video link for ::file-selector-button psedo-element " href="https://youtu.be/NYSwmJEevS0" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+            <br/> use to design the file uploading button which we use in input tag as a type of "file".
+            <br/><span id="idf3">Syntax:</span>
+            <pre>
+                input[type=file]::file-selector-button
+                {
+                    css property
+                }
+                
+                we can use it with other pseudo class also such as for :hover
+                input[type=file]::file-selector-button:hover
+                {
+                    css property
+                }
+            </pre>
         </ol>
     </body>
 </html>

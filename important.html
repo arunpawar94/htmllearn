@@ -1,0 +1,265 @@
+<html>
+    <head>
+        <title>
+            Important hack, @supports condition, :placeholder-shown pseudo class and scroll-behavior property
+        </title>
+        <link rel="stylesheet" href="fontcss.css">
+        <style>
+            body
+            {
+                background-color: #0d2424;
+                color:white;
+                font-size: 20px;
+                counter-reset:hjn;
+                font-family:arial;
+            }
+            h1
+            {
+                color: #adabff;
+                font-size: 35px;
+                margin:0;
+                text-shadow: 2.5px 1.5px 4px #20ff85;
+               
+            }
+            h1::before
+            {
+                content:counter(hjn,upper-alpha) ".) ";
+                counter-increment: hjn 1;
+            }
+            a
+            {
+                font-size:28px;
+                color:red;
+            }
+            p
+            {
+                margin: 10px 0 20px 15px;
+                white-space: pre-line;
+            }
+            hi
+            {
+                font-size:25px;
+                color:red;
+            }
+            pre
+            {
+                color:red;
+            }
+            sy
+            {
+                color: #f3d604;
+                font-size: 27px;
+                
+                text-shadow: 1.8px 0.5px 0px #ff0000;
+            }
+            .scfd
+            {
+                padding: 0 !important;
+                margin: 0 5px;
+                background-color: darkolivegreen;
+                height:330px;
+                overflow-y: auto;
+            }
+            #menu ol li
+            {
+                display:inline-block;
+            }
+            #menu ol
+            {
+                margin: 0;
+            }
+            #menu
+            {
+                background-color: #20ff85;
+                position: sticky;
+                top:0;
+                height: 35px;
+             }
+             .sec
+             {
+                padding-top:35px;
+                height:300px;
+             }
+             .sec h2
+             {margin:0;}
+             .sec p
+             {white-space:normal;}
+             .scf
+             {  
+                padding:10px;
+                width:48%;}
+             .scfg
+             {text-align: center;}
+             #scroll_behavior
+             {scroll-behavior: smooth;}
+             gh
+             {
+                font-size:30px;
+                color:#f3d604;
+                text-shadow: 2.5px 1.5px 4px #20ff85;
+             }
+             
+        </style>
+    </head>
+    <body>
+        <h1>!Important hack: <a href="https://youtu.be/jfd4YpSanAM" title="youtube video link for !important hack"><i class="fa-brands fa-youtube"></i></a></h1>
+        <p>used to give priority of any selector such as id, class or tag. It is not a property or anything else its just a trick. The oreder of priority of seletor given below from highest to lowest.
+            <hi>style attribute > id > class > tag</hi>
+            <sy>Syntax:</sy><pre>
+                class_name or id_name or tag_name
+                {
+                    prperty_name:value !important;
+                }
+                </pre>
+                &emsp;&emsp;&emsp;&emsp;such as:
+                    <pre>
+                body
+                {
+                    color:green !important;
+                }
+            </pre>
+        </p>
+
+<hr>
+
+        <h1>@supprts: <a href="https://youtu.be/K5T0W2rDuTo" title="youtube video link for @supports"><i class="fa-brands fa-youtube"></i></a></h1>
+        <p> it checks the condition wheather it is supported by any browser or not on that browser.
+            <sy>Syntax:</sy><pre>
+                @supports (display:grid)
+                {
+                    body
+                    {
+                        background-color:red;
+                    }
+                } 
+                </pre>
+                In above synatax,if the browser on which this css run and if it supports the propert "display:grid;" then its background color will change to red.
+                <br/>There are 3 operators, we can use with it that are:
+           <p>1. not
+           2. and
+           3. or</p>  
+           way to use the above operators:
+          <p>1. not
+           <pre>
+            @supports not (display:grid)
+            {
+                css property
+            }
+           </pre>  
+            2. and
+           <pre>
+            @supports (display:flex) and (display:-webkit-flex)
+            {
+                css property
+            }
+           </pre>
+            3. or
+           <pre>
+            @supports (display:flex) or (display:-webkit-flex)
+            {
+                css property
+            }
+           </pre> </p>
+           we can also give multiple condition using above operators.
+      </p>
+
+<hr>
+
+      <h1>:placeholder-shown pseudo class <a href="https://youtu.be/kRrNMuD-4cQ" title="youtube video link for :placeholder-shown pseudo class"><i class="fa-brands fa-youtube"></i></a></h1>
+        <p>It is a pseudo class. work with only 2 tags i.e. first is "input" and second one is "textarea". it does not work with type time, date, datetime-local, month, week etc.
+            this is used to define css property until the placeholder is shown in input tag.
+            <sy>Syntax:</sy><pre>
+            input:placeholder-shown
+            {
+                css property
+            }
+            </pre>
+            we can also use it with a specific type of input tag.
+            <pre>
+            input[type="email"]:placeholder-shown
+            {
+                css property
+            }
+            </pre>
+
+ <hr>
+
+            <h1>scroll-behavior:smooth;<a href="https://youtu.be/0J3q8qqeOO8" title="youtube video link for scroll-behavior"><i class="fa-brands fa-youtube"></i></a></h1>
+        <p>it makes the scrolling of any intarnal page link smooth. 
+            There are 2 values of the scroll-behavior.
+            1. auto (default value does not show any effect)
+            2. smooth (make the scrolling smooth)
+
+            there are two way to use it:
+            1. to use it in whole page we have to use html as a selector.
+             html
+             {
+                scroll-behavior:smooth;
+             }
+
+             2. to use particularly in any div, we have to use id or class as a selector.
+             id_name or class_name
+             {
+                scroll-behavior:smooth;
+             }
+            
+            click on the link "home" or "about us" or "contact" to see effect.
+
+            </p>
+             <div style="display:flex; flex-wrap:wrap;width:100%;">
+                <gh class="scf scfg">without scroll-behavior</gh><gh class="scf scfg">using scroll-behavior</gh>
+                <div class="scf scfd" id="nonscroll_behavior">
+                <div id="menu">
+                    <ol>
+                        <li><a href="#sec01">HOME</a></li>
+                        <li><a href="#sec02">ABOUT US</a></li>
+                        <li><a href="#sec03">CONTACT</a></li>
+                        
+                    </ol>
+                </div>
+                <div class="sec" id="sec01">
+                    <h2>HOME</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum culpa doloribus quis aliquam iste unde? Tempora beatae eum fuga cum deleniti perspiciatis sint! Qui velit dolor sint et corporis atque nulla? Autem blanditiis illum cumque doloribus reiciendis rerum asperiores exercitationem temporibus cupiditate. Ipsum officia, dolorum hic aperiam ad explicabo eligendi delectus impedit fuga tenetur eos blanditiis officiis cupiditate repellat veritatis sit, assumenda voluptatem ut. Aliquid a dignissimos obcaecati quisquam itaque libero quas optio molestias tempore cumque eius quae ipsam possimus voluptate, cum, iusto recusandae aspernatur. Nisi voluptas labore, commodi atque asperiores ea explicabo quibusdam, possimus ex soluta voluptatum ullam harum!</P>
+                </div>
+                <div class="sec" id="sec02">
+                    <h2>ABOUT US</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque assumenda non laboriosam deserunt pariatur delectus ad, amet nisi totam ex corporis ut recusandae unde temporibus? Sequi quaerat necessitatibus voluptatem minus, expedita asperiores assumenda quam repellendus nam provident. Eveniet modi earum nemo illo amet a qui maiores tempore eius, et temporibus quaerat aut voluptates beatae omnis eaque rerum impedit, ad consequatur. Vero maxime, deserunt rem fugit non necessitatibus aperiam totam repellendus commodi. Vitae laboriosam ipsam, quod, debitis voluptates explicabo, sequi illo minus sit nemo accusamus tempora sunt esse voluptatum dolor cumque vero sapiente soluta sed. Deleniti dicta tenetur iusto magni vero!</P>
+                </div>
+                <div class="sec" id="sec03">
+                    <h2>CONTACT</h2>
+                    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum ut quaerat reiciendis minus consequatur sit in amet non quidem voluptatibus, doloribus quae quis labore ipsa laborum molestias quibusdam atque nam libero. Eveniet perferendis unde ab autem nihil earum sint cumque et, aperiam accusamus, debitis qui dolores eligendi illo natus aspernatur, voluptates hic ea quae nemo voluptatibus. Provident ipsam, possimus facere ipsa praesentium fugit similique natus incidunt tempore numquam consequuntur veritatis totam beatae voluptates expedita iusto animi nesciunt perferendis? Sed eligendi necessitatibus culpa dolor officiis enim? Impedit blanditiis nobis, cum voluptates quia ducimus iure perspiciatis aliquid corporis, quas architecto atque repellendus?</P>
+                </div>
+
+             </div>
+             <div class="scf scfd" id="scroll_behavior">
+                <div id="menu">
+                    <ol>
+                        <li><a href="#sec1">HOME</a></li>
+                        <li><a href="#sec2">ABOUT US</a></li>
+                        <li><a href="#sec3">CONTACT</a></li>
+                        
+                    </ol>
+                </div>
+                <div class="sec" id="sec1">
+                    <h2>HOME</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum culpa doloribus quis aliquam iste unde? Tempora beatae eum fuga cum deleniti perspiciatis sint! Qui velit dolor sint et corporis atque nulla? Autem blanditiis illum cumque doloribus reiciendis rerum asperiores exercitationem temporibus cupiditate. Ipsum officia, dolorum hic aperiam ad explicabo eligendi delectus impedit fuga tenetur eos blanditiis officiis cupiditate repellat veritatis sit, assumenda voluptatem ut. Aliquid a dignissimos obcaecati quisquam itaque libero quas optio molestias tempore cumque eius quae ipsam possimus voluptate, cum, iusto recusandae aspernatur. Nisi voluptas labore, commodi atque asperiores ea explicabo quibusdam, possimus ex soluta voluptatum ullam harum!</P>
+                </div>
+                <div class="sec" id="sec2">
+                    <h2>ABOUT US</h2>
+                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque assumenda non laboriosam deserunt pariatur delectus ad, amet nisi totam ex corporis ut recusandae unde temporibus? Sequi quaerat necessitatibus voluptatem minus, expedita asperiores assumenda quam repellendus nam provident. Eveniet modi earum nemo illo amet a qui maiores tempore eius, et temporibus quaerat aut voluptates beatae omnis eaque rerum impedit, ad consequatur. Vero maxime, deserunt rem fugit non necessitatibus aperiam totam repellendus commodi. Vitae laboriosam ipsam, quod, debitis voluptates explicabo, sequi illo minus sit nemo accusamus tempora sunt esse voluptatum dolor cumque vero sapiente soluta sed. Deleniti dicta tenetur iusto magni vero!</P>
+                </div>
+                <div class="sec" id="sec3">
+                    <h2>CONTACT</h2>
+                    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum ut quaerat reiciendis minus consequatur sit in amet non quidem voluptatibus, doloribus quae quis labore ipsa laborum molestias quibusdam atque nam libero. Eveniet perferendis unde ab autem nihil earum sint cumque et, aperiam accusamus, debitis qui dolores eligendi illo natus aspernatur, voluptates hic ea quae nemo voluptatibus. Provident ipsam, possimus facere ipsa praesentium fugit similique natus incidunt tempore numquam consequuntur veritatis totam beatae voluptates expedita iusto animi nesciunt perferendis? Sed eligendi necessitatibus culpa dolor officiis enim? Impedit blanditiis nobis, cum voluptates quia ducimus iure perspiciatis aliquid corporis, quas architecto atque repellendus?</P>
+                </div>
+
+             </div>
+             </div>
+    
+    <hr>
+
+    <a href="flex.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
+		<a href="scroll-snap.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+            </body>
+</html>

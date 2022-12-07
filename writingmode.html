@@ -5,6 +5,10 @@
 		</title>
 		<link rel="stylesheet" href="fontcss.css">
 		<style>
+			body
+			{
+				font-size: 20px;
+			}
 			#id1
 				{
 					border:6px groove purple;
@@ -46,6 +50,22 @@
 					background-color:#ccccff;
 					writing-mode:sideways-lr;
 				}
+			#id7
+				{
+					border:6px groove purple;
+					width:400px;
+					background-color:#ccccff;
+					writing-mode:vertical-rl;
+				}
+			#id8
+				{
+					border:6px groove purple;
+					width:400px;
+					background-color:#ccccff;
+					writing-mode:vertical-rl;
+					text-orientation:upright;
+				}
+				
 		</style>
 	</head>
 	<body bgcolor="#99ff66">
@@ -145,5 +165,38 @@
 		inside the Test Centre. Pen will be provided to the candidates 
 		during the Exam.
 	</div>
-	</body>
+	
+
+	<br/><br/><span id="idfh1">text-orientation</span> <a style="color:red;font-size: 25px;" title="youtube video link for text-orientation property" href="https://youtu.be/dK8lEFP5GGE" target="_blank"><i class="fa-brands fa-youtube"></i></a> 
+     It is used with "writing-mode" property. used to rotate the letter within word.
+	       
+	<br/><br/>There are 4 values:<ol>
+		<li>mixed(default, It does not show any effect.)</li>
+		<li>upright</li>
+		<li>sideways(currently not supported by any browser)</li>
+		<li>sideways-right(currently not supported by any browser)</li>
+	</ol>
+	example:
+	<br/>
+	<span id="idfh2">without text-orientation</span>
+	<br/><span id="idf1">
+		writing-mode:vertical-rl;
+	</span>
+	<div id="id7">
+		Arun Pawar
+	</div>
+	<br/><span id="idfh2">using text-orientation</span>
+	<br/><span id="idf1">
+		writing-mode:vertical-rl;
+	<br/>text-orientation:upright;
+	</span>
+	<div id="id8">
+		Arun Pawar
+	</div>
+
+
+
+
+
+</body>
 </html>
