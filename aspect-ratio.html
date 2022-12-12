@@ -1,0 +1,208 @@
+<html>
+	<head>
+		<title>
+		</title>
+		<link rel="stylesheet" href="fontcss.css">
+		<style>
+			*{box-sizing: border-box;}
+			body
+			{
+				font-size: 20px;
+				color:aquamarine;
+				background-color: black;
+				margin: 0;
+				font-family: arial;
+			}
+			.menu
+			{
+				background-color: #787200;
+				height: 10vh;
+				display: flex;
+			}
+			.menu ol
+			{
+				margin: auto;
+			}
+			.menu ol li
+			{
+				display: inline-block;
+				margin:0 14px 0 14px;
+			
+				
+			}
+			.menu a
+			{
+				background:linear-gradient(#00ffd4,black);
+				display: block;
+                color:white;
+                text-decoration: none;
+				padding: 8px 10px 8px 10px ;
+				border-radius: 28px;
+                box-shadow: 0px 0px 0px 3.5px #ff5b00;
+			}
+			.menu a:hover
+			{
+				box-shadow: 0px 0px 0px 3.5px #2196f3;
+			}
+            .menu a:active
+            {
+                
+                box-shadow:0px 0px 0px 2.4px #88ff00, inset 0px 0px 0px 1px #88ff00;                
+				transform: scale(0.95);
+            }
+			.content
+			{
+				background-color:black;
+				height: 90vh;
+				overflow-x: hidden;
+				scroll-behavior: smooth;
+				display: flex;
+				flex-wrap:wrap;
+				flex-direction: column;
+				
+			}
+			.section
+			{
+				width: 100%;
+				height: 100%;
+                padding:0 20px 0 20px;
+				
+			}
+			h1
+            {
+                text-align: center;
+                color:#eda7f5;
+                text-shadow: 1px 3px 3px #1d9caf;
+            }
+			h1 a
+			{
+				color:#f63838;
+			}
+            #para
+            {
+                white-space: pre-line;
+            }
+			sy
+			{
+				color:goldenrod;
+				font-size: 25px;
+			}
+			syy
+			{
+				color:#f63838;
+			}
+			#points
+			{
+				margin-top:20;
+				
+				padding-left: 60px;
+			}
+			#points li
+			{
+				line-height: 0.1;
+				margin:0;
+			}
+			
+			#ex1
+			{
+				width:100%;
+				display:grid;
+				grid-template-columns:1fr 1fr 1fr;
+				grid-template-rows:186px 250px;
+				
+			}
+			.esc1, .esc2, .esc3
+			{text-align:center;}
+		</style>
+	</head>
+	<body>
+		<div class="menu">
+			<ol>
+				<li><a href="#sec1">aspect-ratio</a></li>
+				<li><a href="#sec2">display-mode</a></li>
+			</ol>
+		</div>
+		<div class="content">
+			<div class="section" id="sec1">
+                <h1>aspect-ratio:1/2; <a href="https://youtu.be/hKdH83AybQU" title="youtube video link for aspect-ratio:1; property"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">
+                    This property is used to define ratio b/t width and height of any element.
+                    
+                    &emsp;<sy>Syntax:</sy>
+                    &emsp;&emsp;1. <syy>aspect-ratio:1/2; </syy>(first value is for width and second value is for height.)
+                    &emsp;&emsp;2. <syy>aspect-ratio:1; </syy>(this way is used when value of width and height is same.)
+                
+					&emsp;<sy>Important points:</sy>
+					<ul id="points"><li>From "width" and "height" only one is used with "aspect-ratio" otherwise "aspect-ratio" will become useless.</li>
+						<li>If "width" and "aspect-ratio" then "aspect-ratio" work as minimum height.</li>
+						<li>it is mainly used for make any div, image, or video responsive.</li>
+					</ul>&emsp;<sy>Example:</sy>
+					<div id="ex1">
+						<div class="esc esc1">
+							on div
+							<syy>
+								width:30%; 
+								aspect-ratio:1/1.1;
+							</syy>
+						</div>
+
+						<div class="esc esc2">
+							on image
+							<syy>
+								width:30%; 
+								aspect-ratio:1/1.1;
+								object-fit:cover;
+								object-position:left;
+							</syy>
+						</div>
+
+						<div class="esc esc3">
+							on video
+							<syy>
+								width:50%; 
+								aspect-ratio:16/9;
+							</syy>
+						</div>
+
+						<div class="esc esc4" style="white-space:normal;">
+							<div style="width:95%;height:95%; margin:10px; overflow:auto; resize:both;border:2px solid red;">
+								<div style="width:30%; aspect-ratio:1/1.1;background-color: darkmagenta; margin:60px 20px 35px 135px;border:2px solid rgb(68, 47, 250);">
+									Resulted div
+								</div>
+							</div>
+						</div>
+
+						<div class="esc esc5" style="white-space:normal;">
+							<div style="width:95%;height:95%; margin:10px; overflow:auto; resize:both;border:2px solid red;">
+								<img src="images/laxmi.jpg" style="width:30%; aspect-ratio:1/1.1;object-fit: cover;object-position: left; margin:60px 20px 35px 135px;border:2px solid rgb(68, 47, 250);">
+							</div>
+						</div>
+
+						<div class="esc esc6" style="white-space:normal;">
+							<div style="width:95%;height:95%; margin:10px; overflow:auto; resize:both;border:2px solid red;">
+								
+								<video controls autoplay width="50%" style="width:50%; aspect-ratio:16/9;margin:60px 20px 35px 104px;border:2px solid rgb(68, 47, 250);">
+									<source src="videos\Tune_O_Rangeele_Kaisa_Jadu_Kiya-_Palak_Jain_Flute-The_Golden_Notes(240p).mp4" type="video/mp4" >
+								</video><br />
+								
+							</div>
+						</div>
+					</div>
+					<div style="text-align:center;">Resize the above divs to see effect.</div>
+                </div>
+            </div>
+
+
+			<div class="section" id="sec2">
+                <h1>@media (display-mode:fullscreen) <a href="https://youtu.be/it0fRMlhpY4" title="youtube video link for @media (display-mode:value)."  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">
+
+				</div>
+			</div>
+		</div>
+
+		<a href="scroll-snap.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
+		<a href="aspect-ratio.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
+	</body>
+</html

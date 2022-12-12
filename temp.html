@@ -4,40 +4,37 @@
 		</title>
 		<link rel="stylesheet" href="fontcss.css">
 		<style>
-			#parent
-			{
-				
-				background-color: aquamarine;
-				width: 900px;
-				height: 600px;
+		body{display: flex;background-color: black;}
+	a
+	{
+		background:linear-gradient(#00ffd4,black);
+				display: block;
+                color:white;
+                text-decoration: none;
+				padding: 8px 10px 8px 10px ;
+				border-radius: 28px;
+                box-shadow: 0px 0px 0px 3.5px #ff5b00;
 				margin: auto;
-				background-size: contain;
-				display: flex;
-				
-			}
 		
-			#parent:focus-within
-			{
-				background-color: blueviolet;
-			}
-			#child
-			{
-				width:50%;
-				height:50%;
-				border: 2px solid yellowgreen;
-				backdrop-filter: blur(2px);
-				margin:auto;
-				
-			}
+	}
+	a:hover
+	{
+		box-shadow: 0px 0px 0px 3.5px #2196f3;
+	}
+	a:active
+	{
+		backgdround:linear-gradient(black,#00ffd4);
+        box-shadow:0px 0px 0px 2.4px #88ff00, inset 0px 0px 0px 1px #88ff00;                
+		transform: scale(0.99);
+	}
+	
+			
+			
 		</style>
 	</head>
 	<body>
-	<div id="parent"><form>
-		<input type="text"/></form>
-		<div id="child">
-
-		</div>
-	</div>
+		
+		<a href="">Arun</a>
 		
 	</body>
 </html

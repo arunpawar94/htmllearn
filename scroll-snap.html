@@ -1,9 +1,10 @@
 <html>
     <head>
         <title>
-            scroll-snap, backdrop-filter, display:table, 
+            scroll-snap, backdrop-filter, display:table, accent-color:green;, @media (prefers-color-scheme:dark)
         </title>
         <link rel="stylesheet" href="fontcss.css">
+       
         <style>
             *
             {
@@ -80,7 +81,7 @@
             .section
             {
                 width:100vw;
-                
+                padding-right: 20px;
             }
             .section #para
             {
@@ -143,6 +144,28 @@
             {
                 scroll-snap-type: y mandatory;
             }
+            #display_table p
+            {
+                background-color: rgb(242, 245, 245);
+                color:#52f052;
+                font-size: 25px;
+            }
+            #acc
+			{
+				border: 5px groove palegoldenrod;
+				padding: 20px;
+                margin:10px 0 0 200px;
+			}
+			#acc input
+			{
+				height: 20px;
+				width: 20px;
+				accent-color: #a81ddf;
+			}
+            q
+            {
+                quotes: "<" ">";
+            }
         </style>
     </head>
     <body>
@@ -150,12 +173,14 @@
             <a href="#scroll-snap">scroll-snap</a>
             <a href="#backdrop-filter">backdrop-filter</a>
             <a href="#display_table">display:table;</a>
+            <a href="#accent_color">asscent-color:red;</a>
+            <a href="#prefers-color-scheme">@media (prefers-color-scheme:dark)</a>
         </div>
 
         <div class="content">
         
             <div class="section" id="scroll-snap">
-                <h1>scroll-snap <a href="https://youtu.be/Ts_sxSKGlsE" title="youtube video link for scroll-snap"><i class="fa-brands fa-youtube"></i></a></h1>
+                <h1>scroll-snap <a href="https://youtu.be/Ts_sxSKGlsE" title="youtube video link for scroll-snap"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
                 <div id="para">scroll-snap is used when we are scrolling between different section as in scroll-behavior and we want to that it automatically jump on that section whichever have larger part.
                       There are two properties used for scroll-snap:
                  
@@ -202,7 +227,7 @@
 
             
             <div class="section" id="backdrop-filter">
-                <h1>backdrop-filter <a href="https://youtu.be/Q8MsR7o21Jg" title="youtube video link for backdrop-filter"><i class="fa-brands fa-youtube"></i></a></h1>
+                <h1>backdrop-filter <a href="https://youtu.be/Q8MsR7o21Jg" title="youtube video link for backdrop-filter" target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
                 <div id="para">If there is div above any image then we can give effects on that div using this property. It is used on div and not on image.
                 
                 <sy>Syntax:</sy><syc>backdrop-filter:blur(4px);</syc>
@@ -239,21 +264,98 @@
         
             
             <div class="section" id="display_table">
-                <h1>display:table; <a href="" title="youtube video link for scroll-snap"><i class="fa-brands fa-youtube"></i></a></h1>
-                <div id="para">Using this property we can use any element such as div as table tags.
+                <h1>display:table; <a href="https://youtu.be/XMzzZvxGQN8" title="youtube video link for display:table;" target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">Using this property we can use any element such as div as table tags. We can use div tag to make any table. On this div we can use the properties that we use in the table tag.
+                    Following value of display used to make different table tag.
+                    <ol>
+                        <li>display:table; (it make the div as "table" tag in html. All the below display values are used on the div within this div.)</li>
+                        <li>display:table-cell; (it make the div as "td" tag in html. for making cell in table)</li>
+                        <li>display:table-row; (it make the div as "tr" tag in html. for making row in table.)</li>
+                        <li>display:table-caption; (it make the div as "caption" tag in html. for caption of the table)</li>
+                        <li>display:table-header-group; (it make the div as "thead" tag in html. for header row of the table)</li>
+                        <li>display:table-footer-group; (it make the div as "tfoot" tag in html. for footer row of the table.)</li>
+                        <li>display:table-row-group; (this value is used for making group of rows. And we put those div with property "display:table-row;" that we want to make group within the div of property "display:table-row-group;". )</li>
+                        <li>display:table-column-group; (this value is used for making group of columns. It is difine on the div within div with property "display:table;". First we have to make some div with property "display:table-column;" within this div with property "display:table-column-group;". Each div with property "display:table-column;" represent all the cell within that column. the div with property "display:table-column;" as many as the no. of columns and not more than that.)</li>
+                        <li>display:table-column; (each div with this property represent each column. this div define within the div with property "display:table-column-group;".)</li>
+                    </ol>
 
+                    Example:
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr;grid-template-rows:1fr 10fr;grid-column-gap:20px;">
+                            <exht >CSS code for creating table using property "display:table;"</exht>
+                            <exht >The resulted table using property "display:table;"</exht>
+                            <iframe src="text/tbe.txt" style="width:100%;height:500px;background-color: darkseagreen;"></iframe>
+                            <iframe src="tbe.html" style="width:100%;height:500px;background-color: darkseagreen;"></iframe>
+                        </div>
                 </div>
+            </div>
         
-        
-        
+
+            <div class="section" id="accent_color">
+                <h1>accent-color:red; <a href="https://youtu.be/Zs7TMT2EeIk" title="youtube video link for accent-color:green;" target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">In input tag we have type "checkbox" and "radio", which have default color blue, to change its color we can use property "accent-color:pink;".
+                    <sy>Syntax:</sy><syc>
+                        <pre>
+input
+    {
+      accent-color:pink;
+    }</pre></syc>
+                    <exht >Example:</exht>
+                    <form id="acc" style="white-space: pre-line; width:300px;background-color: cadetblue;">
+                        hobbies:
+                            &emsp;<input type="checkbox" name="hobby">reading
+                            &emsp;<input type="checkbox" name="hobby">swimming
+                            &emsp;<input type="checkbox" name="hobby">music
+                        Gender:
+                            &emsp;<input type="radio" name="gender">male
+                            &emsp;<input type="radio" name="gender">female
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="section" id="prefers-color-scheme">
+                <h1>scroll-snap <a href="https://youtu.be/VX_tRmE3nns" title="youtube video link for @media (prefers-color-scheme:dark)"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">Used to change the css styling of web page when we change our Operating system's light or dark mode.
+                    <sy>Syntax:</sy><syc>
+                        <pre>
+@media (prefers-colors-scheme:dark)
+    {
+      selector 1
+      {  
+        css property
+      }
+      selector 2
+      {
+        css property
+      }
+      .
+      .
+      .
+      .
+      selector n
+      {
+        css property
+      }
+    }</pre></syc>
+                    It has two values i.e. 
+                    <ol>
+                        <li>light(default value)</li>
+                        <li>dark.</li>
+                    </ol>
+                
+                    In html there is "meta" tag is also used to change color scheme according light or dark mode 
+                    <sy>Syntax:</sy><syc><q>meta name="color-scheme" content="dark"</q>  </syc> 
+                
+                    "meta" tag is used in "head" tag
+                     content="dark", we can also use value "light", It has only two values.
+                </div>   
+            </div>
+
         </div>
     
-
-
-
-
         <a href="important.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
-		<a href="scroll-snap.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="aspect-ratio.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
 		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
     </body>
 </html>
