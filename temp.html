@@ -4,37 +4,23 @@
 		</title>
 		<link rel="stylesheet" href="fontcss.css">
 		<style>
-		body{display: flex;background-color: black;}
-	a
-	{
-		background:linear-gradient(#00ffd4,black);
-				display: block;
-                color:white;
-                text-decoration: none;
-				padding: 8px 10px 8px 10px ;
-				border-radius: 28px;
-                box-shadow: 0px 0px 0px 3.5px #ff5b00;
-				margin: auto;
-		
-	}
-	a:hover
-	{
-		box-shadow: 0px 0px 0px 3.5px #2196f3;
-	}
-	a:active
-	{
-		backgdround:linear-gradient(black,#00ffd4);
-        box-shadow:0px 0px 0px 2.4px #88ff00, inset 0px 0px 0px 1px #88ff00;                
-		transform: scale(0.99);
-	}
-	
-			
-			
+		@media (display-mode:browser)
+		{
+			body{background-color: black;}
+		}
+		@media (display-mode:minimal-ui)
+		{
+			body{background-color: yellowgreen;}
+		}
+		@media (display-mode:fullscreen)
+		{
+			body{background-color: #3ae0c2;}
+		}
 		</style>
 	</head>
 	<body>
 		
-		<a href="">Arun</a>
+		
 		
 	</body>
 </html
