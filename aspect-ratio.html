@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>
+			aspect-ratio, @media display-mode, :fullscreen, min() max() clamp() functions, @media orientation, :has
 		</title>
 		<link rel="stylesheet" href="fontcss.css">
 		<style>
@@ -100,7 +101,9 @@
 			#points li
 			{
 				line-height: 0.1;
+				
 				margin:0;
+				
 			}
 			
 			#ex1
@@ -113,6 +116,29 @@
 			}
 			.esc1, .esc2, .esc3
 			{text-align:center;}
+			#sec2 img
+			{
+				width:40vw;
+				border:3px groove #88ff00;
+				margin-bottom: 20px;
+				margin-left: 25%;
+			}
+			#fbox
+			{
+				padding-left:100px ;
+				background-color: red;width:500px;aspect-ratio: 5/3;
+			}
+			#fbox:fullscreen
+			{background-color: cornflowerblue;}
+			#para p
+			{margin:0 0 0 20px;}
+			h2
+			{
+				color:#cafd81;
+				text-decoration:underline solid #cafd81;
+				text-underline-offset: 5px;
+				margin-bottom: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -120,6 +146,10 @@
 			<ol>
 				<li><a href="#sec1">aspect-ratio</a></li>
 				<li><a href="#sec2">display-mode</a></li>
+				<li><a href="#sec3">:fullscreen</a></li>
+				<li><a href="#sec4">min(), max(), clamp() functions</a></li>
+				<li><a href="#sec5">@media (orientation:value)</a></li>
+				<li><a href="#sec6">:has()</a></li>
 			</ol>
 		</div>
 		<div class="content">
@@ -198,16 +228,192 @@
 		{
 			css property
 		}</pre></syy>
-					&emsp;<sy>We have 3 values we can use in place of value.</sy><ol id="points"><li>browser (default mode of the browser)</li>
-						<li>minimal-ui (it appears when we save our )</li>
-						<li>fullscreen (it appears when we press f11 key then browser enters in fullscreen display mode.)</li>				
+					&emsp;<sy>We have 3 values we can use in place of value.</sy><ol id="points"><li><syy>browser</syy> (default mode of the browser)</li>
+						browser view of browser
+						<img src="images/display-mode3.jpg"/>
+						<li><syy>minimal-ui</syy> (it appears when we save any web page from browser using the steps as shown in image )</li>
+						<img src="images/display-mode1.jpg"/>
+						minimal-ui view of browser
+						<img src="images/display-mode2.jpg"/>
+						<li><syy>fullscreen</syy> (it appears when we press f11 key then browser enters in fullscreen display mode.)</li>				
+						fullscreen view of browser
+						<img src="images/display-mode4.jpg"/>
 					</ol>
 				</div>
 			</div>
+
+
+			<div class="section" id="sec3">
+                <h1>:fullscreen pseudo class <a href="https://youtu.be/mjWj8TCMADc" title="youtube video link for :fullscreen pseudo class"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">
+					used for css styling any element, If any element is view in fullscreen view.
+				&emsp;<sy>Syntax:</sy><pre>
+	<syy>selector_name:fullscreen
+		{
+			css property
+		}</syy></pre>
+
+					<sy>Example:</sy>
+					<div id="fbox">
+						#fbox
+						&emsp;{
+						&emsp;&emsp;background-color: red;
+						&emsp;&emsp;width:500px;
+						&emsp;&emsp;aspect-ratio: 5/3;
+						&emsp;}
+						#fbox:fullscreen
+						&emsp;{
+						&emsp;&emsp;background-color: cornflowerblue;
+						&emsp;}						
+					</div>
+					<button onclick="document.getElementById('fbox').requestFullscreen();">Go to Fullscreen</button>
+					click above button to see effect, In button we have use javascript to make the div in fullscreen.
+				</div>
+			</div>
+
+			<div class="section" id="sec4">
+                <h1>min(), max(), clamp() functions <a href="https://youtu.be/rdcNTJhfAho" title="youtube video link for min(), max(), clamp() functions"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                
+				<div id="para"><h2>min(value1, value2,...., nth value) function</h2><p>
+					It is used to select minimum value among the values we give in min() function.	
+						<sy>Syntax:</sy><syy>width:min(220px,600px,400px.....,100px);</syy><ul id="points">
+						<li>In above syntax the width of the element will be 100px since it is minimum value among the given values.</li>
+						<li>We can use value in %, vw this value are w.r.t to its parent element.</li>
+						<li>min() function can also be use with property height, padding, margin etc </li>
+						<li>this function can also be used within another function or vice-versa</li></ul>
+						</p>
+					<h2>max(value1, value2,...., nth value) function</h2><p>
+						It is used to select maximum value among the values we give in min() function.	
+						<sy>Syntax:</sy><syy>width:max(220px,600px,400px.....,100px);</syy><ul id="points">
+						<li>In above syntax the width of the element will be 600px since it is maximum value among the given values.</li>
+						<li>We can use value in %, vw this value are w.r.t to its parent element.</li>
+						<li>max() function can also be use with property height, padding, margin etc </li>
+						<li>this function can also be used within another function or vice-versa</li></ul>
+						</p>
+					<h2>clamp(min_value, value_within_range,max_value) function</h2><p>
+						In this function there are 3 values first is minimum, second is the value which lies b/t minimum and maximum value, and the third value is the maximum.
+						<sy>Syntax:</sy><syy>width:clamp(300px, 50%, 800px);</syy><ul id="points">
+						<li>In above syntax, the width of the element according to the 50% of the parent element but it can't be below than 300px</li> 
+							and can't be exceed than 800px.
+						
+						<li>We can use value in %, vw this value are w.r.t to its parent element.</li>
+						<li>clamp() function can also be use with property height, padding, margin etc </li></ul>
+						</p>
+				</div>
+			</div>
+
+			<div class="section" id="sec5">
+                <h1>@media (orientation:value)<a href="https://youtu.be/lTcYDLiHPeI" title="youtube video link for @media (orientation:value)"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                
+				<div id="para">
+					In this media rule, we can change css styling according to the portrait or landscape view.
+				<sy>Syntax:</sy>
+				<syy>&emsp;@media (orientation:value)
+					&emsp;&emsp;{
+					&emsp;&emsp;&emsp;selector_name
+					&emsp;&emsp;&emsp;&emsp;{
+					&emsp;&emsp;&emsp;&emsp;&emsp;css property
+					&emsp;&emsp;&emsp;&emsp;}
+					&emsp;&emsp;}</syy>
+
+				There are only two value for orientation:
+				&emsp;1. landscape
+				&emsp;2. portrait
+				</div>
+			</div>
+
+			<div class="section" id="sec6">
+                <h1>:has() pseudo class<a href="https://youtu.be/ObIfoYg32ns" title="youtube video link for :has() pseudo class"  target="_blank"><i class="fa-brands fa-youtube"></i></a></h1>
+                <div id="para">used to select parent element with the help of child element.
+					&emsp;<sy>Syntax:</sy>
+					1.<syy>
+					&emsp;&emsp;parent_element_name:has(Child_element_name)
+					&emsp;&emsp;&emsp;{
+					&emsp;&emsp;&emsp;&emsp;css for parent_element
+					&emsp;&emsp;&emsp;}</syy>
+					The css apply on parent element which has the given child element whose name is given in :has() pseudo class.
+				
+					2.<syy>
+						&emsp;&emsp;parent_element_name:has(Child_element1, child_element2....., child_elementn )
+						&emsp;&emsp;&emsp;{
+						&emsp;&emsp;&emsp;&emsp;css for parent_element
+						&emsp;&emsp;&emsp;}</syy>
+						Here we have given multiple child elements name, The css apply on every parent element which has the given child elements whose name is given in :has() pseudo class.
+					
+					3.<syy>
+							&emsp;&emsp;parent_element_name:has(> Child_element_name)
+							&emsp;&emsp;&emsp;{
+							&emsp;&emsp;&emsp;&emsp;css for parent_element
+							&emsp;&emsp;&emsp;}</syy>
+							The css apply on parent element, only if the given child element whose name is given in :has() pseudo class is the direct child element of that parent element.
+						
+					4.<syy>
+						&emsp;&emsp;parent_element_name:has(Child1 + child2)
+						&emsp;&emsp;&emsp;{
+						&emsp;&emsp;&emsp;&emsp;css for parent_element
+						&emsp;&emsp;&emsp;}</syy>
+						The css apply on parent element, only if the given child2 element is immediate after child1 element.
+							
+						
+					5.<syy>
+						&emsp;&emsp;parent_element_name:has(+ child2)
+						&emsp;&emsp;&emsp;{
+						&emsp;&emsp;&emsp;&emsp;css for parent_element
+						&emsp;&emsp;&emsp;}</syy>
+						The css apply on parent element, only if the given child2 element is immediate after parent element.
+					
+					6.<syy>
+						&emsp;&emsp;parent_element_name:not(:has(Child1))
+						&emsp;&emsp;&emsp;{
+						&emsp;&emsp;&emsp;&emsp;css for parent_element
+						&emsp;&emsp;&emsp;}</syy>
+						The css apply on all parent element, which does not have child element "child1"
+
+					7.<syy>
+						&emsp;&emsp;parent_element_name:has(Child1) child2
+						&emsp;&emsp;&emsp;{
+						&emsp;&emsp;&emsp;&emsp;css for parent_element
+						&emsp;&emsp;&emsp;}</syy>
+						The css apply on child element "child2", only if the given "child1" is the child of the given parent element.
+					8.<syy>
+						&emsp;&emsp;parent_element_name:has(*:empty)
+						&emsp;&emsp;&emsp;{
+						&emsp;&emsp;&emsp;&emsp;css for parent_element
+						&emsp;&emsp;&emsp;}</syy>
+						The css apply on all parent element, if any child element is empty within that parent element.
+			
+						some examples:
+						<ol>
+							<li>div:has(h2)</li>
+							apply on div if h2 is child of any div.
+
+							<li>div:has(h2,h3,h1)</li>
+							apply on those divs if h2 or h3 or h1 is child of any div.
+
+							<li>div:not(:has(h2))</li>
+							apply on div if h2 is child not the child of any div.
+
+							<li>form:has(input[type="checkbox"]:checked){}</li>
+							apply on form if input of type checkbox is checked.
+
+							<li>form:has(input[type="checkbox"]:checked) button{}</li>
+							apply on button if input of type checkbox is checked.
+
+							<li>label:has(+ input[type="checkbox"]:checked){}</li>
+							apply on label only if  there input of type checkbox is checked immediate after the label.
+						
+							<li>label:has(+ input:focus){}</li>
+							apply on label if input is focused.
+						</ol>
+				
+					
+				</div>
+			</div>
+
 		</div>
 
 		<a href="scroll-snap.html"><ifp id="ifnav" class="fa-solid fa-circle-left"></ifp></a>
-		<a href="aspect-ratio.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
+		<a href="print media.html"><ifn id="ifnav" class="fa-solid fa-circle-right"></ifn></a>
 		<a href="indexpage.html"><ifi id="ifnav" class="fa-solid fa-bars"></ifi></a>
 	</body>
 </html
