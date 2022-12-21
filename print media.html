@@ -5,6 +5,7 @@
         </title>
         <link rel="stylesheet" href="fontcss.css">
         <style>
+            
             *
             {
                 box-sizing: border-box;
@@ -14,6 +15,7 @@
                 font-family: arial;
                 margin:0;
                 font-size: 20px;
+                counter-reset: ht;
                 
             }
             #menu
@@ -122,6 +124,17 @@
                 border: 4px solid #0e06f5;
                 margin-left: 20%;
            }
+           h2
+           {
+            color:#a90cf9;
+            text-shadow: 2px 1.5px 0px #03b923;
+           }
+           h2:before
+           {
+                content:counter(ht, upper-alpha)".) ";
+                counter-increment:ht 1;
+                color:black;
+           }
         </style>
 
     </head>
@@ -212,7 +225,30 @@
             <div class="se se2" id="sec3">
                 <div id="mh"><h1>break-before, break-after and break-inside</h1><a href="https://youtu.be/lolnibWPPss" target="_blank" title="youtube video for break-before, break-after and break-inside"><i class="fa-brands fa-youtube"></i></a></div>
                 <div id="para">
+                    <h2>break-before and break-after</h2>
+                    <p>both the properties are use during print in print media, to start the content from new page.
+                        In break-before, there is break before the element in which we use break-before and the element and content after the element start from the new page.
+                        In break-after, there is break after the element in which we use break-after and the element remains on the same page but content after that element start from new page.
+
+                        <sy>Syntax:</sy>
+                        1. <syy>break-before:page;</syy>
+                        2. <syy>break-after:page;</syy>
+
+                        There are two values for both properties:
+                        1. page (it breaks)
+                        2. avoid (default value, it doesn't break)
+                    </p>
+                    <h2>break-inside</h2>
+                    <p>It doesn't make any element to be break from b/t such as table, when we print any web page, some of the rows remain on the same page but some rows comes on the new page, to avoid this we use break-inside property so that whole table remain on same page.
                     
+                    <sy>Syntax:</sy> <syy>break-inside:avoid;</syy>
+                   
+
+                    There are two values for break-inside property:
+                    1. page (default value, it breaks the element)
+                    2. avoid (it helps in not to break any element, so that whole element remain on the same page)
+                    </p>
+                
                 </div>
             </div>
         </div>
