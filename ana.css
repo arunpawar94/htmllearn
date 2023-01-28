@@ -1,0 +1,39 @@
+body{background:yellow;color:red;}
+div
+{
+  background:pink;
+  width:564;
+  aspect-ratio:1;
+
+}
+.c1
+{
+  position:fixed;
+}
+#d2
+{
+  left: 261px;
+  top: 90px;
+  height: 220px;
+  aspect-ratio: auto;
+  transform: rotate(30deg);
+  transform-origin: 45% 92%;
+}
+#d3
+{
+  left: 260px;
+      top: 27px;
+      height: 281px;
+      aspect-ratio: auto;
+      transform: rotate(310deg);
+      transform-origin: 48% 94%;
+}
+#d4
+{    left: 259px;
+    top: 19.5px;
+    height: 380px;
+    aspect-ratio: auto;
+    transform: rotate(90deg);
+    transform-origin: 48% 71.4%;
+
+}
