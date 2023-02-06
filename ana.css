@@ -1,7 +1,7 @@
 body{background:yellow;color:red;}
 div
 {
-  background:pink;
+
   width:564;
   aspect-ratio:1;
 
@@ -35,5 +35,19 @@ div
     aspect-ratio: auto;
     transform: rotate(90deg);
     transform-origin: 48% 71.4%;
-
+}
+#d5
+{
+  left:237px;
+  top:137px;
+  font-size:30px;
+  color:black;
+  font-weight: 700;
+}
+#d6
+{
+    left: 238px;
+    top: 394px;
+    font-size: 18px;
+    color: black;
 }
